@@ -1,6 +1,6 @@
 # Course overview
 
-*The module Market Research (337094) consits of the lectures Market Research (337094a) and Statistics (337094b)* 
+*The module Market Research (337094) consists of the lectures Market Research (337094a) and Statistics (337094b)* 
 
 Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. 
 
@@ -12,11 +12,8 @@ The course will focus on the Python computing language. No statistical or comput
 
 Important links:
 
-- [GitHub repo for project]()
+- [Moodle discussion forum](https://e-learning.hdm-stuttgart.de/moodle/mod/forum/view.php?id=97729)
 
-- [Moodle discussion forum]()
-
-- [Moodle assignment upload]()
 
 ---
 
