@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to our course! 
+Welcome to our course Market Research! 
 
 This online book contains content and information for the semester. Note that the course schedule will be updated as the semester progresses.
 
