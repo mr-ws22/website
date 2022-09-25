@@ -1,4 +1,4 @@
-title: Course template
+title: Market Research
 author: Jan Kirenz
 logo: logo.png
 
@@ -13,7 +13,7 @@ bibtex_bibfiles:
    - _bibliography/references.bib
 
 repository:
-  url: https://github.com/kirenz/course-template
+  url: https://github.com/mr-ws22/website
   branch: main
 
 html:

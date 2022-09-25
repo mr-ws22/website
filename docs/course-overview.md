@@ -1,12 +1,12 @@
 # Course overview
 
-Learn ... for analyzing multivariate data sets, emphasizing analysis of variance, linear regression, and logistic regression.
+*The module Market Research (337094) consits of the lectures Market Research (337094a) and Statistics (337094b)* 
 
-Learn techniques for checking the appropriateness of proposed models, such as residual analyses and case influence diagnostics, and techniques for selecting models.
+Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. 
 
-Gain experience dealing with the challenges that arise in practice through assignments that utilize real-world data.
+Gain experience in data collection, wrangling, and visualization, exploratory data analysis, predictive modeling, and effective communication of results while working on problems and case studies inspired by and based on real-world questions. 
 
-This class emphasizes data analysis over mathematical theory.
+The course will focus on the Python computing language. No statistical or computing background is necessary.
 
 ---
 
