@@ -27,13 +27,4 @@
 
 ---
 
-(perform)=
-## Perform
-
-💯 No assignments this week 
-
-
-
----
-
 Back to [course schedule](../docs/course-schedule.md) ⏎
