@@ -4,20 +4,28 @@
 
 ## Course info
 
-|           | Day       | Time              | Location                       |
-|-----------|-----------|-------------------|--------------------------------|
-| Lecture   | x         | x pm - x pm |  X  |
-| Lab       | x         | x pm - x pm |  X  |
+|                   | Day       | Time                  | Location    |
+|-----------        |-----------|-------------------    |-------------|
+| Market research   | Tuesday   | 14:15 am - 15:45 pm   |  Room 016b  |
+| Statistics        | Tuesday   | 16:00 pm - 17:30 pm   |  Room 016b  |
+
+
+```{image} ../_static/img/room.png
+:alt: course location
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
 
 
 ## Learning objectives
 
 By the end of the semester, you will be able to...
 
--   explore, visualize, and analyze data to investigate patterns.
--   fit and evaluate linear and logistic regression models.
--   use Python to write reproducible reports and GitHub for version control and collaboration.
--   communicate results from statistical analyses to a general audience.
+-   obtain, explore, visualize, and analyze data in Python to investigate patterns.
+-   fit and evaluate linear and logistic regression models to make predictions.
+-   perform simulation-based inference using randomization and bootstrapping.
+-   use traditional statistical methods to test hypothesis.
 
 
 ## Where to get help
@@ -52,7 +60,7 @@ You are expected to bring a laptop to each class so that you can take part in th
 Assessment for the course is comprised of two components: 
 
 - Optional [application exercises](application-exercises) to obtain 10 bonus points for the exam
-- Exam (90 minutes at the end of the semester)
+- Exam (90 minutes at the end of the semester. 60% market research and 40% statistics)
 
 (application-exercises)=
 ### Application exercises
@@ -70,7 +78,7 @@ The AEs are due within **three days** after the corresponding lecture. For examp
 Because these AEs are for practice, they will be graded based on completion. Successful on-time completion of at least 80% of every AE will result in full credit (+10 bouns points in exam). 
 
 (exams)=
-### Exams
+### Exam
 
 There will be one exam at the end of the semester. Through the exam you have the opportunity to demonstrate what you've learned in the course.
 
@@ -78,15 +86,7 @@ The exam will focus on the conceptual understanding of the content but will also
 
 More detail about the exams will be given during the semester.
 
-(project)=
-### Project
-
-The purpose of the [project](project-description.md) is to apply what you've learned throughout the semester to analyze an interesting, data-driven research question. The project will be completed in **teams**.
-
-More information about the project will be provided during the semester.
-
 ## Grading
-
 
 The final grade will be determined based on the following thresholds:
 
