@@ -22,6 +22,8 @@ This section contains the weekly course resources and is structured as follows:
 
 ---
 
-**Practice**: Application exercises (AE) to practice concepts and code
+**Practice**: Application exercises (AE) and quaestions (Q) to practice concepts and code
 
 💻 Application exercises
+
+☑️ Questions (usually multiple choice)
