@@ -359,18 +359,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basics">
-     Basics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#installation">
      Installation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-up-environment">
-     Set up environment
+    <a class="reference internal nav-link" href="#anaconda-environment">
+     Anaconda environment
     </a>
    </li>
   </ul>
@@ -382,11 +377,6 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Basics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
      Installation
     </a>
    </li>
@@ -464,18 +454,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basics">
-     Basics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#installation">
      Installation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-up-environment">
-     Set up environment
+    <a class="reference internal nav-link" href="#anaconda-environment">
+     Anaconda environment
     </a>
    </li>
   </ul>
@@ -487,11 +472,6 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Basics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
      Installation
     </a>
    </li>
@@ -566,17 +546,14 @@ title="Print to PDF"
 <hr class="docutils" />
 <section id="anaconda">
 <span id="id1"></span><h2>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">#</a></h2>
-<section id="basics">
-<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h3>
 <p>The open-source <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda Individual Edition</a> is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Anaconda is a data science toolkit which already includes most of the data science modules we need.</p>
 </div>
-</section>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
-<p>You can skip this step if you already have Anaconda on your machine. If not, install the latest version of the Anaconda Individual Edition:</p>
+<p>You can skip the installation step if you already have Anaconda on your machine. If not, install the latest version of the Anaconda Individual Edition:</p>
 <div class="tip admonition">
 <p class="admonition-title">To do</p>
 <ul class="simple">
@@ -585,14 +562,18 @@ title="Print to PDF"
 </div>
 <p>Follow the steps described in the next section.</p>
 </section>
-<section id="set-up-environment">
-<h3>Set up environment<a class="headerlink" href="#set-up-environment" title="Permalink to this headline">#</a></h3>
+<section id="anaconda-environment">
+<h3>Anaconda environment<a class="headerlink" href="#anaconda-environment" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>On <em>Windows</em> open the Start menu and open the “Anaconda Command Prompt”.</p></li>
+<li><p>On <em>macOS</em>: <a class="reference external" href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">Open your terminal</a></p></li>
+</ul>
 <p>Let’s update Anaconda:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update --all
 </pre></div>
 </div>
 <p>Now you can install the modules we need for our course in a new environment (we call this new environment <code class="docutils literal notranslate"><span class="pre">mr</span></code>).</p>
-<p>Copy this code and run it in your terminal:</p>
+<p>Copy this code and run it in your terminal (command prompt):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n mr <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9 pandas openpyxl jupyter scikit-learn altair vega_datasets matplotlib seaborn
 </pre></div>
 </div>
@@ -608,8 +589,6 @@ title="Print to PDF"
 </section>
 <section id="visual-studio-code">
 <span id="vscode"></span><h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">#</a></h2>
-<section id="id2">
-<h3>Basics<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -618,9 +597,8 @@ title="Print to PDF"
 <br>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KMxo3T_MTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
-</section>
-<section id="id3">
-<h3>Installation<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<section id="id2">
+<h3>Installation<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>Install VS Code:</p>
 <div class="tip admonition">
 <p class="admonition-title">To do</p>
@@ -700,7 +678,7 @@ title="Print to PDF"
 <p>Note that we will use Jupyter Notebook inside the coding editor Visual Studio Code or Google Colab.</p>
 </section>
 <section id="colab">
-<span id="id4"></span><h3>Colab<a class="headerlink" href="#colab" title="Permalink to this headline">#</a></h3>
+<span id="id3"></span><h3>Colab<a class="headerlink" href="#colab" title="Permalink to this headline">#</a></h3>
 <p>Colaboratory, or “Colab” for short, is a free to use product from Google Research. Colab allows anybody to write and execute python code through the browser, and is especially well suited to perform data analysis and machine learning.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
