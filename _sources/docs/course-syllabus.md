@@ -42,13 +42,11 @@ By the end of the semester, you will be able to...
 
 Check out the [Support](course-support.md) page for more resources.
 
-## Textbooks
+## Textbook
 
-While there is no official textbook for the course, we will be assigning readings from the following textbooks.
+Textbook for the course:
 
 - [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) by Mine Çetinkaya-Rundel and Johanna Hardin
-
-- [Python for Data Analysis, 3E](https://wesmckinney.com/book/) by Wes McKinney
 
 
 ## Lectures
@@ -76,7 +74,7 @@ Parts of some lectures will be dedicated to working on "Application Exercises" (
 AEs should be completed and **submitted individually**.
 
 :::{Note}
-AEs are due within three days after lecture
+AEs are usually due within three days after lecture
 :::
 
 The AEs are due within **three days** after the corresponding lecture. For example, AEs from a Tuesday lecture would be due Friday by 11:59 pm ET.

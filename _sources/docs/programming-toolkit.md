@@ -7,18 +7,15 @@ You will simply need to:
 1. Install [Anaconda](anaconda) (includes Python and some toolkits)
 2. Install [Visual Studio Code](vscode) (a code editor)
 
-Please read all the instructions and complete the tasks listed in the following section "Tools".
+Please read the following instructions about Anaconda and Visual Studio Code.
 
 ---
 
 
-(tools)=
-## Tools
-
 (anaconda)=
-### Anaconda
+## Anaconda
 
-#### Basics
+### Basics
 
 The open-source [Anaconda Individual Edition](https://www.anaconda.com/products/individual) is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules. 
 
@@ -27,7 +24,7 @@ Anaconda is a data science toolkit which already includes most of the data scien
 :::
 
 
-#### Installation
+### Installation
 
 You can skip this step if you already have Anaconda on your machine. If not, install the latest version of the Anaconda Individual Edition:
 
@@ -40,7 +37,7 @@ You can skip this step if you already have Anaconda on your machine. If not, ins
 
 Follow the steps described in the next section.
 
-#### Set up environment
+### Set up environment
 
 Let's update Anaconda:
 
@@ -71,9 +68,9 @@ conda activate mr
 ---
 
 (vscode)=
-### Visual Studio Code 
+## Visual Studio Code 
 
-#### Basics
+### Basics
 
 Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.
 
@@ -87,7 +84,7 @@ Visual Studio Code is a code editor that can be used with a variety of programmi
 
 <br>
 
-#### Installation
+### Installation
 
 Install VS Code:
 
@@ -96,7 +93,7 @@ Install VS Code:
 - [Install Code](https://code.visualstudio.com/)
 ```
 
-#### Install extensions
+### Install extensions
 
 The features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.
 
@@ -109,7 +106,7 @@ Let's install some important extensions:
 - [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) 
 ```
 
-#### Jupyter Notebooks
+### Jupyter Notebooks
 
 We usually work with Jupyter Notebook files in VS Code:
 
@@ -119,7 +116,7 @@ We usually work with Jupyter Notebook files in VS Code:
 
 ```
 
-#### Optional tutorials
+### Optional tutorials
 
 Here some resources to get familiar with VS Code:
 
@@ -130,7 +127,7 @@ Here some resources to get familiar with VS Code:
 - Pro tips: [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI)
 
 
-#### Troubleshooting
+## Troubleshooting
 
 Make sure that you use the latest version (in our course, we use Python 3.9). In your terminal, type `python --version` to see which Python version you are using in your Anaconda base environment.
 
@@ -201,7 +198,7 @@ Watch this video to get a first impression of Colab:
 
 Let`s start your first Colab notebook to get an overview about some basic features:
 
-```{admonition} To do
+```{admonition} Resources
 :class: tip
 - [Colab basic features overview](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
 ```
@@ -216,7 +213,7 @@ Markdown is one of the world’s most popular markup languages used in data scie
 Markdown is a simple way to format text that looks great on any device.
 :::
 
-According to {cite:t}`Wickham2016`, Markdown files are designed to be used in three ways:
+ Markdown files are designed to be used in three ways:
 
 1. For communicating to decision makers, who want to focus on the conclusions, not the code behind the analysis.
 
@@ -224,12 +221,11 @@ According to {cite:t}`Wickham2016`, Markdown files are designed to be used in th
 
 3. As an environment in which to do data science, as a modern day lab notebook where you can capture not only what you did, but also what you were thinking.
 
-Review this sites to learn more about Markdown:
+Review this site to learn more about Markdown:
 
-```{admonition} To do
+```{admonition} Resources
 :class: tip
 - [Interactive Colab Markdown guide](https://colab.research.google.com/notebooks/markdown_guide.ipynb)
 
-- [Interactive 10 minute Markdown tutorial](https://commonmark.org/help/)
 ```
 

@@ -1,6 +1,12 @@
 # Course schedule
 
-This page contains a more detailed overview about the topics, content, and application exercises for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.
+This page contains a detailed overview about the topics, content, and application exercises for the semester. 
+
+:::{Note}
+This overview will be updated as the semester progresses.
+:::
+
+
 
 |	Lecture	|	Week	|	Nr.	|	Date	|	Topic	|	Prepare	|	Slides	|	AE	|	Q	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|	---	|	---	|
