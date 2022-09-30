@@ -2,13 +2,14 @@
 
 Welcome to our course Market Research (337094)! 👋  
 
+This page contains a weekly overview about the topics, slides and materials for the semester.
+
 :::{Note}
-The module consists of the lectures Market Research (337094a) and Statistics (337094b)
+This overview will be updated as the semester progresses.
 :::
 
-This page contains a weekly overview about the topics and slides for the semester (for a more detailed overview, take a look at the [course-schedule](../docs/course-schedule.md)). 
+For a more detailed semester overview, take a look at the [course-schedule](../docs/course-schedule.md). 
 
-Note that this overview will be updated as the semester progresses.
 
 
 |	Week	|	Date	|	Market Research (MR)	|	Statistics (S)	|	Slides	|	Materials	|
