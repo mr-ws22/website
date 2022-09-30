@@ -15,8 +15,6 @@ Please read the following instructions about Anaconda and Visual Studio Code.
 (anaconda)=
 ## Anaconda
 
-### Basics
-
 The open-source [Anaconda Individual Edition](https://www.anaconda.com/products/individual) is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules. 
 
 :::{note}
@@ -26,7 +24,7 @@ Anaconda is a data science toolkit which already includes most of the data scien
 
 ### Installation
 
-You can skip this step if you already have Anaconda on your machine. If not, install the latest version of the Anaconda Individual Edition:
+You can skip the installation step if you already have Anaconda on your machine. If not, install the latest version of the Anaconda Individual Edition:
 
 ```{admonition} To do
 :class: tip
@@ -37,7 +35,12 @@ You can skip this step if you already have Anaconda on your machine. If not, ins
 
 Follow the steps described in the next section.
 
-### Set up environment
+### Anaconda environment
+
+- On *Windows* open the Start menu and open the "Anaconda Command Prompt". 
+
+- On *macOS*: [Open your terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) 
+
 
 Let's update Anaconda:
 
@@ -47,7 +50,7 @@ conda update --all
 
 Now you can install the modules we need for our course in a new environment (we call this new environment `mr`). 
 
-Copy this code and run it in your terminal: 
+Copy this code and run it in your terminal (command prompt): 
 
 ```bash
 conda create -n mr python=3.9 pandas openpyxl jupyter scikit-learn altair vega_datasets matplotlib seaborn
@@ -70,7 +73,6 @@ conda activate mr
 (vscode)=
 ## Visual Studio Code 
 
-### Basics
 
 Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.
 
