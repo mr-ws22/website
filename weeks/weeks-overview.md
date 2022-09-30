@@ -24,7 +24,7 @@ Lecture materials:
 
 📑 Download slides
 
-⏯ Web-tutorials
+⏯ Participate in web-tutorials
 
 ---
 
