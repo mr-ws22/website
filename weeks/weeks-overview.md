@@ -16,7 +16,7 @@ This section contains the weekly course resources and is structured as follows:
 
 **Participate**: Lecture resources 
 
-📘 Download slides
+📑 Download slides
 
 ⏯ Web-tutorials
 
