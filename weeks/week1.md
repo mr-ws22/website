@@ -10,20 +10,29 @@
 
 📚 Read the [support resources](../docs/course-support.md)
 
+First Data Analysis (Nr. 4): [📚](https://openintro-ims.netlify.app/data-hello.html#case-study-stents-strokes)
+
+Data basics (Nr. 5): [📚](https://openintro-ims.netlify.app/data-hello.html#data-basics)
+
+
 ---
 
 (participate)=
 ## Participate
 
 
-[📑] Download slides](https://drive.google.com/file/d/1LgF4xshHAkC_m4yWaUwr2qr9oI9NCOnG/view?usp=sharing)
+Download slides: [📑](https://drive.google.com/file/d/1-4cLyD1QI9YLoYJH5_QuYz0AvdyKyZOu/view?usp=sharing)
+
 
 ---
 
 (practice)=
 ## Practice
 
-💻 [AE 1: Netflix crosstable](../ae/ae1/01-1b-netflix-g.ipynb)
+First Data Analysis (Nr. 4): [💻](..ae/ae1/01-1b-netflix-g.ipynb)
+
+
+Data basics (Nr. 5): [☑️](https://forms.gle/EJT7mcYgPi8drKgR9)
 
 
 ---
