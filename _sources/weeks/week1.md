@@ -29,7 +29,7 @@ Download slides: [📑](https://drive.google.com/file/d/1-4cLyD1QI9YLoYJH5_QuYz0
 (practice)=
 ## Practice
 
-First Data Analysis (Nr. 4): [💻](..ae/ae1/01-1b-netflix-g.ipynb)
+First Data Analysis (Nr. 4): [💻](../ae/ae1/01-1b-netflix-g.ipynb)
 
 
 Data basics (Nr. 5): [☑️](https://forms.gle/EJT7mcYgPi8drKgR9)
