@@ -2,18 +2,150 @@
 
 This section contains an overview about the programming toolkit you will need for our course. 
 
-You will simply need to (we cover this topic in detail in the section ["Tools"](tools)):
+You will simply need to:
 
 1. Install [Anaconda](anaconda) (includes Python and some toolkits)
 2. Install [Visual Studio Code](vscode) (a code editor)
 
-Please read all the instructions and complete the tasks listed in the following two sections ("Fundamentals" and "Tools").
-
-:::{Note}
-If you aren't familiar with the terminal, you may want to look at this [short introduction](terminal)
-:::
+Please read all the instructions and complete the tasks listed in the following section "Tools".
 
 ---
+
+
+(tools)=
+## Tools
+
+(anaconda)=
+### Anaconda
+
+#### Basics
+
+The open-source [Anaconda Individual Edition](https://www.anaconda.com/products/individual) is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules. 
+
+:::{note}
+Anaconda is a data science toolkit which already includes most of the data science modules we need.
+:::
+
+
+#### Installation
+
+You can skip this step if you already have Anaconda on your machine. If not, install the latest version of the Anaconda Individual Edition:
+
+```{admonition} To do
+:class: tip
+
+- [Anaconda installation](https://www.anaconda.com/products/individual)
+
+```
+
+Follow the steps described in the next section.
+
+#### Set up environment
+
+Let's update Anaconda:
+
+```bash
+conda update --all
+```
+
+Now you can install the modules we need for our course in a new environment (we call this new environment `mr`). 
+
+Copy this code and run it in your terminal: 
+
+```bash
+conda create -n mr python=3.9 pandas openpyxl jupyter scikit-learn altair vega_datasets matplotlib seaborn
+```
+
+When conda asks you: 
+
+`Proceed ([y]/n)?` 
+
+simply type `y` and press enter.
+
+Now activate the new environment:
+
+```bash
+conda activate mr
+```
+
+---
+
+(vscode)=
+### Visual Studio Code 
+
+#### Basics
+
+Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.
+
+:::{note}
+Visual Studio Code is a code editor that can be used with a variety of programming languages including Python.
+:::
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KMxo3T_MTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+#### Installation
+
+Install VS Code:
+
+```{admonition} To do
+:class: tip
+- [Install Code](https://code.visualstudio.com/)
+```
+
+#### Install extensions
+
+The features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.
+
+Let's install some important extensions:
+
+```{admonition} To do
+:class: tip
+
+- [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) 
+```
+
+#### Jupyter Notebooks
+
+We usually work with Jupyter Notebook files in VS Code:
+
+```{admonition} To do
+:class: tip
+- [How to use Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+
+```
+
+#### Optional tutorials
+
+Here some resources to get familiar with VS Code:
+
+- [Take a look at the intro videos](https://code.visualstudio.com/docs/getstarted/introvideos)
+
+- [Data Science in VS Code tutorial](https://code.visualstudio.com/docs/datascience/data-science-tutorial)
+
+- Pro tips: [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI)
+
+
+#### Troubleshooting
+
+Make sure that you use the latest version (in our course, we use Python 3.9). In your terminal, type `python --version` to see which Python version you are using in your Anaconda base environment.
+
+*You may also uninstall your current Anaconda environment from your machine and install the latest version: here a guide of how to [uninstall Anaconda](https://docs.anaconda.com/anaconda/install/uninstall/).*
+
+If you have troubles to use Anaconda in Visual Studio Code, follow these instructions: 
+
+- [Windows](https://stackoverflow.com/a/61937090/14796848)
+- [Mac](https://stackoverflow.com/a/55203534/14796848)
+
+
+
+
+---
+
 
 ## Fundamentals
 
@@ -100,213 +232,4 @@ Review this sites to learn more about Markdown:
 
 - [Interactive 10 minute Markdown tutorial](https://commonmark.org/help/)
 ```
-
----
-
-(tools)=
-## Tools
-
-(anaconda)=
-### Anaconda
-
-#### Basics
-
-The open-source [Anaconda Individual Edition](https://www.anaconda.com/products/individual) is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules. 
-
-:::{note}
-Anaconda is a data science toolkit which already includes most of the data science modules we need.
-:::
-
-Anaconda's package manager `conda` makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments). `conda` analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2,0 or higher), works out how to install a compatible set of dependencies, and shows a warning if this cannot be done. Instead of conda, you can also use `pip` (the standard package installer for Python) to install packages. Note that you should only use either conda or pip in one environment (we usually use conda).
-
-#### If you already have it
-
-If you already have Anaconda on your machine, make sure that you use the latest version (in our course, we use Python 3.9). In your terminal, type `python --version` to see which Python version you are using in your Anaconda base environment.
-
-*You may also uninstall your current Anaconda environment from your machine and install the latest version: here a guide of how to [uninstall Anaconda](https://docs.anaconda.com/anaconda/install/uninstall/).*
-
-
-#### Installation
-
-Install the latest version of the Anaconda Individual Edition:
-
-```{admonition} To do
-:class: tip
-
-- [Anaconda installation](https://www.anaconda.com/products/individual)
-
-```
-
-After you have installed Anaconda, you can update it. The following commands will update all packages in the default "base" environment to the latest version but will not update Python:
-
-```{admonition} To do
-:class: tip
-
-- On *Windows* open the Start menu and open an ["Anaconda Command Prompt"](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda). 
-- On *macOS* or *Linux* open a [terminal window](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda).
-- In your terminal, type: conda update --all
-
-```
-
-Now follow the steps described in the next section.
-
-#### Set up environment
-
-After you have installed and updated Anaconda, you can install the modules we need for our course in a new environment. 
-
-
-```{admonition} To do
-:class: tip
-- Install [GitHub course environments](https://github.com/kirenz/environments)
-- Use the following course environment: env-ds.yml
-```
-
-#### Install or update Modules
-
-Take a look at all the modules in your environment:
-
-```bash
-conda list
-```
-
-Make sure that you use `scikit-learn` in version 1.0.2 or higher. If this is not the case, update Anaconda. If you only want to **update specific modules**, use conda update and the name of the module (e.g., scikit-learn)
-
-```bash
-conda update scikit-learn
-```
-
-If you want to **install new modules** in your environment, you should always use conda (and not the package installer for Python: [pip](https://pypi.org/project/pip/)). Here is an example of how to install scikit-learn [see conda documentation](https://anaconda.org/anaconda/scikit-learn)
-
-```bash
-conda install scikit-learn
-```
-
-Or, if you want to install a specific version
-
-```bash
-conda install scikit-learn=1.0.2
-```
-
-Finally, take a look at the [Anaconda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf) which provides a list of useful commands.
-
----
-
-(vscode)=
-### Visual Studio Code 
-
-#### Basics
-
-Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.
-
-:::{note}
-Visual Studio Code is a code editor that can be used with a variety of programming languages including Python.
-:::
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KMxo3T_MTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-#### Installation
-
-Install VS Code:
-
-```{admonition} To do
-:class: tip
-- [Install Code](https://code.visualstudio.com/)
-```
-
-#### Install extensions
-
-The features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.
-
-Let's install some important extensions:
-
-```{admonition} To do
-:class: tip
-
-- [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) 
-```
-
-#### Jupyter Notebooks
-
-We usually work with Jupyter Notebook files in VS Code:
-
-```{admonition} To do
-:class: tip
-- [How to use Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
-
-```
-
-#### Optional tutorials
-
-Here some resources to get familiar with VS Code:
-
-- [Take a look at the intro videos](https://code.visualstudio.com/docs/getstarted/introvideos)
-
-- [Data Science in VS Code tutorial](https://code.visualstudio.com/docs/datascience/data-science-tutorial)
-
-- Pro tips: [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI)
-
-
-#### Troubleshooting
-
-If you have troubles to use Anaconda in Visual Studio Code, follow these instructions: 
-
-- [Windows](https://stackoverflow.com/a/61937090/14796848)
-- [Mac](https://stackoverflow.com/a/55203534/14796848)
-
-
----
-
----
-
-## Helpful
-
-(stackoverflow)=
-### Stackoverflow
-
-[Stackoverflow](https://stackoverflow.com/) is a public platform with a massive collection of coding questions & answers. So whenever you run into issues with your code, Stackoverlow is a great place to find answers!
-
-:::{Note}
-A community-based space to find and contribute answers to technical challenges.
-:::
-
-The website serves as a platform for users to ask and answer questions, and, through membership and active participation, to vote questions and answers up or down similar to [Reddit](https://www.reddit.com/) and edit questions and answers in a fashion similar to a wiki.
-
-
----
-
-(terminal)=
-### Command-line interface
-
-Operating systems like Windows and macOS implement a command-line interface (other names for the command line are: cmd, CLI, prompt, console or terminal) in a shell for interactive access to operating system functions or services. 
-
-:::{note}
-A command-line interface (CLI) processes commands to a computer program in the form of lines of text.
-:::
-
-We sometimes use the command line interface so you should be familiar with basic commands. If you aren't familiar with the terminal, read this short introduction to the command-line interface:
-
-```{admonition} To do
-:class: tip
-- [Introduction to the command-line interface](https://tutorial.djangogirls.org/en/intro_to_command_line/)
-```
-
-Here is a summary of some useful commands:
-
-Command (Windows) | Command (Mac OS / Linux) | Description                | Example
------------------ | ------------------------ | -------------------------- | ---------------------------------------------
-exit              | exit                     | close the window           | **exit**
-cd                | cd                       | change directory           | **cd test**, **cd..** (Windows) or **cd ..** (Mac)
-cd                | pwd                      | show the current directory | **cd** (Windows) or **pwd** (Mac OS / Linux)
-dir               | ls                       | list directories/files     | **dir**
-copy              | cp                       | copy file                  | **copy c:\test\test.txt c:\windows\test.txt**
-move              | mv                       | move file                  | **move c:\test\test.txt c:\windows\test.txt**
-mkdir             | mkdir                    | create a new directory     | **mkdir testdirectory**
-rmdir (or del)    | rm                       | delete a file              | **del c:\test\test.txt**
-rmdir /S          | rm -r                    | delete a directory         | **rm -r testdirectory**
-[CMD] /?          | man [CMD]                | get help for a command     | **cd /?** (Windows) or **man cd** (Mac OS / Linux)
 
