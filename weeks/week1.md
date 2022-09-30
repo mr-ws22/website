@@ -15,7 +15,8 @@
 (participate)=
 ## Participate
 
-📘 Download: [Introduction](/slides/lec-1.html)
+
+[📑] Download slides](https://drive.google.com/file/d/1LgF4xshHAkC_m4yWaUwr2qr9oI9NCOnG/view?usp=sharing)
 
 ---
 
