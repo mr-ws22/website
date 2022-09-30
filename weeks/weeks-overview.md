@@ -30,7 +30,7 @@ Lecture materials:
 
 ## Practice
 
-Application exercises (AE) and quaestions (Q) to practice concepts and code:
+Application exercises (AE) and questions (Q) to practice concepts and code:
 
 💻 Application exercises
 
