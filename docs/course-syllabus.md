@@ -54,8 +54,6 @@ Textbook for the course:
 A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing.
 Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture.
 
-Additionally, some lectures will feature application exercises that will be graded.
-
 You are expected to bring a laptop to each class so that you can take part in the in-class exercises.
 
 
@@ -65,6 +63,7 @@ Assessment for the course is comprised of two components:
 
 - Optional [application exercises](application-exercises) to obtain 10 bonus points for the exam
 - Exam (90 minutes at the end of the semester. 60% market research and 40% statistics)
+
 
 (application-exercises)=
 ### Application exercises
