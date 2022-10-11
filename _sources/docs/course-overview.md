@@ -14,7 +14,7 @@ For a more detailed semester overview, take a look at the [course-schedule](../d
 
 |	Week	|	Date	|	Market Research (MR)	|	Statistics (S)	|	Slides	|	Materials	|
 |	---	|	---	|	---	|	---	|	---	|	---	|
-|	1	|	11.10.	|	Introduction	|	Introduction to data	|	[📑](https://drive.google.com/file/d/1-4cLyD1QI9YLoYJH5_QuYz0AvdyKyZOu/view?usp=sharing)	|	[📁](../weeks/week1.md)	|
+|	1	|	11.10.	|	Introduction	|	Introduction to data	|	[📑](https://drive.google.com/file/d/1-WrEI0wxKQX_MJyt6sAvy4UVuNo0EVWS/view?usp=sharing)	|	[📁](../weeks/week1.md)	|
 |	2	|	18.10.	|	Data preparation	|	Study design	|	[📑](https://drive.google.com/file/d/1-3uVavxMAvDNMnRiN7sXsZRTReRNsZpj/view?usp=sharing)	|	[📁](../weeks/week2.md)	|
 |	3	|	25.10.	|	Exploratory data analysis	|	Exploratory data analysis	|		|		|
 |	4	|	08.11.	|	Data	|	Exploratory data analysis	|		|		|
