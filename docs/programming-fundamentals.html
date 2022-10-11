@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Course syllabus &#8212; Market Research</title>
+    <title>Fundamentals &#8212; Market Research</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Course support" href="course-support.html" />
-    <link rel="prev" title="Course schedule" href="course-schedule.html" />
+    <link rel="next" title="Python Syntax" href="programming-syntax.html" />
+    <link rel="prev" title="Programming toolkit" href="programming-toolkit.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,14 +119,14 @@ const thebe_selector_output = ".output, .cell_output"
   Course information
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="course-schedule.html">
    Course schedule
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="course-syllabus.html">
    Course syllabus
   </a>
  </li>
@@ -141,19 +141,19 @@ const thebe_selector_output = ".output, .cell_output"
   Programming
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="programming-toolkit.html">
    Programming toolkit
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="programming-fundamentals.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Fundamentals
     </a>
    </li>
@@ -288,7 +288,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fdocs/course-syllabus.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fdocs/programming-fundamentals.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -316,7 +316,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/course-syllabus.md"
+        <a href="../_sources/docs/programming-fundamentals.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -376,60 +376,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#course-info">
-   Course info
+  <a class="reference internal nav-link" href="#python">
+   Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#course-topics">
-   Course topics
+  <a class="reference internal nav-link" href="#jupyter-notebook">
+   Jupyter Notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learning-objectives">
-   Learning objectives
+  <a class="reference internal nav-link" href="#colab">
+   Colab
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-to-get-help">
-   Where to get help
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#textbook">
-   Textbook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lectures">
-   Lectures
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assessment">
-   Assessment
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#application-exercises">
-     Application exercises
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exam">
-     Exam
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grading">
-   Grading
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips-for-success">
-   Tips for success
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
   </a>
  </li>
 </ul>
@@ -441,7 +404,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Course syllabus</h1>
+                <h1>Fundamentals</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -452,60 +415,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#course-info">
-   Course info
+  <a class="reference internal nav-link" href="#python">
+   Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#course-topics">
-   Course topics
+  <a class="reference internal nav-link" href="#jupyter-notebook">
+   Jupyter Notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learning-objectives">
-   Learning objectives
+  <a class="reference internal nav-link" href="#colab">
+   Colab
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-to-get-help">
-   Where to get help
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#textbook">
-   Textbook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lectures">
-   Lectures
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assessment">
-   Assessment
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#application-exercises">
-     Application exercises
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exam">
-     Exam
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#grading">
-   Grading
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips-for-success">
-   Tips for success
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
   </a>
  </li>
 </ul>
@@ -518,153 +444,71 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="course-syllabus">
-<h1>Course syllabus<a class="headerlink" href="#course-syllabus" title="Permalink to this headline">#</a></h1>
-<section id="course-info">
-<h2>Course info<a class="headerlink" href="#course-info" title="Permalink to this headline">#</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>Day</p></th>
-<th class="head"><p>Time</p></th>
-<th class="head"><p>Location</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Market research</p></td>
-<td><p>Tuesday</p></td>
-<td><p>14:15 am - 15:45 pm</p></td>
-<td><p>Room 016b</p></td>
-</tr>
-<tr class="row-odd"><td><p>Statistics</p></td>
-<td><p>Tuesday</p></td>
-<td><p>16:00 pm - 17:30 pm</p></td>
-<td><p>Room 016b</p></td>
-</tr>
-</tbody>
-</table>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/room.png"><img alt="course location" class="bg-primary mb-1 align-center" src="../_images/room.png" style="width: 400px;" /></a>
-</section>
-<section id="course-topics">
-<h2>Course topics<a class="headerlink" href="#course-topics" title="Permalink to this headline">#</a></h2>
-<p>Gain experience in data collection, data wrangling, exploratory data analysis, predictive modeling, and statistical inference while working on problems and case studies inspired by and based on real-world questions.</p>
-<p>The course will focus on the Python programming language.</p>
-</section>
-<section id="learning-objectives">
-<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">#</a></h2>
-<p>By the end of the semester, you will be able to…</p>
-<ul class="simple">
-<li><p>obtain, explore, visualize, and analyze data in Python to investigate patterns.</p></li>
-<li><p>fit and evaluate linear and logistic regression models to make predictions.</p></li>
-<li><p>perform simulation-based inference using randomization and bootstrapping.</p></li>
-<li><p>use traditional statistical methods to test hypothesis.</p></li>
-</ul>
-</section>
-<section id="where-to-get-help">
-<h2>Where to get help<a class="headerlink" href="#where-to-get-help" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>If you have a question during lecture, feel free to ask it!</p></li>
-<li><p>Outside of class, any general questions about course content or assignments should be posted on the Moodle course forum.</p></li>
-<li><p>Emails should be reserved for questions not appropriate for the public forum. <strong>If you email me, please include the name of our course in the subject line.</strong></p></li>
-</ul>
-<p>Check out the <a class="reference internal" href="course-support.html"><span class="doc std std-doc">Support</span></a> page for more resources.</p>
-</section>
-<section id="textbook">
-<h2>Textbook<a class="headerlink" href="#textbook" title="Permalink to this headline">#</a></h2>
-<p>Textbook for the course:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://openintro-ims.netlify.app/">Introduction to Modern Statistics</a> by Mine Çetinkaya-Rundel and Johanna Hardin</p></li>
-</ul>
-</section>
-<section id="lectures">
-<h2>Lectures<a class="headerlink" href="#lectures" title="Permalink to this headline">#</a></h2>
-<p>A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing.
-Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture.</p>
-<p>You are expected to bring a laptop to each class so that you can take part in the in-class exercises.</p>
-</section>
-<section id="assessment">
-<h2>Assessment<a class="headerlink" href="#assessment" title="Permalink to this headline">#</a></h2>
-<p>Assessment for the course is comprised of two components:</p>
-<ul class="simple">
-<li><p>Optional <a class="reference internal" href="#application-exercises"><span class="std std-ref">application exercises</span></a> to obtain 10 bonus points for the exam</p></li>
-<li><p>Exam (90 minutes at the end of the semester. 60% market research and 40% statistics)</p></li>
-</ul>
-<section id="application-exercises">
-<span id="id1"></span><h3>Application exercises<a class="headerlink" href="#application-exercises" title="Permalink to this headline">#</a></h3>
-<p>Parts of some lectures will be dedicated to working on “Application Exercises” (AE). These small exercises will give you an opportunity to practice apply the concepts and code introduced in the readings and lectures.</p>
-<p>AEs should be completed and <strong>submitted individually</strong>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="fundamentals">
+<h1>Fundamentals<a class="headerlink" href="#fundamentals" title="Permalink to this headline">#</a></h1>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h2>
+<p>Python is an object-oriented language (an object is an entity that contains data along with associated metadata and/or functionality).</p>
+<p>One thing that distinguishes Python from many other programming languages is that it is interpreted rather than compiled. This means that it is executed line by line which is particular useful for data analysis, as well as the creation of interactive, executable documents like Jupyter Notebooks.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>AEs are usually due within three days after lecture</p>
+<p>Python is an interpreted language. The Python interpreter runs a program by executing one statement at a time.</p>
 </div>
-<p>The AEs are due within <strong>three days</strong> after the corresponding lecture. For example, AEs from a Tuesday lecture would be due Friday by 11:59 pm ET.</p>
-<p>Because these AEs are for practice, they will be graded based on completion. Successful on-time completion of at least 80% of every AE will result in full credit (+10 bouns points in exam).</p>
+<p>On top of this, there is a broad ecosystem of third-party tools and modules (like Jupyter Notebook) that offer more specialized data science functionality.</p>
 </section>
-<section id="exam">
-<span id="exams"></span><h3>Exam<a class="headerlink" href="#exam" title="Permalink to this headline">#</a></h3>
-<p>There will be one exam at the end of the semester. Through the exam you have the opportunity to demonstrate what you’ve learned in the course.</p>
-<p>The exam will focus on the conceptual understanding of the content but will also cover programming topics.</p>
-<p>More detail about the exams will be given during the semester.</p>
-</section>
-</section>
-<section id="grading">
-<h2>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">#</a></h2>
-<p>The final grade will be determined based on the following thresholds:</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Grade</p></th>
-<th class="head"><p>Final Course Grade</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1.0</p></td>
-<td><p>96 - 100</p></td>
-</tr>
-<tr class="row-odd"><td><p>1.3</p></td>
-<td><p>91 - 95</p></td>
-</tr>
-<tr class="row-even"><td><p>1.7</p></td>
-<td><p>85 - 90</p></td>
-</tr>
-<tr class="row-odd"><td><p>2.0</p></td>
-<td><p>80 - 84</p></td>
-</tr>
-<tr class="row-even"><td><p>2.3</p></td>
-<td><p>75 - 79</p></td>
-</tr>
-<tr class="row-odd"><td><p>2.7</p></td>
-<td><p>70 - 74</p></td>
-</tr>
-<tr class="row-even"><td><p>3.0</p></td>
-<td><p>65 - 69</p></td>
-</tr>
-<tr class="row-odd"><td><p>3.3</p></td>
-<td><p>60 - 64</p></td>
-</tr>
-<tr class="row-even"><td><p>3.7</p></td>
-<td><p>55 - 59</p></td>
-</tr>
-<tr class="row-odd"><td><p>4.0</p></td>
-<td><p>50 - 54</p></td>
-</tr>
-<tr class="row-even"><td><p>4.7</p></td>
-<td><p>15 - 49</p></td>
-</tr>
-<tr class="row-odd"><td><p>5.0</p></td>
-<td><p>0 - 14</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="tips-for-success">
-<h2>Tips for success<a class="headerlink" href="#tips-for-success" title="Permalink to this headline">#</a></h2>
-<p>Your success on this course depends very much on you and the effort you put into it:</p>
+<hr class="docutils" />
+<section id="jupyter-notebook">
+<h2>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://jupyter.org/">Jupyter Notebook</a> is an open-source application that allows you to create and share documents that contain code, equations, visualizations and narrative text.</p>
+<br>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/jupyter.png"><img alt="jupyter" class="bg-primary mb-1 align-center" src="../_images/jupyter.png" style="width: 300px;" /></a>
+<br>
+<p>A notebook is basically a list of cells and the cells contain either</p>
 <ol class="simple">
-<li><p>Complete all the preparation work before class.</p></li>
-<li><p>Do the readings.</p></li>
-<li><p>Do the application exercises. The earlier you start, the better.</p></li>
-<li><p>Don’t procrastinate. If something is confusing to you in Week 2, Week 3 will become more confusing, Week 4 even worse, and eventually you won’t know where to begin asking questions. Don’t let the week end with unanswered questions.</p></li>
+<li><p>explanatory text (written in markdown)</p></li>
+<li><p>executable code</p></li>
+<li><p>code output</p></li>
 </ol>
+<p>Note that we will use Jupyter Notebook inside the coding editor Visual Studio Code or Google Colab.</p>
+</section>
+<section id="colab">
+<span id="id1"></span><h2>Colab<a class="headerlink" href="#colab" title="Permalink to this headline">#</a></h2>
+<p>Colaboratory, or “Colab” for short, is a free to use product from Google Research. Colab allows anybody to write and execute python code through the browser, and is especially well suited to perform data analysis and machine learning.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Colab is a free Jupyter notebook environment that requires no setup, and runs entirely on the Cloud.</p>
+</div>
+<p>Watch this video to get a first impression of Colab:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/inN8seMm7UI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Let`s start your first Colab notebook to get an overview about some basic features:</p>
+<div class="tip admonition">
+<p class="admonition-title">Resources</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://colab.research.google.com/notebooks/basic_features_overview.ipynb">Colab basic features overview</a></p></li>
+</ul>
+</div>
+</section>
+<hr class="docutils" />
+<section id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">#</a></h2>
+<p>Markdown is one of the world’s most popular markup languages used in data science. Jupyter Notebooks use Markdown to provide an unified authoring framework for data science, combining code, its results, and commentary in Markdown.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Markdown is a simple way to format text that looks great on any device.</p>
+</div>
+<p>Markdown files are designed to be used in three ways:</p>
+<ol class="simple">
+<li><p>For communicating to decision makers, who want to focus on the conclusions, not the code behind the analysis.</p></li>
+<li><p>For collaborating with other data scientists, who are interested in both your conclusions, and how you reached them (i.e. the code).</p></li>
+<li><p>As an environment in which to do data science, as a modern day lab notebook where you can capture not only what you did, but also what you were thinking.</p></li>
+</ol>
+<p>Review this site to learn more about Markdown:</p>
+<div class="tip admonition">
+<p class="admonition-title">Resources</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://colab.research.google.com/notebooks/markdown_guide.ipynb">Interactive Colab Markdown guide</a></p></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -695,17 +539,17 @@ Therefore, as much as possible, you will be working on a variety of tasks and ac
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="course-schedule.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="programming-toolkit.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Course schedule</p>
+            <p class="prev-next-title">Programming toolkit</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="course-support.html" title="next page">
+    <a class='right-next' id="next-link" href="programming-syntax.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Course support</p>
+        <p class="prev-next-title">Python Syntax</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
