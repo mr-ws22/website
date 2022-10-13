@@ -398,18 +398,13 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation">
-     Installation
+    <a class="reference internal nav-link" href="#install-anaconda">
+     Install Anaconda
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use-conda-forge">
      Use conda-forge
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-new-environment">
-     Create a new environment
     </a>
    </li>
   </ul>
@@ -420,8 +415,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Installation
+    <a class="reference internal nav-link" href="#vs-code-installation">
+     VS Code installation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -432,11 +427,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#jupyter-notebook-extension">
      Jupyter Notebook extension
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-tutorials">
-     Optional tutorials
     </a>
    </li>
   </ul>
@@ -483,18 +473,13 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation">
-     Installation
+    <a class="reference internal nav-link" href="#install-anaconda">
+     Install Anaconda
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use-conda-forge">
      Use conda-forge
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-new-environment">
-     Create a new environment
     </a>
    </li>
   </ul>
@@ -505,8 +490,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Installation
+    <a class="reference internal nav-link" href="#vs-code-installation">
+     VS Code installation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -517,11 +502,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#jupyter-notebook-extension">
      Jupyter Notebook extension
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-tutorials">
-     Optional tutorials
     </a>
    </li>
   </ul>
@@ -541,35 +521,37 @@ title="Print to PDF"
 <p>This section contains an overview about the programming toolkit you will need for our course.</p>
 <p>You will need to install:</p>
 <ol class="simple">
-<li><p>the latest version of <a class="reference internal" href="#anaconda"><span class="std std-ref">Anaconda</span></a> (includes Python and some toolkits)</p></li>
-<li><p><a class="reference internal" href="#vscode"><span class="std std-ref">Visual Studio Code</span></a> (a code editor)</p></li>
+<li><p>the latest version of Anaconda (includes Python and some toolkits)</p></li>
+<li><p>Visual Studio Code (a code editor)</p></li>
 </ol>
 <p>Please read the following instructions.</p>
 <hr class="docutils" />
 <section id="anaconda">
 <span id="id1"></span><h2>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">#</a></h2>
-<p>The open-source <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda Individual Edition</a> is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Anaconda is a data science toolkit which already includes most of the data science modules we need.</p>
-</div>
+<p>The open-source Anaconda Individual Edition is one of the easiest ways to get started with data science projects. It is a data science toolkit which already includes most of the data science modules we need.</p>
 <section id="uninstall-your-old-version">
 <h3>Uninstall your old version<a class="headerlink" href="#uninstall-your-old-version" title="Permalink to this headline">#</a></h3>
-<p>To avoid compatibility problems with old versions of Anaconda, I recommend to uninstall Anaconda and install the latest version.</p>
+<p>To avoid compatibility problems with older versions of Anaconda, I recommend to uninstall Anaconda and install the latest version.</p>
 <section id="windows">
 <h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">#</a></h4>
+<div class="tip admonition">
+<p class="admonition-title">To do</p>
 <ol class="simple">
 <li><p>Open the file explorer.</p></li>
 <li><p>Delete your environment (anaconda3\envs) and package (anaconda3\pkgs) folders in your user folder.</p></li>
 <li><p>Open Add or remove programs and uninstall your Anaconda installation.</p></li>
 </ol>
+</div>
 </section>
 <section id="macos">
 <h4>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">#</a></h4>
-<ol class="simple">
-<li><p><a class="reference external" href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">Open your terminal</a></p></li>
-<li><p>Remove your entire Anaconda directory with <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span></code>. Depending on your installation, your anaconda3 directory will be in your root folder or in your opt folder. If you are not sure where anaconda is installed, simply enter all commands. Note that there will be no information printed in the terminal - it will just remove Anaconda.</p></li>
-</ol>
+<blockquote>
+<div><p>Open your terminal (<a class="reference external" href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">learn how to open your terminal</a>)</p>
+</div></blockquote>
+<div class="tip admonition">
+<p class="admonition-title">To do</p>
+<p>Remove your entire Anaconda directory with <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span></code>.</p>
+<p>If you are not sure where anaconda is installed, simply enter all commands:</p>
 <p>First try the opt folder:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf ~/opt/anaconda3
 </pre></div>
@@ -582,11 +564,11 @@ title="Print to PDF"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf ~/anaconda3
 </pre></div>
 </div>
-<p>Close the terminal and proceed with the next step.</p>
+</div>
 </section>
 </section>
-<section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
+<section id="install-anaconda">
+<h3>Install Anaconda<a class="headerlink" href="#install-anaconda" title="Permalink to this headline">#</a></h3>
 <p>Install the latest version of the Anaconda Individual Edition:</p>
 <div class="tip admonition">
 <p class="admonition-title">To do</p>
@@ -598,10 +580,14 @@ title="Print to PDF"
 <section id="use-conda-forge">
 <h3>Use conda-forge<a class="headerlink" href="#use-conda-forge" title="Permalink to this headline">#</a></h3>
 <p>Instead of the conda default package manager, we want to use the community-led alternative <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> to install Python modules.</p>
-<ul class="simple">
-<li><p>On <em>Windows</em> open the Start menu and open the “Anaconda Command Prompt”.</p></li>
-<li><p>On <em>macOS</em>: <a class="reference external" href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">Open a terminal</a></p></li>
-</ul>
+<blockquote>
+<div><p>On <em>Windows</em> open the Start menu and open the “Anaconda Command Prompt”.</p>
+</div></blockquote>
+<blockquote>
+<div><p>On <em>macOS</em>: Open your terminal (<a class="reference external" href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">learn how to open your terminal</a>)</p>
+</div></blockquote>
+<div class="tip admonition">
+<p class="admonition-title">To do</p>
 <p>Type this in your terminal to add <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels conda-forge
 </pre></div>
@@ -610,30 +596,15 @@ title="Print to PDF"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --set channel_priority strict
 </pre></div>
 </div>
-</section>
-<section id="create-a-new-environment">
-<h3>Create a new environment<a class="headerlink" href="#create-a-new-environment" title="Permalink to this headline">#</a></h3>
-<p>Now you can install some modules in a new Anaconda environment. We call this new environment <code class="docutils literal notranslate"><span class="pre">mr</span></code>.</p>
-<p>Copy this code and run it in your terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n mr <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9 pandas openpyxl jupyter scikit-learn altair vega_datasets matplotlib seaborn --y
-</pre></div>
 </div>
-<p>Depending on your machine, the installation process may take a few minutes.</p>
 <hr class="docutils" />
 </section>
 </section>
 <section id="visual-studio-code">
 <span id="vscode"></span><h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">#</a></h2>
-<p>Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>Visual Studio Code is a code editor that can be used with a variety of programming languages including Python.</p>
-</div>
-<br>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KMxo3T_MTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br>
-<section id="id2">
-<h3>Installation<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<section id="vs-code-installation">
+<h3>VS Code installation<a class="headerlink" href="#vs-code-installation" title="Permalink to this headline">#</a></h3>
 <p>Install VS Code:</p>
 <div class="tip admonition">
 <p class="admonition-title">To do</p>
@@ -644,13 +615,12 @@ title="Print to PDF"
 </section>
 <section id="install-extensions">
 <h3>Install extensions<a class="headerlink" href="#install-extensions" title="Permalink to this headline">#</a></h3>
-<p>The features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.</p>
-<p>Let’s install some extensions:</p>
+<p>VS Code extensions let you add tools to your installation to support your development workflow.</p>
 <div class="tip admonition">
 <p class="admonition-title">To do</p>
 <ul class="simple">
-<li><p>💾 Install <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a></p></li>
-<li><p>💾 Install <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">Live Share Extension Pack</a></p></li>
+<li><p>💾 Install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a></p></li>
+<li><p>💾 Install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">Live Share Extension Pack</a></p></li>
 </ul>
 </div>
 <p>Now close and restart VS Code.</p>
@@ -661,7 +631,7 @@ title="Print to PDF"
 <div class="tip admonition">
 <p class="admonition-title">To do</p>
 <ul class="simple">
-<li><p>💾 Install <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter extension</a></p></li>
+<li><p>💾 Install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter extension</a></p></li>
 </ul>
 </div>
 <p>Now close and restart VS Code.</p>
@@ -669,21 +639,13 @@ title="Print to PDF"
 <div class="tip admonition">
 <p class="admonition-title">To do</p>
 <ul class="simple">
-<li><p>Learn how to <a class="reference external" href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">use Jupyter Notebooks in VS Code</a></p></li>
+<li><p>Learn how to use <a class="reference external" href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">Jupyter Notebooks in VS Code</a></p></li>
 </ul>
 </div>
-<p>If you can’t select a kernel (like the Anaconda <code class="docutils literal notranslate"><span class="pre">base</span></code> kernel), try to close and restart VS Code once again.</p>
-</section>
-<section id="optional-tutorials">
-<h3>Optional tutorials<a class="headerlink" href="#optional-tutorials" title="Permalink to this headline">#</a></h3>
-<p>Here some resources to get familiar with VS Code:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://code.visualstudio.com/docs/getstarted/introvideos">Take a look at the intro videos</a></p></li>
-<li><p><a class="reference external" href="https://code.visualstudio.com/docs/datascience/data-science-tutorial">Data Science in VS Code tutorial</a></p></li>
-<li><p>Pro tips: <a class="reference external" href="https://www.youtube.com/watch?v=ifTF3ags0XI">25 VS Code Productivity Tips and Speed Hacks</a></p></li>
-</ul>
+<p>If you can’t select a kernel (like the so called <code class="docutils literal notranslate"><span class="pre">base</span></code> kernel), try to close and restart VS Code once again.</p>
 </section>
 </section>
+<hr class="docutils" />
 <div class="toctree-wrapper compound">
 </div>
 </section>
