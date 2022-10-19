@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Week 3 &#8212; Market Research</title>
+    <title>Mosaic plot &#8212; Market Research</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Week 2" href="week2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -174,29 +173,29 @@ const thebe_selector_output = ".output, .cell_output"
   Weekly materials
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="weeks-overview.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../weeks/weeks-overview.html">
    Overview
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="week1.html">
+    <a class="reference internal" href="../weeks/week1.html">
      Week 1
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="week2.html">
+    <a class="reference internal" href="../weeks/week2.html">
      Week 2
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week3.html">
      Week 3
     </a>
    </li>
@@ -253,6 +252,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/mr-ws22/website/blob/main/code/04-2-mosaic-plots.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -292,7 +320,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fweeks/week3.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fcode/04-2-mosaic-plots.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -320,7 +348,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/weeks/week3.md"
+        <a href="../_sources/code/04-2-mosaic-plots.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -331,7 +359,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -380,18 +408,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare">
-   Prepare
+  <a class="reference internal nav-link" href="#setup">
+   Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#participate">
-   Participate
+  <a class="reference internal nav-link" href="#data">
+   Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#practice">
-   Practice
+  <a class="reference internal nav-link" href="#mosaic-plots">
+   Mosaic plots
   </a>
  </li>
 </ul>
@@ -403,7 +431,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Week 3</h1>
+                <h1>Mosaic plot</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -414,18 +442,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare">
-   Prepare
+  <a class="reference internal nav-link" href="#setup">
+   Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#participate">
-   Participate
+  <a class="reference internal nav-link" href="#data">
+   Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#practice">
-   Practice
+  <a class="reference internal nav-link" href="#mosaic-plots">
+   Mosaic plots
   </a>
  </li>
 </ul>
@@ -438,33 +466,76 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="week-3">
-<h1>Week 3<a class="headerlink" href="#week-3" title="Permalink to this headline">#</a></h1>
-<hr class="docutils" />
-<section id="prepare">
-<span id="id1"></span><h2>Prepare<a class="headerlink" href="#prepare" title="Permalink to this headline">#</a></h2>
-<p>Introduction to Altair (Nr. 11): <a class="reference external" href="https://uwdata.github.io/visualization-curriculum/altair_introduction.html">📚</a></p>
-<p>Loans data (Nr. 12): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#explore-categorical">📚</a></p>
-<p>Simple bar chart (Nr. 13): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#contingency-tables-and-bar-plots">📚</a></p>
-<p>Dodged bar plot (Nr. 14): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables">📚</a></p>
-<p>Stacked bar plot (Nr. 15): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables">📚</a></p>
-<p>Standardized bar plot (Nr. 16): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables">📚</a></p>
-<p>Pie chart (Nr. 17): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#pie-charts">📚</a></p>
-<p>Contingency tables (Nr. 18): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#contingency-tables-and-bar-plots">📚</a></p>
-<p>Contingency tables with proportions (Nr. 19): <a class="reference external" href="https://openintro-ims.netlify.app/explore-categorical.html#row-and-column-proportions">📚</a></p>
-<hr class="docutils" />
-<hr class="docutils" />
+  <section class="tex2jax_ignore mathjax_ignore" id="mosaic-plot">
+<h1>Mosaic plot<a class="headerlink" href="#mosaic-plot" title="Permalink to this headline">#</a></h1>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">statsmodels.graphics.mosaicplot</span> <span class="kn">import</span> <span class="n">mosaic</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="participate">
-<span id="id2"></span><h2>Participate<a class="headerlink" href="#participate" title="Permalink to this headline">#</a></h2>
-<p>Download slides: <a class="reference external" href="https://drive.google.com/file/d/1-ZClN3oVlIwMtL8n1Z4dWyTIqH7kMdO4/view?usp=sharing">📑</a></p>
-<hr class="docutils" />
-<hr class="docutils" />
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ROOT</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/kirenz/modern-statistics/main/data/&quot;</span>
+<span class="n">DATA</span> <span class="o">=</span> <span class="s2">&quot;loans.csv&quot;</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">+</span> <span class="n">DATA</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">homeownership</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">homeownership</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">application_type</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">application_type</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="practice">
-<span id="id3"></span><h2>Practice<a class="headerlink" href="#practice" title="Permalink to this headline">#</a></h2>
-<hr class="docutils" />
-<p>Back to <a class="reference internal" href="../docs/course-schedule.html"><span class="doc std std-doc">course schedule</span></a> ⏎</p>
+<section id="mosaic-plots">
+<h2>Mosaic plots<a class="headerlink" href="#mosaic-plots" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mosaic plot for homeownership alone</span>
+<span class="n">mosaic</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Moasic plot for homeownership&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04-2-mosaic-plots_6_0.png" src="../_images/04-2-mosaic-plots_6_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mosaic plot for displaying the relationship between homeownership and application type.</span>
+<span class="n">mosaic</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">,</span> <span class="s1">&#39;application_type&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Relationship between homeownership and application type&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04-2-mosaic-plots_7_0.png" src="../_images/04-2-mosaic-plots_7_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mosaic plot where loans are grouped by homeownership </span>
+<span class="c1"># after they have been divided into application types.</span>
+
+<span class="n">mosaic</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">,</span> <span class="s1">&#39;homeownership&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04-2-mosaic-plots_8_0.png" src="../_images/04-2-mosaic-plots_8_0.png" />
+</div>
+</div>
 </section>
 </section>
 
@@ -481,7 +552,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./weeks"
+            path: "./code"
         },
         predefinedOutput: true
     }
@@ -495,13 +566,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="week2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Week 2</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
