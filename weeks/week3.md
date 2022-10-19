@@ -45,8 +45,6 @@ Contingency tables with proportions (Nr. 19): [📚](https://openintro-ims.netli
 Download slides: [📑](https://drive.google.com/file/d/1-ZClN3oVlIwMtL8n1Z4dWyTIqH7kMdO4/view?usp=sharing)
 
 
-Go to this GitHub-Repo: [umfrage](https://github.com/kirenz/umfrage)
-
 
 ---
 
