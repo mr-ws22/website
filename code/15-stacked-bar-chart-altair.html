@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Mosaic plot &#8212; Market Research</title>
+    <title>Stacked bar chart &#8212; Market Research</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -260,7 +260,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/mr-ws22/website/blob/main/code/04-2-mosaic-plots.ipynb"
+        <a href="https://colab.research.google.com/github/mr-ws22/website/blob/main/code/15-stacked-bar-chart-altair.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -320,7 +320,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fcode/04-2-mosaic-plots.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fcode/15-stacked-bar-chart-altair.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -348,7 +348,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/code/04-2-mosaic-plots.ipynb"
+        <a href="../_sources/code/15-stacked-bar-chart-altair.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -418,8 +418,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mosaic-plots">
-   Mosaic plots
+  <a class="reference internal nav-link" href="#chart">
+   Chart
   </a>
  </li>
 </ul>
@@ -431,7 +431,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Mosaic plot</h1>
+                <h1>Stacked bar chart</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -452,8 +452,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mosaic-plots">
-   Mosaic plots
+  <a class="reference internal nav-link" href="#chart">
+   Chart
   </a>
  </li>
 </ul>
@@ -466,15 +466,18 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="mosaic-plot">
-<h1>Mosaic plot<a class="headerlink" href="#mosaic-plot" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="stacked-bar-chart">
+<h1>Stacked bar chart<a class="headerlink" href="#stacked-bar-chart" title="Permalink to this headline">#</a></h1>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">statsmodels.graphics.mosaicplot</span> <span class="kn">import</span> <span class="n">mosaic</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -484,7 +487,7 @@ title="Print to PDF"
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ROOT</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/kirenz/modern-statistics/main/data/&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ROOT</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/kirenz/datasets/master/&quot;</span>
 <span class="n">DATA</span> <span class="o">=</span> <span class="s2">&quot;loans.csv&quot;</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">+</span> <span class="n">DATA</span><span class="p">)</span>
@@ -496,44 +499,33 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="mosaic-plots">
-<h2>Mosaic plots<a class="headerlink" href="#mosaic-plots" title="Permalink to this headline">#</a></h2>
+<section id="chart">
+<h2>Chart<a class="headerlink" href="#chart" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mosaic plot for homeownership alone</span>
-<span class="n">mosaic</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Moasic plot for homeownership&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;homeownership&#39;</span><span class="p">,</span>
+            <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;-y&#39;</span><span class="p">,</span>
+            <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Homeownership&quot;</span><span class="p">,</span> 
+                          <span class="n">titleAnchor</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> 
+                          <span class="n">labelAngle</span><span class="o">=</span><span class="mi">0</span><span class="p">)),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;count(homeownership)&#39;</span><span class="p">,</span> 
+            <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Count&quot;</span><span class="p">,</span> 
+                          <span class="n">titleAnchor</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">)),</span>
+    <span class="n">color</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;application_type&#39;</span><span class="p">,</span> 
+                     <span class="n">legend</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Type&quot;</span><span class="p">))</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;This is a stacked bar chart&#39;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">350</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">150</span>
+<span class="p">)</span><span class="o">.</span><span class="n">configure_title</span><span class="p">(</span>
+    <span class="n">fontSize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+    <span class="n">font</span><span class="o">=</span><span class="s1">&#39;Arial&#39;</span><span class="p">,</span>
+    <span class="n">anchor</span><span class="o">=</span><span class="s1">&#39;start&#39;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-2-mosaic-plots_6_0.png" src="../_images/04-2-mosaic-plots_6_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mosaic plot for displaying the relationship between homeownership and application type.</span>
-<span class="n">mosaic</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">,</span> <span class="s1">&#39;application_type&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Relationship between homeownership and application type&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-2-mosaic-plots_7_0.png" src="../_images/04-2-mosaic-plots_7_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mosaic plot where loans are grouped by homeownership </span>
-<span class="c1"># after they have been divided into application types.</span>
-
-<span class="n">mosaic</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">,</span> <span class="s1">&#39;homeownership&#39;</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-2-mosaic-plots_8_0.png" src="../_images/04-2-mosaic-plots_8_0.png" />
 </div>
 </div>
 </section>

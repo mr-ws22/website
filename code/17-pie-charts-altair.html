@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Row and column proportions &#8212; Market Research</title>
+    <title>Pie charts &#8212; Market Research</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -260,7 +260,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/mr-ws22/website/blob/main/code/04-3-row-column-proportions.ipynb"
+        <a href="https://colab.research.google.com/github/mr-ws22/website/blob/main/code/17-pie-charts-altair.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -320,7 +320,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fcode/04-3-row-column-proportions.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fcode/17-pie-charts-altair.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -348,7 +348,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/code/04-3-row-column-proportions.ipynb"
+        <a href="../_sources/code/17-pie-charts-altair.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -416,23 +416,28 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#data">
    Data
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contingency-table-with-proportions">
-   Contingency table with proportions
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#row-proportions">
-     Row proportions
+    <a class="reference internal nav-link" href="#data-import">
+     Data import
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#column-proportions">
-     Column proportions
+    <a class="reference internal nav-link" href="#data-corrections">
+     Data corrections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-lists">
+     Variable lists
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chart">
+   Chart
+  </a>
  </li>
 </ul>
 
@@ -443,7 +448,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Row and column proportions</h1>
+                <h1>Pie charts</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -462,23 +467,28 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#data">
    Data
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contingency-table-with-proportions">
-   Contingency table with proportions
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#row-proportions">
-     Row proportions
+    <a class="reference internal nav-link" href="#data-import">
+     Data import
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#column-proportions">
-     Column proportions
+    <a class="reference internal nav-link" href="#data-corrections">
+     Data corrections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-lists">
+     Variable lists
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chart">
+   Chart
+  </a>
  </li>
 </ul>
 
@@ -490,13 +500,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="row-and-column-proportions">
-<h1>Row and column proportions<a class="headerlink" href="#row-and-column-proportions" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="pie-charts">
+<h1>Pie charts<a class="headerlink" href="#pie-charts" title="Permalink to this headline">#</a></h1>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DataTransformerRegistry.enable(&#39;default&#39;)
 </pre></div>
 </div>
 </div>
@@ -504,35 +524,59 @@ title="Print to PDF"
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
+<section id="data-import">
+<h3>Data import<a class="headerlink" href="#data-import" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ROOT</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/kirenz/datasets/master/&quot;</span>
 <span class="n">DATA</span> <span class="o">=</span> <span class="s2">&quot;loans.csv&quot;</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">+</span> <span class="n">DATA</span><span class="p">)</span>
-
-<span class="n">df</span><span class="o">.</span><span class="n">homeownership</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">homeownership</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-corrections">
+<h3>Data corrections<a class="headerlink" href="#data-corrections" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">homeownership</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">homeownership</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">application_type</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">application_type</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="contingency-table-with-proportions">
-<h2>Contingency table with proportions<a class="headerlink" href="#contingency-table-with-proportions" title="Permalink to this headline">#</a></h2>
-<p>Normalize by dividing all values by the sum of values:</p>
-<ul class="simple">
-<li><p>If passed ‘all’ or True, will normalize over all values.</p></li>
-<li><p>If passed ‘index’ will normalize over each row.</p></li>
-<li><p>If passed ‘columns’ will normalize over each column.</p></li>
-<li><p>If margins is True, will also normalize margin values.</p></li>
-</ul>
-<section id="row-proportions">
-<h3>Row proportions<a class="headerlink" href="#row-proportions" title="Permalink to this headline">#</a></h3>
+<section id="variable-lists">
+<h3>Variable lists<a class="headerlink" href="#variable-lists" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A contingency table with row proportions for the application type and homeownership variables.</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">application_type</span>	<span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">homeownership</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create data for pie chart</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">homeownership</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set index to column</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># rename columns</span>
+<span class="n">source</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;homeownership&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">source</span>
 </pre></div>
 </div>
 </div>
@@ -554,100 +598,106 @@ title="Print to PDF"
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>homeownership</th>
-      <th>mortgage</th>
-      <th>own</th>
-      <th>rent</th>
-    </tr>
-    <tr>
-      <th>application_type</th>
       <th></th>
-      <th></th>
-      <th></th>
+      <th>category</th>
+      <th>value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>individual</th>
-      <td>45.14</td>
-      <td>13.76</td>
-      <td>41.11</td>
+      <th>0</th>
+      <td>mortgage</td>
+      <td>4789</td>
     </tr>
     <tr>
-      <th>joint</th>
-      <td>63.55</td>
-      <td>12.24</td>
-      <td>24.21</td>
+      <th>1</th>
+      <td>rent</td>
+      <td>3858</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>own</td>
+      <td>1353</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<ul class="simple">
-<li><p>0.411 corresponds to the proportion of individual applicants who rent.</p></li>
-</ul>
 </section>
-<section id="column-proportions">
-<h3>Column proportions<a class="headerlink" href="#column-proportions" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="chart">
+<h2>Chart<a class="headerlink" href="#chart" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A contingency table with row proportions for the application type and homeownership variables.</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">application_type</span>	<span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">homeownership</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">theta</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Theta</span><span class="p">(</span><span class="s2">&quot;value:Q&quot;</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;category:N&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">pie</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">mark_arc</span><span class="p">(</span><span class="n">outerRadius</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;category:N&quot;</span><span class="p">)</span>
+
+<span class="n">pie</span> <span class="o">+</span> <span class="n">text</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
+<div class="output text_html">
+<div id="altair-viz-e9e09f266c4a43efa39cfbb3c0e4ced6"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-e9e09f266c4a43efa39cfbb3c0e4ced6") {
+      outputDiv = document.getElementById("altair-viz-e9e09f266c4a43efa39cfbb3c0e4ced6");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
     }
 
-    .dataframe thead th {
-        text-align: right;
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
     }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>homeownership</th>
-      <th>mortgage</th>
-      <th>own</th>
-      <th>rent</th>
-    </tr>
-    <tr>
-      <th>application_type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>individual</th>
-      <td>80.16</td>
-      <td>86.47</td>
-      <td>90.62</td>
-    </tr>
-    <tr>
-      <th>joint</th>
-      <td>19.84</td>
-      <td>13.53</td>
-      <td>9.38</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": {"type": "arc", "outerRadius": 100}, "encoding": {"color": {"field": "category", "legend": null, "type": "nominal"}, "theta": {"field": "value", "stack": true, "type": "quantitative"}}}, {"mark": {"type": "text", "radius": 130, "size": 12}, "encoding": {"color": {"field": "category", "legend": null, "type": "nominal"}, "text": {"field": "category", "type": "nominal"}, "theta": {"field": "value", "stack": true, "type": "quantitative"}}}], "data": {"name": "data-5690a8b392b08bad2c1d644b7a4a7ea8"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-5690a8b392b08bad2c1d644b7a4a7ea8": [{"category": "mortgage", "value": 4789}, {"category": "rent", "value": 3858}, {"category": "own", "value": 1353}]}}, {"mode": "vega-lite"});
+</script></div></div>
 </div>
-<ul class="simple">
-<li><p>The value 0.906 indicates that 90.6% of renters applied as individuals for the loan.</p></li>
-<li><p>This rate is higher compared to loans from people with mortgages (80.2%) or who own their home (86.5%)</p></li>
-</ul>
-</section>
 </section>
 </section>
 

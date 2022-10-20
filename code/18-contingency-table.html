@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Take a look at the data: loans &#8212; Market Research</title>
+    <title>Contingency table &#8212; Market Research</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -260,7 +260,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/mr-ws22/website/blob/main/code/04-1-data-overview.ipynb"
+        <a href="https://colab.research.google.com/github/mr-ws22/website/blob/main/code/18-contingency-table.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -320,7 +320,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fcode/04-1-data-overview.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/mr-ws22/website/issues/new?title=Issue%20on%20page%20%2Fcode/18-contingency-table.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -348,7 +348,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/code/04-1-data-overview.ipynb"
+        <a href="../_sources/code/18-contingency-table.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -423,11 +423,6 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-structure">
-     Data structure
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-corrections">
      Data corrections
     </a>
@@ -438,6 +433,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#analysis">
    Analysis
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Contingency table
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -448,7 +450,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Take a look at the data: loans</h1>
+                <h1>Contingency table</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -474,11 +476,6 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-structure">
-     Data structure
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-corrections">
      Data corrections
     </a>
@@ -489,6 +486,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#analysis">
    Analysis
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Contingency table
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -500,14 +504,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="take-a-look-at-the-data-loans">
-<h1>Take a look at the data: loans<a class="headerlink" href="#take-a-look-at-the-data-loans" title="Permalink to this headline">#</a></h1>
-<p>This data set represents thousands of loans made through the Lending Club platform, which is a platform that allows individuals to lend to other individuals.</p>
-<p>Take a closer look at the following variables:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">home_ownership</span></code>: The ownership status of the applicant’s residence.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">application_type</span></code>: The type of application: either individual or joint.</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="contingency-table">
+<h1>Contingency table<a class="headerlink" href="#contingency-table" title="Permalink to this headline">#</a></h1>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
@@ -533,77 +531,13 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="data-structure">
-<h3>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Only show our two variables</span>
-<span class="n">df</span><span class="p">[[</span><span class="s2">&quot;homeownership&quot;</span><span class="p">,</span> <span class="s2">&quot;application_type&quot;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show info about variables</span>
-<span class="n">df</span><span class="p">[[</span><span class="s2">&quot;homeownership&quot;</span><span class="p">,</span> <span class="s2">&quot;application_type&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="data-corrections">
 <h3>Data corrections<a class="headerlink" href="#data-corrections" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change data format from object to category</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can also select variables with df.</span>
-<span class="n">df</span><span class="o">.</span><span class="n">application_type</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">application_type</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show info</span>
-<span class="n">df</span><span class="p">[[</span><span class="s2">&quot;homeownership&quot;</span><span class="p">,</span> <span class="s2">&quot;application_type&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show levels of categorical variable</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show levels of categorical variable</span>
-<span class="n">df</span><span class="o">.</span><span class="n">application_type</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -612,30 +546,28 @@ title="Print to PDF"
 </section>
 <section id="analysis">
 <h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>Contingency table<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Summarizing the frequencies for each value</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;homeownership&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># contingency table for application type and homeownership.</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">],</span> <span class="c1"># rows</span>
+            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">],</span>    <span class="c1"># columns</span>
+            <span class="n">margins</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>          <span class="c1"># no total count</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Summarizing the frequencies for each value</span>
-<span class="n">df</span><span class="o">.</span><span class="n">application_type</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;application_type&#39;</span><span class="p">],</span> 
+            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;homeownership&#39;</span><span class="p">],</span>    
+            <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>          <span class="c1"># total count</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data summary for categorical variables</span>
-<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+</section>
 </section>
 </section>
 
