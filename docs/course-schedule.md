@@ -20,3 +20,12 @@ This overview will be updated as the semester progresses.
 |	S	|	2	|	8	|	18.10.	|	Sampling methods	|	[📚](https://openintro-ims.netlify.app/data-design.html#sampling-principles-strategies)	|		|		|	[☑️](https://forms.gle/SnQsTPKF5CRQ1Wa49)	|
 |	S	|	2	|	9	|	18.10.	|	Experiments	|	[📚](https://openintro-ims.netlify.app/data-design.html#experiments)	|		|		|	[☑️](https://forms.gle/6Tu92Ez83XANW8Un6)	|
 |	S	|	2	|	10	|	18.10.	|	Observations	|	[📚](https://openintro-ims.netlify.app/data-design.html#observational-studies)	|		|		|	[☑️](https://forms.gle/V36KmsTjeH2finms9)	|
+|	MR	|	3	|	11	|	25.10.	|	Introduction to Altair	|	[📚](https://uwdata.github.io/visualization-curriculum/altair_introduction.html)	|	[📑](https://drive.google.com/file/d/1-ZClN3oVlIwMtL8n1Z4dWyTIqH7kMdO4/view?usp=sharing)	|		|		|
+|	S	|	3	|	12	|	25.10.	|	Loans data	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#explore-categorical)	|		|		|		|
+|	S	|	3	|	13	|	25.10.	|	Simple bar chart	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#contingency-tables-and-bar-plots)	|		|		|		|
+|	S	|	3	|	14	|	25.10.	|	Dodged bar plot	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables)	|		|		|		|
+|	S	|	3	|	15	|	25.10.	|	Stacked bar plot	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables)	|		|		|		|
+|	S	|	3	|	16	|	25.10.	|	Standardized bar plot	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables)	|		|		|		|
+|	S	|	3	|	17	|	25.10.	|	Pie chart	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#pie-charts)	|		|		|		|
+|	S	|	3	|	18	|	25.10.	|	Contingency tables	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#contingency-tables-and-bar-plots)	|		|		|		|
+|	S	|	3	|	19	|	25.10.	|	Contingency tables with proportions	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#row-and-column-proportions)	|		|		|		|
