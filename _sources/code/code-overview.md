@@ -11,4 +11,4 @@
 - [17. Pie chart](../code/17-pie-charts-altair.ipynb)
 - [18. Contingency tables](../code/18-b-contingency-table-bar-plot.ipynb)
 
---
+---
