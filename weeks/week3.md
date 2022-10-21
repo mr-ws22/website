@@ -54,6 +54,7 @@ Download slides: [📑](https://drive.google.com/file/d/1-ZClN3oVlIwMtL8n1Z4dWyT
 (practice)=
 ## Practice
 
+Code overview: [](../code/code-overview.md)
 
 
 
