@@ -10,7 +10,7 @@
 Scatterplot (Nr. 21): [📚](https://openintro-ims.netlify.app/explore-numerical.html#scatterplots)
 
 
-Dot plot, mean, median and mode (Nr. 22): [📚](https://openintro-ims.netlify.app/explore-numerical.html#dotplots)
+Dot plot mean median and mode (Nr. 22): [📚](https://openintro-ims.netlify.app/explore-numerical.html#dotplots)
 
 
 Histogram  (Nr. 23): [📚](https://openintro-ims.netlify.app/explore-numerical.html#histograms)
@@ -26,7 +26,6 @@ Robust statistics and transformations (Nr. 26): [📚](https://openintro-ims.net
 
 
 Comparing numerical data across groups (Nr. 27): [📚](https://openintro-ims.netlify.app/explore-categorical.html#comparing-numerical-data-across-groups)
-
 
 ---
 
