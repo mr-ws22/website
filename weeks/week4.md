@@ -36,10 +36,12 @@ Comparing numerical data across groups (Nr. 27): [📚](https://openintro-ims.ne
 (participate)=
 ## Participate
 
+
 Download slides: [📑](https://drive.google.com/file/d/1-h3_Xa33mqe_tVSYzOstE3rqzZbdzid0/view?usp=sharing)
 
 
-Code overview: [](../code/code-overview.md)
+
+Code overview: [🖥](../code/code-overview.md)
 
 
 ---
