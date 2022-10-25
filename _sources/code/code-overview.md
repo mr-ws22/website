@@ -10,5 +10,6 @@
 - [16. Standardized bar plot](../code/16-standardized-bar-chart-altair.ipynb)
 - [17. Pie chart](../code/17-pie-charts-altair.ipynb)
 - [18. Contingency tables](../code/18-b-contingency-table-bar-plot.ipynb)
+- [19. Contingency tables with proportions](../code/19-row-column-proportions.ipynb)
 
 ---
