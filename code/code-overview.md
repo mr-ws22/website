@@ -77,8 +77,8 @@ Create a:
 
 - [21. Scatterplot](../code/21-scatterplot-paired-data-altair.ipynb)
 - [22. Dot plot mean median and mode](../code/22-dot-plots-mean-altair.ipynb)
-- [23. Histogram ](../code/23a-histograms-altair.ipynb)
-- [24. Variance and standard deviation (kernel density plot)](../code/24b-histograms-kernel-density-altair.ipynb)
+- [23. Histogram ](../code/23-histograms-altair.ipynb)
+- [24. Variance and standard deviation (kernel density plot)](../code/24-histograms-kernel-density-altair.ipynb)
 - [25. Box Plot](../code/25-box-plot-altair.ipynb)
 - [26. Robust statistics and transformations](../code/26-transforming-data-altair.ipynb)
 - [27. Comparing numerical data across groups](../code/27-comparisons-across-groups-altair.ipynb)
