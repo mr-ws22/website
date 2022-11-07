@@ -2,7 +2,7 @@
 
 ## Exam
 
-In the exam, you will get a copy of the following cheat sheets: 
+In the exam, you will get a copy of the following code cheat sheets: 
 
 - [Pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
@@ -17,7 +17,7 @@ In the exam, you will get a copy of the following cheat sheets:
 
 ```{note}
 
-You should be able to use Pandas to:
+You should be able to:
 
 - Import CSV-data
 - Create a crosstable
@@ -36,8 +36,7 @@ You should be able to use Pandas to:
 
 You should be able to:
 
-
-- Get a data overview
+- Get a data overview and show the dataframe metadata
 - Rename columns
 - Change data types to numeric, category or ordinal (using loops)
 - Recode variables (e.g. from integers to likert scale)
@@ -53,7 +52,21 @@ You should be able to:
 ## Week 3
 
 - [11. Introduction to Altair](../code/11-altair_introduction_p.ipynb) (not relevant)
+
+<br>
+
 - [12. Loans data](../code/12-data-overview.ipynb)
+
+```{note}
+
+You should be able to:
+
+- Summarize the frequencies of categorical variables 
+- Show levels of categorical variables
+- Obtain a data summary for categorical variables
+```
+
+
 - [13. Simple bar chart](../code/13-bar-chart-altair.ipynb)
 - [14. Dodged bar plot](../code/14-dodged-bar-chart-altair.ipynb) (not relevant)
 - [15. Stacked bar plot](../code/15-stacked-bar-chart-altair.ipynb)
@@ -66,18 +79,13 @@ You should be able to:
 
 ```{note}
 
-You should be able to:
+You should be able to create:
 
-- Summarize the frequencies of categorical variables 
-- Show levels of categorical variables
-- Obtain a data summary for categorical variables
-
-... create a:
-
-- Bar plot
-- Stacked bar plot
-- Standardized bar plot 
-- Contingeny table (crosstable) with proportions
+- Bar plots 
+- Customized plots (change axis title, sort values, ...)
+- Stacked bar plots
+- Standardized bar plots 
+- Contingeny tables (crosstable) with proportions
 
 ```
 
@@ -87,7 +95,13 @@ You should be able to:
 
 - [20. Data Analysis Case: GitHub "umfrage"](https://github.com/kirenz/umfrage) (see week 2: you should have a local copy of this repo called `umfrage-main`) 
 
-<br>
+```{note}
+You should be able to:
+
+- Obtain statistical summaries of numerical and categorical data
+- Create appropriate plots and customize their axes
+
+```
 
 - [21. Scatterplot](../code/21-scatterplot-paired-data-altair.ipynb)
 - [22. Dot plot mean median and mode](../code/22-dot-plots-mean-altair.ipynb)
@@ -97,17 +111,9 @@ You should be able to:
 - [26. Robust statistics and transformations](../code/26-transforming-data-altair.ipynb)
 - [27. Comparing numerical data across groups](../code/27-comparisons-across-groups-altair.ipynb)
 
-Optional:
-
-- [Mapping data](../code/mapping-data-altair.ipynb)
-
-
-
 
 ```{note}
 You should be able to create:
-
-
 
 - Scatter plots
 - Histograms
@@ -117,3 +123,9 @@ You should be able to create:
 - Plots to compare numerical data across groups
 
 ```
+
+Optional:
+
+- [Mapping data](../code/mapping-data-altair.ipynb)
+
+---
