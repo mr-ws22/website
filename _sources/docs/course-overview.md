@@ -17,7 +17,7 @@ For a more detailed semester overview, take a look at the [course-schedule](../d
 |	1	|	11.10.	|	Introduction	|	Introduction to data	|	[📑](https://drive.google.com/file/d/1-WrEI0wxKQX_MJyt6sAvy4UVuNo0EVWS/view?usp=sharing)	|	[📁](../weeks/week1.md)	|
 |	2	|	18.10.	|	Data preparation	|	Study design	|	[📑](https://drive.google.com/file/d/1-3uVavxMAvDNMnRiN7sXsZRTReRNsZpj/view?usp=sharing)	|	[📁](../weeks/week2.md)	|
 |	3	|	25.10.	|	Exploratory data analysis	|	Exploratory data analysis	|	[📑](https://drive.google.com/file/d/1-ZClN3oVlIwMtL8n1Z4dWyTIqH7kMdO4/view?usp=sharing)	|	[📁](../weeks/week3.md)	|
-|	4	|	08.11.	|	Data	|	Exploratory data analysis	|		|		|
+|	4	|	08.11.	|	Data	|	Exploratory data analysis	|	[📑](https://drive.google.com/file/d/1-h3_Xa33mqe_tVSYzOstE3rqzZbdzid0/view?usp=sharing)	|	[📁](../weeks/week4.md)	|
 |	5	|	15.11.	|	Introduction to models	|	Regression modeling	|		|		|
 |	6	|	22.11.	|	Regression modeling	|	Regression modeling	|		|		|
 |	7	|	29.11.	|	Regression modeling	|	Regression modeling	|		|		|
