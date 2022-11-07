@@ -70,3 +70,34 @@ Create a:
 ---
 
 ## Week 4
+
+- [20. Data Analysis Case: GitHub "umfrage"](https://github.com/kirenz/umfrage) (we started in week 2) 
+
+
+
+- [21. Scatterplot](../code/21-scatterplot-paired-data-altair.ipynb)
+- [22. Dot plot mean median and mode](../code/22-dot-plots-mean-altair.ipynb)
+- [23. Histogram ](../code/23a-histograms-altair.ipynb)
+- [24. Variance and standard deviation (kernel density plot)](../code/24b-histograms-kernel-density-altair.ipynb)
+- [25. Box Plot](../code/25-box-plot-altair.ipynb)
+- [26. Robust statistics and transformations](../code/26-transforming-data-altair.ipynb)
+- [27. Comparing numerical data across groups](../code/27-comparisons-across-groups-altair.ipynb)
+
+Optional:
+
+- [Mapping data](../code/mapping-data-altair.ipynb)
+
+
+
+You should be able to create:
+
+```{notes}
+
+- Scatter plots
+- Histograms
+- Kernel density plots
+- Boxplots
+- Plots with a log transformation (robust transformations)
+- Plots to compare numerical data across groups
+
+```
