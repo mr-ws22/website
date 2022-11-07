@@ -6,7 +6,7 @@ In the exam, you will get a copy of the following code cheat sheets:
 
 - [Pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
-- [Altair marks](../_static/img/altair-marks.png)
+- [Altair marks](../code/altair-marks.md)
 
 ---
 
