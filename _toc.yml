@@ -9,6 +9,7 @@ parts:
  #  - file: docs/course-faq.md
   - caption: Programming
     chapters:
+    - file: code/code-overview.md
     - file: docs/programming-toolkit.md
     - file: docs/programming-environment.md 
     - file: docs/programming-fundamentals.ipynb    
