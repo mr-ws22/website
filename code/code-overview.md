@@ -52,7 +52,7 @@ You should be able to:
 
 You should be able to:
 
-```{notes}
+```{note}
 
 - Summarize the frequencies of categorical variables 
 - Show levels of categorical variables
@@ -91,7 +91,7 @@ Optional:
 
 You should be able to create:
 
-```{notes}
+```{note}
 
 - Scatter plots
 - Histograms
