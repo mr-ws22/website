@@ -73,7 +73,7 @@ Create a:
 
 - [20. Data Analysis Case: GitHub "umfrage"](https://github.com/kirenz/umfrage) (we started in week 2) 
 
-
+<br>
 
 - [21. Scatterplot](../code/21-scatterplot-paired-data-altair.ipynb)
 - [22. Dot plot mean median and mode](../code/22-dot-plots-mean-altair.ipynb)
