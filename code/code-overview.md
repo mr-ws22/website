@@ -39,7 +39,7 @@ You should be able to:
 
 ## Week 3
 
-- [11. Introduction to Altair](../code/11-altair_introduction_p.ipynb)
+- [11. Introduction to Altair](../code/11-altair_introduction_p.ipynb) (not relevant)
 - [12. Loans data](../code/12-data-overview.ipynb)
 - [13. Simple bar chart](../code/13-bar-chart-altair.ipynb)
 - [14. Dodged bar plot](../code/14-dodged-bar-chart-altair.ipynb) (not relevant)
