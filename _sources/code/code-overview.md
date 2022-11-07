@@ -4,9 +4,10 @@
 
 [First Data Analysis (Nr. 4): 💻](../ae/ae1/01-1b-netflix-g.ipynb)
 
-You should be able to use Pandas to:
 
 ```{note}
+
+You should be able to use Pandas to:
 
 - Import CSV-data
 - Create a crosstable
@@ -20,9 +21,11 @@ You should be able to use Pandas to:
 [GitHub-Repo: umfrage](https://github.com/kirenz/umfrage)
 
 
-You should be able to:
 
 ```{note}
+
+You should be able to:
+
 
 - Get a data overview
 - Rename columns
@@ -50,15 +53,16 @@ You should be able to:
 - [19. Contingency tables with proportions](../code/19-row-column-proportions.ipynb)
 
 
-You should be able to:
 
 ```{note}
+
+You should be able to:
 
 - Summarize the frequencies of categorical variables 
 - Show levels of categorical variables
 - Obtain a data summary for categorical variables
 
-Create a:
+... create a:
 
 - Bar plot
 - Stacked bar plot
@@ -89,9 +93,11 @@ Optional:
 
 
 
-You should be able to create:
 
 ```{note}
+You should be able to create:
+
+
 
 - Scatter plots
 - Histograms
