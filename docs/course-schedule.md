@@ -29,3 +29,11 @@ This overview will be updated as the semester progresses.
 |	S	|	3	|	17	|	25.10.	|	Pie chart	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#pie-charts)	|		|		|		|
 |	S	|	3	|	18	|	25.10.	|	Contingency tables	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#contingency-tables-and-bar-plots)	|		|		|		|
 |	S	|	3	|	19	|	25.10.	|	Contingency tables with proportions	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#row-and-column-proportions)	|		|		|		|
+|	MR	|	4	|	20	|	08.11.	|	Date analysis case	|		|	[📑](https://drive.google.com/file/d/1-h3_Xa33mqe_tVSYzOstE3rqzZbdzid0/view?usp=sharing)	|		|		|
+|	S	|	4	|	21	|	08.11.	|	Scatterplot	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#scatterplots)	|		|		|		|
+|	S	|	4	|	22	|	08.11.	|	Dot plot mean median and mode	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#dotplots)	|		|		|		|
+|	S	|	4	|	23	|	08.11.	|	Histogram 	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#histograms)	|		|		|		|
+|	S	|	4	|	24	|	08.11.	|	Variance and standard deviation	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#histograms)	|		|		|		|
+|	S	|	4	|	25	|	08.11.	|	Box Plot	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#boxplots)	|		|		|		|
+|	S	|	4	|	26	|	08.11.	|	Robust statistics and transformations	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#robust-statistics)	|		|		|		|
+|	S	|	4	|	27	|	08.11.	|	Comparing numerical data across groups	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#comparing-numerical-data-across-groups)	|		|		|		|
