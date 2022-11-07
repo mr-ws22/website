@@ -48,7 +48,7 @@ You should be able to:
 - [14. Dodged bar plot](../code/14-dodged-bar-chart-altair.ipynb) (not relevant)
 - [15. Stacked bar plot](../code/15-stacked-bar-chart-altair.ipynb)
 - [16. Standardized bar plot](../code/16-standardized-bar-chart-altair.ipynb)
-- [17. Pie chart](../code/17-pie-charts-altair.ipynb)
+- [17. Pie chart](../code/17-pie-charts-altair.ipynb) (not relevant)
 - [18. Contingency tables](../code/18-contingency-table-bar-plot.ipynb)
 - [19. Contingency tables with proportions](../code/19-row-column-proportions.ipynb)
 
