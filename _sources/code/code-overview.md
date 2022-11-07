@@ -1,5 +1,15 @@
 # Code overview
 
+## Exam
+
+In the exam, you will get a copy of the following cheat sheets: 
+
+- [Pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+
+- [Altair marks](../_static/img/altair-marks.png)
+
+---
+
 ## Week 1
 
 [First Data Analysis (Nr. 4): 💻](../ae/ae1/01-1b-netflix-g.ipynb)
