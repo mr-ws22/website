@@ -75,7 +75,7 @@ You should be able to:
 
 ## Week 4
 
-- [20. Data Analysis Case: GitHub "umfrage"](https://github.com/kirenz/umfrage) (we started in week 2) 
+- [20. Data Analysis Case: GitHub "umfrage"](https://github.com/kirenz/umfrage) (see week 2: you should have a local copy of this repo called `umfrage-main`) 
 
 <br>
 
