@@ -6,8 +6,6 @@ This page contains a detailed overview about the topics, readings,  application 
 This overview will be updated as the semester progresses.
 :::
 
-
-
 |	Lecture	|	Week	|	Nr.	|	Date	|	Topic	|	Prepare	|	Slides	|	AE	|	Q	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|	---	|	---	|
 |	MR	|	1	|	1	|	11.10.	|	Data driven	|		|	[📑](https://drive.google.com/file/d/1-WrEI0wxKQX_MJyt6sAvy4UVuNo0EVWS/view?usp=sharing)	|		|		|
@@ -37,3 +35,9 @@ This overview will be updated as the semester progresses.
 |	S	|	4	|	25	|	08.11.	|	Box Plot	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#boxplots)	|		|		|		|
 |	S	|	4	|	26	|	08.11.	|	Robust statistics and transformations	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#robust-statistics)	|		|		|		|
 |	S	|	4	|	27	|	08.11.	|	Comparing numerical data across groups	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#comparing-numerical-data-across-groups)	|		|		|		|
+|	MR	|	5	|	28	|	15.11.	|	Introduction to models	|		|		|		|		|
+|	S	|	5	|	29	|	15.11.	|	Sales and ads	|		|		|	[💻](../ae/models_1/07a-intro-sales.ipynb)	|		|
+|	S	|	5	|	30	|	15.11.	|	Mean squared error 1	|		|		|	[💻](../ae/models_2/07b-1-mse.ipynb)	|		|
+|	S	|	5	|	31	|	15.11.	|	Mean squared error 2	|		|		|	[💻](../ae/models_3/07b-2-mse.ipynb)	|		|
+|	S	|	5	|	32	|	15.11.	|	Mean squared error 3	|		|		|	[💻](../ae/models_4/07b-3-mse.ipynb)	|		|
+|	S	|	5	|	33	|	15.11.	|	Fitting a line and residuals	|	[📚](https://openintro-ims.netlify.app/model-slr.html#fit-line-res-cor)	|		|		|		|
