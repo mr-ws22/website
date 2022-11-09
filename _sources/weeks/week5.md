@@ -1,31 +1,14 @@
 # Week 5
 
 
+
 ---
 
 (prepare)=
 ## Prepare
 
+Fitting a line and residuals (Nr. 33): [📚](https://openintro-ims.netlify.app/model-slr.html#fit-line-res-cor)
 
-Scatterplot (Nr. 21): [📚](https://openintro-ims.netlify.app/explore-numerical.html#scatterplots)
-
-
-Dot plot, mean, median and mode (Nr. 22): [📚](https://openintro-ims.netlify.app/explore-numerical.html#dotplots)
-
-
-Histogram  (Nr. 23): [📚](https://openintro-ims.netlify.app/explore-numerical.html#histograms)
-
-
-Variance and standard deviation (Nr. 24): [📚](https://openintro-ims.netlify.app/explore-numerical.html#histograms)
-
-
-Box Plot (Nr. 25): [📚](https://openintro-ims.netlify.app/explore-numerical.html#boxplots)
-
-
-Robust statistics and transformations (Nr. 26): [📚](https://openintro-ims.netlify.app/explore-numerical.html#robust-statistics)
-
-
-Comparing numerical data across groups (Nr. 27): [📚](https://openintro-ims.netlify.app/explore-categorical.html#comparing-numerical-data-across-groups)
 
 
 ---
@@ -37,12 +20,6 @@ Comparing numerical data across groups (Nr. 27): [📚](https://openintro-ims.ne
 ## Participate
 
 
-Download slides: [📑](https://drive.google.com/file/d/1-h3_Xa33mqe_tVSYzOstE3rqzZbdzid0/view?usp=sharing)
-
-
-
-Code overview: [🖥](../code/code-overview.md)
-
 
 ---
 
@@ -53,7 +30,17 @@ Code overview: [🖥](../code/code-overview.md)
 ## Practice
 
 
-None
+Sales and ads (Nr. 29): [💻](../ae/models_1/07a-intro-sales.ipynb)
+
+
+Mean squared error 1 (Nr. 30): [💻](../ae/models_2/07b-1-mse.ipynb)
+
+
+Mean squared error 2 (Nr. 31): [💻](../ae/models_3/07b-2-mse.ipynb)
+
+
+Mean squared error 3 (Nr. 32): [💻](../ae/models_4/07b-3-mse.ipynb)
+
 
 ---
 
