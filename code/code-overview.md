@@ -129,3 +129,23 @@ Optional:
 - [Mapping data](../code/mapping-data-altair.ipynb)
 
 ---
+
+### Week 5
+
+- [28. Introduction to models](../code/28-ds-happy-scikit.ipynb)
+
+---
+
+Numbers 29 to 32 are application exercises:
+
+- Sales and ads (Nr. 29): [💻](../ae/models_1/07a-intro-sales.ipynb)
+- Mean squared error 1 (Nr. 30): [💻](../ae/models_2/07b-1-mse.ipynb)
+- Mean squared error 2 (Nr. 31): [💻](../ae/models_3/07b-2-mse.ipynb)
+- Mean squared error 3 (Nr. 32): [💻](../ae/models_4/07b-3-mse.ipynb)
+
+---
+
+
+- [33. Fitting a model](../code/33-fitting.ipynb)
+
+---
