@@ -20,6 +20,11 @@ Fitting a line and residuals (Nr. 33): [📚](https://openintro-ims.netlify.app/
 ## Participate
 
 
+[📑](https://drive.google.com/file/d/1-aNNxcxxtxU7shWEGJrpw8k88XmUym_0/view?usp=sharing)
+
+
+Go to the code overview: [🖥](../code/code-overview.md)
+
 
 ---
 
