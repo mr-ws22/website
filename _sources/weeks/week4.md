@@ -41,7 +41,7 @@ Download slides: [📑](https://drive.google.com/file/d/1-h3_Xa33mqe_tVSYzOstE3r
 
 
 
-Code overview: [🖥](../code/code-overview.md)
+Go to the code overview: [🖥](../code/code-overview.md)
 
 
 ---
