@@ -108,7 +108,7 @@ You should be able to:
 - [23. Histogram ](../code/23-histograms-altair.ipynb)
 - [24. Variance and standard deviation (kernel density plot)](../code/24-histograms-kernel-density-altair.ipynb)
 - [25. Box Plot](../code/25-box-plot-altair.ipynb)
-- [26. Robust statistics and transformations](../code/26-transforming-data-altair.ipynb)
+- [26. Robust statistics and transformations](../code/26-transforming-data-altair.ipynb) (not relevant)
 - [27. Comparing numerical data across groups](../code/27-comparisons-across-groups-altair.ipynb)
 
 
@@ -119,7 +119,6 @@ You should be able to create:
 - Histograms
 - Kernel density plots
 - Boxplots
-- Plots with a log transformation (robust transformations)
 - Plots to compare numerical data across groups
 
 ```
@@ -150,3 +149,14 @@ Numbers 29 to 32 are application exercises:
 - [33. Fitting a model](../code/33-fitting.ipynb)
 
 ---
+
+
+
+```{note}
+You should be able to use scikit-learn to:
+
+- Fit a model
+- Make predictions
+- Evaluate your model (with MSE and RMSE)
+
+```
