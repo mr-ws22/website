@@ -19,7 +19,7 @@ For a more detailed semester overview, take a look at the [course-schedule](../d
 |	3	|	25.10.	|	Exploratory data analysis	|	Exploratory data analysis	|	[📑](https://drive.google.com/file/d/1-ZClN3oVlIwMtL8n1Z4dWyTIqH7kMdO4/view?usp=sharing)	|	[📁](../weeks/week3.md)	|
 |	4	|	08.11.	|	Data	|	Exploratory data analysis	|	[📑](https://drive.google.com/file/d/1-h3_Xa33mqe_tVSYzOstE3rqzZbdzid0/view?usp=sharing)	|	[📁](../weeks/week4.md)	|
 |	5	|	15.11.	|	Introduction to models	|	Regression modeling	|	[📑](https://drive.google.com/file/d/1-aNNxcxxtxU7shWEGJrpw8k88XmUym_0/view?usp=sharing)	|	[📁](../weeks/week5.md)	|
-|	6	|	22.11.	|	Regression modeling	|	Regression modeling	|		|		|
+|	6	|	22.11.	|	Regression modeling	|	Regression modeling	|	[📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)	|	[📁](../weeks/week6.md)	|
 |	7	|	29.11.	|	Regression modeling	|	Regression modeling	|		|		|
 |	8	|	06.12.	|	Classification	|	Classification	|		|		|
 |	9	|	13.12.	|	Foundations of inference	|	Foundations of inference	|		|		|

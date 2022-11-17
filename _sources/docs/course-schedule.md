@@ -41,3 +41,8 @@ This overview will be updated as the semester progresses.
 |	S	|	5	|	31	|	15.11.	|	Mean squared error 2 (models 3)	|		|		|	[💻](../ae/models_3/07b-2-mse-g.ipynb)	|		|
 |	S	|	5	|	32	|	15.11.	|	Mean squared error 3 (models 4)	|		|		|	[💻](../ae/models_4/07b-3-mse-g.ipynb)	|		|
 |	S	|	5	|	33	|	15.11.	|	Fitting a line and residuals	|	[📚](https://openintro-ims.netlify.app/model-slr.html#fit-line-res-cor)	|		|		|	[☑️](https://forms.gle/JFMXzjByDRGZtbDx8)	|
+|	MR	|	6	|	34	|	22.11.	|	Data splitting	|		|	[📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)	|		|		|
+|	S	|	6	|	35	|	22.11.	|	Correlation	|	[📚](https://openintro-ims.netlify.app/model-slr.html#describing-linear-relationships-with-correlation)	|		|		|		|
+|	S	|	6	|	36	|	22.11.	|	Least squares regression	|	[📚](https://openintro-ims.netlify.app/model-slr.html#least-squares-regression)	|		|		|		|
+|	S	|	6	|	37	|	22.11.	|	R squared	|	[📚](https://openintro-ims.netlify.app/model-slr.html#r-squared)	|		|		|		|
+|	S	|	6	|	38	|	22.11.	|	Categorical predictors with two levels	|	[📚](https://openintro-ims.netlify.app/model-slr.html#categorical-predictor-two-levels)	|		|		|		|
