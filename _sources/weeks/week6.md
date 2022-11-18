@@ -27,6 +27,8 @@ Categorical predictors with two levels (Nr. 38): [📚](https://openintro-ims.ne
 
 Slides: [📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)
 
+Go to the code overview: [🖥](../code/code-overview.md)
+
 
 
 ---
@@ -38,6 +40,8 @@ Slides: [📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I
 ## Practice
 
 
+
+None
 
 
 

@@ -160,3 +160,13 @@ You should be able to use scikit-learn to:
 - Evaluate your model (with MSE and RMSE)
 
 ```
+
+---
+
+### Week 6
+
+- [34. Data splitting](../code/35-ds-happy-scikit-splitting.ipynb)
+- [35. Correlation](../code/36-correlation.ipynb)
+- [36. Least squares regression](../code/37-least-squares.ipynb)
+- [37. R squared](../code/38-strength-fit.ipynb)
+- [38. Categorical predictors with two levels](../code/39-categorical.ipynb)
