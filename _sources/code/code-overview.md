@@ -165,7 +165,12 @@ You should be able to use scikit-learn to:
 
 ### Week 6
 
+Market research
+
 - [34. Data splitting](../code/35-ds-happy-scikit-splitting.ipynb)
+
+Statistics
+
 - [35. Correlation](../code/36-correlation.ipynb)
 - [36. Least squares regression](../code/37-least-squares.ipynb)
 - [37. R squared](../code/38-strength-fit.ipynb)

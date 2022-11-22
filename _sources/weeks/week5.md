@@ -46,6 +46,8 @@ Models 3: Mean squared error 2 (Nr. 31): [💻](../ae/models_3/07b-2-mse-g.ipynb
 
 Models 4: Mean squared error 3 (Nr. 32): [💻](../ae/models_4/07b-3-mse-g.ipynb)
 
+Fitting a line and residuals (Nr. 33): [☑️](https://forms.gle/JFMXzjByDRGZtbDx8)
+
 
 ---
 
