@@ -167,11 +167,11 @@ You should be able to use scikit-learn to:
 
 Market research
 
-- [34. Data splitting](../code/35-ds-happy-scikit-splitting.ipynb)
+- [35. Data splitting](../code/35-ds-happy-scikit-splitting.ipynb)
 
 Statistics
 
-- [35. Correlation](../code/36-correlation.ipynb)
-- [36. Least squares regression](../code/37-least-squares.ipynb)
-- [37. R squared](../code/38-strength-fit.ipynb)
-- [38. Categorical predictors with two levels](../code/39-categorical.ipynb)
+- [36. Correlation](../code/36-correlation.ipynb)
+- [37. Least squares regression](../code/37-least-squares.ipynb)
+- [38. R squared](../code/38-strength-fit.ipynb)
+- [39. Categorical predictors with two levels](../code/39-categorical.ipynb)
