@@ -38,8 +38,8 @@ This overview will be updated as the semester progresses.
 |	MR	|	5	|	28	|	15.11.	|	Introduction to models	|		|	[📑](https://drive.google.com/file/d/1-aNNxcxxtxU7shWEGJrpw8k88XmUym_0/view?usp=sharing)	|		|		|
 |	S	|	5	|	29	|	15.11.	|	Sales and ads (models 1)	|		|		|	[💻](../ae/models_1models_1/07a-intro-sales-g.ipynb)	|		|
 |	S	|	5	|	30	|	15.11.	|	Mean squared error 1 (models 2)	|		|		|	[💻](../ae/models_2models_2/07b-1-mse-g.ipynb)	|		|
-|	S	|	5	|	31	|	15.11.	|	Mean squared error 2 (models 3)	|	NA	|		|	[💻](../ae/models_3models_3/07b-2-mse-g.ipynb)	|		|
-|	S	|	5	|	32	|	15.11.	|	Mean squared error 3 (models 4)	|	NA	|		|	[💻](../ae/models_4models_4/07b-3-mse-g.ipynb)	|		|
+|	S	|	5	|	31	|	15.11.	|	Mean squared error 2 (models 3)	|		|		|	[💻](../ae/models_3models_3/07b-2-mse-g.ipynb)	|		|
+|	S	|	5	|	32	|	15.11.	|	Mean squared error 3 (models 4)	|		|		|	[💻](../ae/models_4models_4/07b-3-mse-g.ipynb)	|		|
 |	S	|	5	|	33	|	15.11.	|	Fitting a line and residuals	|	[📚](https://openintro-ims.netlify.app/model-slr.html#fit-line-res-cor)	|		|		|	[☑️](https://forms.gle/JFMXzjByDRGZtbDx8)	|
 |	MR	|	6	|	34	|	22.11.	|	Data splitting	|		|	[📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)	|		|		|
 |	S	|	6	|	35	|	22.11.	|	Correlation	|	[📚](https://openintro-ims.netlify.app/model-slr.html#describing-linear-relationships-with-correlation)	|		|		|	[☑️](https://forms.gle/5ntV6z8yHk8g4qgZ8)	|
