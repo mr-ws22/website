@@ -595,8 +595,8 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import altair as alt
 </pre></div>
 </div>
 </div>
@@ -606,8 +606,8 @@ title="Print to PDF"
 <h2>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/kirenz/datasets/master/gender_discrimination.csv&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.read_csv(&quot;https://raw.githubusercontent.com/kirenz/datasets/master/gender_discrimination.csv&quot;)
+df.head()
 </pre></div>
 </div>
 </div>
@@ -666,7 +666,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
 </pre></div>
 </div>
 </div>
@@ -692,7 +692,7 @@ memory usage: 896.0+ bytes
 <h2>Crosstable<a class="headerlink" href="#crosstable" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">gender</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">decision</span><span class="p">,</span>  <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.crosstab(df.gender, df.decision,  margins=True)
 </pre></div>
 </div>
 </div>
@@ -754,22 +754,22 @@ memory usage: 896.0+ bytes
 <h2>Calculate difference<a class="headerlink" href="#calculate-difference" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_male</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;gender&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span><span class="p">)]</span>
-<span class="n">df_female</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;gender&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_male = df[(df[&quot;gender&quot;] == &quot;male&quot;)]
+df_female = df[(df[&quot;gender&quot;] == &quot;female&quot;)]
 
-<span class="n">male_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_male</span><span class="p">)</span>
-<span class="n">female_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_female</span><span class="p">)</span>
+male_total = len(df_male)
+female_total = len(df_female)
 
-<span class="n">male_promoted</span> <span class="o">=</span> <span class="n">df_male</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">promoted</span>
-<span class="n">female_promoted</span> <span class="o">=</span> <span class="n">df_female</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">promoted</span>
+male_promoted = df_male[&#39;decision&#39;].value_counts().promoted
+female_promoted = df_female[&#39;decision&#39;].value_counts().promoted
 
-<span class="n">male_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">male_promoted</span><span class="o">/</span><span class="n">male_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">female_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">female_promoted</span><span class="o">/</span><span class="n">female_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+male_p = round(male_promoted/male_total, 3)
+female_p = round(female_promoted/female_total, 3)
 
-<span class="n">p_diff_ob</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">male_p</span> <span class="o">-</span> <span class="n">female_p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+p_diff_ob = round(male_p - female_p, 3)
 
-<span class="n">df_p_diff_ob</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;p_diff&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">p_diff_ob</span><span class="p">]</span> <span class="p">})</span>
-<span class="n">df_p_diff_ob</span>
+df_p_diff_ob = pd.DataFrame({&#39;p_diff&#39;: [p_diff_ob] })
+df_p_diff_ob
 </pre></div>
 </div>
 </div>
@@ -812,7 +812,7 @@ memory usage: 896.0+ bytes
 <p>Example with only one randomization:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;gender_random&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df[&#39;gender_random&#39;] = df[&#39;gender&#39;].sample(frac=1, random_state=123).reset_index(drop=True)
 </pre></div>
 </div>
 </div>
@@ -820,7 +820,7 @@ memory usage: 896.0+ bytes
 <p>Since the randomization of files in this simulation is independent of the promotion decisions, any difference in promotion rates is due to chance.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">gender_random</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">decision</span><span class="p">,</span>  <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.crosstab(df.gender_random, df.decision,  margins=True)
 </pre></div>
 </div>
 </div>
@@ -884,20 +884,20 @@ memory usage: 896.0+ bytes
 <h4>One randomization<a class="headerlink" href="#one-randomization" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_male</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;gender_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span><span class="p">)]</span>
-<span class="n">df_female</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;gender_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_male = df[(df[&quot;gender_random&quot;] == &quot;male&quot;)]
+df_female = df[(df[&quot;gender_random&quot;] == &quot;female&quot;)]
 
-<span class="n">male_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_male</span><span class="p">)</span>
-<span class="n">female_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_female</span><span class="p">)</span>
+male_total = len(df_male)
+female_total = len(df_female)
 
-<span class="n">male_promoted</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_male</span><span class="p">[</span><span class="n">df_male</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;promoted&quot;</span><span class="p">])</span>
-<span class="n">female_promoted</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_female</span><span class="p">[</span><span class="n">df_female</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;promoted&quot;</span><span class="p">])</span>
+male_promoted = len(df_male[df_male[&#39;decision&#39;]==&quot;promoted&quot;])
+female_promoted = len(df_female[df_female[&#39;decision&#39;]==&quot;promoted&quot;])
 
-<span class="n">male_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">male_promoted</span><span class="o">/</span><span class="n">male_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">female_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">female_promoted</span><span class="o">/</span><span class="n">female_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+male_p = round(male_promoted/male_total, 3)
+female_p = round(female_promoted/female_total, 3)
 
-<span class="n">p_diff</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">male_p</span> <span class="o">-</span> <span class="n">female_p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">p_diff</span>
+p_diff = round(male_p - female_p, 3)
+p_diff
 </pre></div>
 </div>
 </div>
@@ -912,44 +912,44 @@ memory usage: 896.0+ bytes
 <h4>Multiple randomizations<a class="headerlink" href="#multiple-randomizations" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an empty list</span>
-<span class="n">random_difference</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># create an empty list
+random_difference = []
 
-<span class="c1"># make 100 randomizations and save results</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+# make 100 randomizations and save results
+for i in range(0, 100):
 
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;gender_random&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    df[&#39;gender_random&#39;] = df[&#39;gender&#39;].sample(frac=1, random_state=i).reset_index(drop=True)
 
-    <span class="n">df_male</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;gender_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;male&quot;</span><span class="p">)]</span>
-    <span class="n">df_female</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;gender_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)]</span>
+    df_male = df[(df[&quot;gender_random&quot;] == &quot;male&quot;)]
+    df_female = df[(df[&quot;gender_random&quot;] == &quot;female&quot;)]
 
-    <span class="n">male_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_male</span><span class="p">)</span>
-    <span class="n">female_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_female</span><span class="p">)</span>
+    male_total = len(df_male)
+    female_total = len(df_female)
 
-    <span class="n">male_promoted</span> <span class="o">=</span> <span class="n">df_male</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">promoted</span>
-    <span class="n">female_promoted</span> <span class="o">=</span> <span class="n">df_female</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">promoted</span>
+    male_promoted = df_male[&#39;decision&#39;].value_counts().promoted
+    female_promoted = df_female[&#39;decision&#39;].value_counts().promoted
 
-    <span class="n">male_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">male_promoted</span><span class="o">/</span><span class="n">male_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-    <span class="n">female_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">female_promoted</span><span class="o">/</span><span class="n">female_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    male_p = round(male_promoted/male_total, 3)
+    female_p = round(female_promoted/female_total, 3)
 
-    <span class="n">p_diff</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">male_p</span> <span class="o">-</span> <span class="n">female_p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    p_diff = round(male_p - female_p, 3)
 
-    <span class="n">random_difference</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p_diff</span><span class="p">)</span>
+    random_difference.append(p_diff)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create pandas dataframe</span>
-<span class="n">df_random</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;p_diff&#39;</span><span class="p">:</span> <span class="n">random_difference</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># create pandas dataframe
+df_random = pd.DataFrame({&#39;p_diff&#39;: random_difference})
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_random</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_random.describe().T
 </pre></div>
 </div>
 </div>
@@ -1000,29 +1000,29 @@ memory usage: 896.0+ bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart1</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_random</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">transform_window</span><span class="p">(</span>
-    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;rank()&#39;</span><span class="p">,</span>
-    <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p_diff&#39;</span><span class="p">]</span>
-<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;p_diff:O&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Differences in promotion rates (male - female) across 100 shuffles&#39;</span><span class="p">),</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;id:O&#39;</span><span class="p">,</span>
-          <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">)</span>
-<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart1 = alt.Chart(df_random).mark_circle(size=100).transform_window(
+    id=&#39;rank()&#39;,
+    groupby=[&#39;p_diff&#39;]
+).encode(
+    alt.X(&#39;p_diff:O&#39;, title=&#39;Differences in promotion rates (male - female) across 100 shuffles&#39;),
+    alt.Y(&#39;id:O&#39;,
+          axis=None,
+          sort=&#39;descending&#39;)
+).properties(height=300, width=400)
 
 
-<span class="n">chart2</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_p_diff_ob</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">transform_window</span><span class="p">(</span>
-    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;rank()&#39;</span><span class="p">,</span>
-    <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p_diff&#39;</span><span class="p">]</span>
-<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;p_diff:O&#39;</span><span class="p">),</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;id:O&#39;</span><span class="p">,</span>
-          <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">),</span>
-    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
-<span class="p">)</span>
+chart2 = alt.Chart(df_p_diff_ob).mark_circle(size=100).transform_window(
+    id=&#39;rank()&#39;,
+    groupby=[&#39;p_diff&#39;]
+).encode(
+    alt.X(&#39;p_diff:O&#39;),
+    alt.Y(&#39;id:O&#39;,
+          axis=None,
+          sort=&#39;descending&#39;),
+    color=alt.value(&#39;orange&#39;)
+)
 
-<span class="n">chart1</span> <span class="o">+</span> <span class="n">chart2</span> 
+chart1 + chart2 
 </pre></div>
 </div>
 </div>
@@ -1090,10 +1090,10 @@ memory usage: 896.0+ bytes
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_diff</span> <span class="o">=</span> <span class="n">df_random</span><span class="p">[</span><span class="n">df_random</span><span class="p">[</span><span class="s1">&#39;p_diff&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">p_diff_ob</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">p_diff</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count_diff = df_random[df_random[&#39;p_diff&#39;] &gt;= p_diff_ob].count().p_diff
 
-<span class="n">p_value</span> <span class="o">=</span> <span class="n">count_diff</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df_random</span><span class="p">)</span>
-<span class="n">p_value</span>
+p_value = count_diff/len(df_random)
+p_value
 </pre></div>
 </div>
 </div>
@@ -1116,7 +1116,7 @@ We reject the null hypothesis in favor of the alternative</p>
 <p>The 1-in-100 chance is what we call a p-value, which is a probability quantifying the strength of the evidence against the null hypothesis, given the observed data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_value</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p_value
 </pre></div>
 </div>
 </div>
@@ -1129,18 +1129,18 @@ We reject the null hypothesis in favor of the alternative</p>
 <p>When the p-value is small (usually less than 0.05), less than a previously set threshold, we say the results are statistically significant. This means the data provide such strong evidence against H0 that we reject the null hypothesis in favor of the alternative hypothesis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;=</span> <span class="mf">0.05</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;Reject Null Hypothesis&quot;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;Accept Null Hypothesis&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def significance(p_value):
+    if p_value &lt;= 0.05:
+        return &quot;Reject Null Hypothesis&quot;
+    else:
+        return &quot;Accept Null Hypothesis&quot;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>significance(p_value)
 </pre></div>
 </div>
 </div>

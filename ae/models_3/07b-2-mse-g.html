@@ -618,16 +618,16 @@ title="Print to PDF"
 <p>Good luck!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="n">COLLABORATORS</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>NAME = &quot;&quot;
+COLLABORATORS = &quot;&quot;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
-<span class="k">assert</span> <span class="n">IPython</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Your version of IPython is too old, please update it.&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import IPython
+assert IPython.version_info[0] &gt;= 3, &quot;Your version of IPython is too old, please update it.&quot;
 </pre></div>
 </div>
 </div>
@@ -644,8 +644,8 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+from sklearn.metrics import mean_squared_error
 </pre></div>
 </div>
 </div>
@@ -657,10 +657,10 @@ title="Print to PDF"
 <h3>Create data<a class="headerlink" href="#create-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">{</span><span class="s1">&#39;sales&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">4500</span><span class="p">,</span> <span class="mi">6500</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">12500</span><span class="p">,</span> <span class="mi">14500</span><span class="p">,</span> <span class="mi">16500</span><span class="p">,</span> <span class="mi">18500</span><span class="p">,</span> <span class="mi">20500</span><span class="p">],</span>
-      <span class="s1">&#39;ads&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="mi">900</span><span class="p">,</span> <span class="mi">1400</span><span class="p">,</span> <span class="mi">3600</span><span class="p">,</span> <span class="mi">3800</span><span class="p">,</span> <span class="mi">6200</span><span class="p">,</span> <span class="mi">5200</span><span class="p">,</span> <span class="mi">6800</span><span class="p">,</span> <span class="mi">8300</span><span class="p">,</span> <span class="mi">9800</span><span class="p">,</span> <span class="mi">10100</span><span class="p">]}</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.DataFrame(
+    {&#39;sales&#39;: [2500, 4500, 6500, 8500, 10500, 12500, 14500, 16500, 18500, 20500],
+      &#39;ads&#39;  : [900, 1400, 3600, 3800, 6200, 5200, 6800, 8300, 9800, 10100]}
+)
 </pre></div>
 </div>
 </div>
@@ -670,14 +670,14 @@ title="Print to PDF"
 <h3>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
 </pre></div>
 </div>
 </div>
@@ -688,10 +688,10 @@ title="Print to PDF"
 <h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intercept</span> <span class="o">=</span> <span class="mi">500</span> 
-<span class="n">slope</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>intercept = 500 
+slope = 2
 
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ads&#39;</span><span class="p">]</span> 
+df[&#39;sales_prediction&#39;] = intercept + slope * df[&#39;ads&#39;] 
 </pre></div>
 </div>
 </div>
@@ -718,23 +718,23 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
+raise NotImplementedError()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.head()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check your code</span>
-<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;se&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">40000</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Check your code
+assert df.loc[0, &#39;se&#39;] == 40000
 </pre></div>
 </div>
 </div>
@@ -767,23 +767,23 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
+raise NotImplementedError()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sse</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sse
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chack your code</span>
-<span class="k">assert</span> <span class="n">sse</span> <span class="o">==</span> <span class="mi">14520000</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Chack your code
+assert sse == 14520000
 </pre></div>
 </div>
 </div>
@@ -806,15 +806,15 @@ title="Print to PDF"
 <p><em>with n = the number of observations</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtain number of examples (observations)</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Obtain number of examples (observations)
+n = len(df)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n
 </pre></div>
 </div>
 </div>
@@ -822,31 +822,31 @@ title="Print to PDF"
 <p>Calculate the mse and save the result as <code class="docutils literal notranslate"><span class="pre">mse</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
+raise NotImplementedError()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mse</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mse
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># alternative way to print the result</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The MSE equals </span><span class="si">{</span><span class="n">mse</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># alternative way to print the result
+print(f&#39;The MSE equals {mse:.0f}&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check your code</span>
-<span class="k">assert</span> <span class="mi">1451000</span> <span class="o">&lt;</span> <span class="n">mse</span> <span class="o">&lt;</span> <span class="mi">1453000</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Check your code
+assert 1451000 &lt; mse &lt; 1453000
 </pre></div>
 </div>
 </div>
@@ -876,23 +876,23 @@ title="Print to PDF"
 <p>Calculate the rmse and save the result as <code class="docutils literal notranslate"><span class="pre">rmse</span></code> (not in your Dataframe):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
+raise NotImplementedError()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmse</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rmse
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check your code</span>
-<span class="k">assert</span> <span class="mi">1203</span> <span class="o">&lt;</span> <span class="n">rmse</span> <span class="o">&lt;</span> <span class="mi">1206</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Check your code
+assert 1203 &lt; rmse &lt; 1206
 </pre></div>
 </div>
 </div>
@@ -911,7 +911,7 @@ title="Print to PDF"
 <h4>Mean squared error<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mean_squared_error(df[&#39;sales&#39;], df[&#39;sales_prediction&#39;])
 </pre></div>
 </div>
 </div>
@@ -921,7 +921,7 @@ title="Print to PDF"
 <h4>Root mean squared error<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">],</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mean_squared_error(df[&#39;sales&#39;], df[&#39;sales_prediction&#39;], squared=False)
 </pre></div>
 </div>
 </div>
@@ -931,7 +931,7 @@ title="Print to PDF"
 <h4>Mean absolute error<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mean_absolute_error(df[&#39;sales&#39;], df[&#39;sales_prediction&#39;])
 </pre></div>
 </div>
 </div>

@@ -609,10 +609,10 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 </pre></div>
 </div>
 </div>
@@ -624,7 +624,7 @@ title="Print to PDF"
 <h3>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/kirenz/datasets/master/possum.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.read_csv(&#39;https://raw.githubusercontent.com/kirenz/datasets/master/possum.csv&#39;)
 </pre></div>
 </div>
 </div>
@@ -634,7 +634,7 @@ title="Print to PDF"
 <h3>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df
 </pre></div>
 </div>
 </div>
@@ -796,7 +796,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
 </pre></div>
 </div>
 </div>
@@ -826,10 +826,10 @@ memory usage: 6.6+ KB
 <p>Prepara data for scikit-learn model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_label</span> <span class="o">=</span> <span class="s2">&quot;head_l&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y_label = &quot;head_l&quot;
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;total_l&quot;</span><span class="p">]]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">y_label</span><span class="p">]</span>
+X = df[[&quot;total_l&quot;]]
+y = df[y_label]
 </pre></div>
 </div>
 </div>
@@ -842,8 +842,8 @@ memory usage: 6.6+ KB
 <h3>Select model<a class="headerlink" href="#select-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose the linear regression model</span>
-<span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Choose the linear regression model
+reg = LinearRegression()
 </pre></div>
 </div>
 </div>
@@ -853,8 +853,8 @@ memory usage: 6.6+ KB
 <h3>Fit model<a class="headerlink" href="#fit-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit the model to the data</span>
-<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Fit the model to the data
+reg.fit(X, y)
 </pre></div>
 </div>
 </div>
@@ -866,8 +866,8 @@ memory usage: 6.6+ KB
 <h3>Coefficients<a class="headerlink" href="#coefficients" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Intercept</span>
-<span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Intercept
+reg.intercept_
 </pre></div>
 </div>
 </div>
@@ -879,8 +879,8 @@ memory usage: 6.6+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Slope</span>
-<span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Slope
+reg.coef_
 </pre></div>
 </div>
 </div>
@@ -895,8 +895,8 @@ memory usage: 6.6+ KB
 <h3>Make predictions<a class="headerlink" href="#make-predictions" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make predictions on the data</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Make predictions on the data
+y_pred = reg.predict(X)
 </pre></div>
 </div>
 </div>
@@ -908,7 +908,7 @@ memory usage: 6.6+ KB
 <h4>Mean squared error<a class="headerlink" href="#mean-squared-error" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mean_squared_error(y, y_pred)
 </pre></div>
 </div>
 </div>
@@ -923,7 +923,7 @@ memory usage: 6.6+ KB
 <h4>Root mean squared error<a class="headerlink" href="#root-mean-squared-error" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mean_squared_error(y, y_pred, squared=False)
 </pre></div>
 </div>
 </div>

@@ -641,14 +641,14 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import altair as alt
 
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegressionCV</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">ConfusionMatrixDisplay</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">RocCurveDisplay</span>
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegressionCV
+from sklearn.metrics import ConfusionMatrixDisplay
+from sklearn.metrics import classification_report
+from sklearn.metrics import RocCurveDisplay
 </pre></div>
 </div>
 </div>
@@ -658,8 +658,8 @@ title="Print to PDF"
 <h2>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/kirenz/datasets/master/resume.csv&#39;</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;received_callback&#39;</span><span class="p">,</span> <span class="s1">&#39;honors&#39;</span><span class="p">,</span> <span class="s1">&#39;job_city&#39;</span><span class="p">,</span> <span class="s1">&#39;years_experience&#39;</span><span class="p">,</span> <span class="s1">&#39;military&#39;</span><span class="p">,</span> <span class="s1">&#39;has_email_address&#39;</span><span class="p">,</span> <span class="s1">&#39;race&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;college_degree&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.read_csv(&#39;https://raw.githubusercontent.com/kirenz/datasets/master/resume.csv&#39;)
+df = df[[&#39;received_callback&#39;, &#39;honors&#39;, &#39;job_city&#39;, &#39;years_experience&#39;, &#39;military&#39;, &#39;has_email_address&#39;, &#39;race&#39;, &#39;gender&#39;, &#39;college_degree&#39;]]
 </pre></div>
 </div>
 </div>
@@ -669,7 +669,7 @@ title="Print to PDF"
 <h2>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df
 </pre></div>
 </div>
 </div>
@@ -843,7 +843,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;received_callback&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df[&#39;received_callback&#39;].value_counts()
 </pre></div>
 </div>
 </div>
@@ -857,7 +857,7 @@ Name: received_callback, dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
 </pre></div>
 </div>
 </div>
@@ -885,9 +885,9 @@ memory usage: 342.5+ KB
 <p>Prepare data for scikit-learn model:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;job_city&#39;</span><span class="p">,</span> <span class="s1">&#39;race&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.get_dummies(df, prefix = [&#39;job_city&#39;, &#39;race&#39;, &#39;gender&#39;])
 
-<span class="n">df</span>
+df
 </pre></div>
 </div>
 </div>
@@ -1100,21 +1100,21 @@ memory usage: 342.5+ KB
 <h2>Variable lists<a class="headerlink" href="#variable-lists" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare the data</span>
-<span class="n">y_label</span> <span class="o">=</span> <span class="s1">&#39;received_callback&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Prepare the data
+y_label = &#39;received_callback&#39;
 
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;job_city_Chicago&quot;</span><span class="p">,</span> 
-            <span class="s2">&quot;college_degree&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;years_experience&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;honors&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;military&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;has_email_address&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;race_white&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;gender_m&quot;</span>
-            <span class="p">]</span>
+features = [&quot;job_city_Chicago&quot;, 
+            &quot;college_degree&quot;,
+            &quot;years_experience&quot;,
+            &quot;honors&quot;,
+            &quot;military&quot;,
+            &quot;has_email_address&quot;,
+            &quot;race_white&quot;,
+            &quot;gender_m&quot;
+            ]
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">y_label</span><span class="p">]</span>
+X = df[features]
+y = df[y_label]
 </pre></div>
 </div>
 </div>
@@ -1124,7 +1124,7 @@ memory usage: 342.5+ KB
 <h2>Data split<a class="headerlink" href="#data-split" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state = 1)
 </pre></div>
 </div>
 </div>
@@ -1136,7 +1136,7 @@ memory usage: 342.5+ KB
 <h3>Select model<a class="headerlink" href="#select-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticRegressionCV</span><span class="p">(</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf = LogisticRegressionCV(cv=5, random_state=0)
 </pre></div>
 </div>
 </div>
@@ -1146,7 +1146,7 @@ memory usage: 342.5+ KB
 <h3>Training<a class="headerlink" href="#training" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.fit(X_train, y_train)
 </pre></div>
 </div>
 </div>
@@ -1155,7 +1155,7 @@ memory usage: 342.5+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">get_params</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.get_params
 </pre></div>
 </div>
 </div>
@@ -1167,7 +1167,7 @@ memory usage: 342.5+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.score(X_train, y_train)
 </pre></div>
 </div>
 </div>
@@ -1182,7 +1182,7 @@ memory usage: 342.5+ KB
 <h3>Coefficients<a class="headerlink" href="#coefficients" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">intercept_</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.intercept_
 </pre></div>
 </div>
 </div>
@@ -1194,7 +1194,7 @@ memory usage: 342.5+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.coef_
 </pre></div>
 </div>
 </div>
@@ -1210,15 +1210,15 @@ memory usage: 342.5+ KB
 <h3>Evaluation on test set<a class="headerlink" href="#evaluation-on-test-set" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y_pred = clf.predict(X_test)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return the mean accuracy on the given test data and labels:</span>
-<span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Return the mean accuracy on the given test data and labels:
+clf.score(X_test, y_test)
 </pre></div>
 </div>
 </div>
@@ -1233,8 +1233,8 @@ memory usage: 342.5+ KB
 <h3>Evaluation on test set<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return the mean accuracy on the given test data and labels:</span>
-<span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Return the mean accuracy on the given test data and labels:
+clf.score(X_test, y_test)
 </pre></div>
 </div>
 </div>
@@ -1249,7 +1249,7 @@ memory usage: 342.5+ KB
 <h3>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ConfusionMatrixDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ConfusionMatrixDisplay.from_estimator(clf, X_test, y_test);
 </pre></div>
 </div>
 </div>
@@ -1262,9 +1262,9 @@ memory usage: 342.5+ KB
 <h3>Classification report<a class="headerlink" href="#classification-report" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y_pred = clf.predict(X_test)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">],</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+print(classification_report(y_test, y_pred, target_names=[&#39;0&#39;, &#39;1&#39;], zero_division=0))
 </pre></div>
 </div>
 </div>
@@ -1286,7 +1286,8 @@ weighted avg       0.85      0.92      0.88      1461
 <h3>ROC Curve<a class="headerlink" href="#roc-curve" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RocCurveDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+RocCurveDisplay.from_estimator(clf, X_test, y_test);
 </pre></div>
 </div>
 </div>
@@ -1299,7 +1300,7 @@ weighted avg       0.85      0.92      0.88      1461
 <h3>AUC Score<a class="headerlink" href="#auc-score" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">decision_function</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>roc_auc_score(y_test, clf.decision_function(X_test))
 </pre></div>
 </div>
 </div>
@@ -1312,8 +1313,8 @@ weighted avg       0.85      0.92      0.88      1461
 <p>Option 2 to obtain AUC:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_score</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_score</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y_score = clf.predict_proba(X_test)[:, 1]
+roc_auc_score(y_test, y_score)
 </pre></div>
 </div>
 </div>
@@ -1329,24 +1330,24 @@ weighted avg       0.85      0.92      0.88      1461
 <p>Use specific threshold</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtain probabilities</span>
-<span class="n">pred_proba</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># obtain probabilities
+pred_proba = clf.predict_proba(X_test)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set threshold to 0.25</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># set threshold to 0.25
 
-<span class="n">df_25</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y_pred&#39;</span><span class="p">:</span> <span class="n">pred_proba</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">.25</span><span class="p">})</span>
+df_25 = pd.DataFrame({&#39;y_pred&#39;: pred_proba[:,1] &gt; .25})
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ConfusionMatrixDisplay</span><span class="o">.</span><span class="n">from_predictions</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_25</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ConfusionMatrixDisplay.from_predictions(y_test, df_25[&#39;y_pred&#39;]);
 </pre></div>
 </div>
 </div>
@@ -1359,7 +1360,7 @@ weighted avg       0.85      0.92      0.88      1461
 <h3>Classification report<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">df_25</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">],</span> <span class="n">target_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">],</span> <span class="n">zero_division</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(classification_report(y_test, df_25[&#39;y_pred&#39;], target_names=[&#39;0&#39;, &#39;1&#39;], zero_division=0))
 </pre></div>
 </div>
 </div>

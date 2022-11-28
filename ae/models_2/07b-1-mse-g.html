@@ -524,16 +524,16 @@ title="Print to PDF"
 <p>Good luck!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="n">COLLABORATORS</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>NAME = &quot;&quot;
+COLLABORATORS = &quot;&quot;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
-<span class="k">assert</span> <span class="n">IPython</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Your version of IPython is too old, please update it.&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import IPython
+assert IPython.version_info[0] &gt;= 3, &quot;Your version of IPython is too old, please update it.&quot;
 </pre></div>
 </div>
 </div>
@@ -545,12 +545,12 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import altair as alt
+import warnings
 
-<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
-<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
+warnings.simplefilter(action=&#39;ignore&#39;, category=FutureWarning)
+alt.data_transformers.disable_max_rows()
 </pre></div>
 </div>
 </div>
@@ -560,11 +560,11 @@ title="Print to PDF"
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let&#39;s change some values in ads</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">{</span><span class="s1">&#39;sales&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">4500</span><span class="p">,</span> <span class="mi">6500</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">12500</span><span class="p">,</span> <span class="mi">14500</span><span class="p">,</span> <span class="mi">16500</span><span class="p">,</span> <span class="mi">18500</span><span class="p">,</span> <span class="mi">20500</span><span class="p">],</span>
-      <span class="s1">&#39;ads&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="mi">900</span><span class="p">,</span> <span class="mi">1400</span><span class="p">,</span> <span class="mi">3600</span><span class="p">,</span> <span class="mi">3800</span><span class="p">,</span> <span class="mi">6200</span><span class="p">,</span> <span class="mi">5200</span><span class="p">,</span> <span class="mi">6800</span><span class="p">,</span> <span class="mi">8300</span><span class="p">,</span> <span class="mi">9800</span><span class="p">,</span> <span class="mi">10100</span><span class="p">]}</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># let&#39;s change some values in ads
+df = pd.DataFrame(
+    {&#39;sales&#39;: [2500, 4500, 6500, 8500, 10500, 12500, 14500, 16500, 18500, 20500],
+      &#39;ads&#39;  : [900, 1400, 3600, 3800, 6200, 5200, 6800, 8300, 9800, 10100]}
+)
 </pre></div>
 </div>
 </div>
@@ -574,11 +574,11 @@ title="Print to PDF"
 <h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span>
-    <span class="n">tooltip</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="s1">&#39;sales&#39;</span><span class="p">]</span>
-<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>alt.Chart(df).mark_point().encode(
+    x=&#39;ads&#39;,
+    y=&#39;sales&#39;,
+    tooltip= [&#39;ads&#39;, &#39;sales&#39;]
+).interactive()
 </pre></div>
 </div>
 </div>
@@ -612,40 +612,40 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
-<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
+raise NotImplementedError()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.head()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check your code</span>
-<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;sales_prediction&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2300</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Check your code
+assert df.loc[0, &#39;sales_prediction&#39;] == 2300 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;sales&#39;</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart = alt.Chart(df).mark_point().encode(
+    x=&#39;ads&#39;,
+    y=&#39;sales&#39;
+)
 
-<span class="n">line</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-         <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ads (in $)&#39;</span><span class="p">)),</span>
-         <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sales (in units)&quot;</span><span class="p">)),</span>
-         <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;#0001F5&quot;</span><span class="p">))</span>
+line = alt.Chart(df).mark_line().encode(
+         alt.X(&#39;ads&#39;, axis=alt.Axis(title=&#39;Ads (in $)&#39;)),
+         alt.Y(&#39;sales_prediction&#39;, axis=alt.Axis(title=&quot;Sales (in units)&quot;)),
+         color=alt.value(&quot;#0001F5&quot;))
 
-<span class="n">chart</span> <span class="o">+</span> <span class="n">line</span>
+chart + line
 </pre></div>
 </div>
 </div>
