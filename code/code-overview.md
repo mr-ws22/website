@@ -175,3 +175,29 @@ Statistics
 - [37. Least squares regression](../code/37-least-squares.ipynb)
 - [38. R squared](../code/38-strength-fit.ipynb)
 - [39. Categorical predictors with two levels](../code/39-categorical.ipynb)
+
+
+```{note}
+You should be able to use scikit-learn to:
+
+- Obtain correlations
+- Use a categorical predictor in your model
+- Fit a model using data splitting
+- Evaluate your model with R squared 
+
+```
+
+
+### Week 7
+
+
+- [43. Multiple predictors regression 1](../code/44-1-multiple.ipynb)
+- [44. Multiple predictors regression 2](../code/45-2-multiple.ipynb)
+- [45. Multiple predictors regression 3](../code/46-3-multiple.ipynb)
+
+```{note}
+You should be able to use scikit-learn to:
+
+- create a model with multiple predictors
+
+```
