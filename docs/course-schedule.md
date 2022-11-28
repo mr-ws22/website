@@ -46,3 +46,10 @@ This overview will be updated as the semester progresses.
 |	S	|	6	|	36	|	22.11.	|	Least squares regression	|	[📚](https://openintro-ims.netlify.app/model-slr.html#least-squares-regression)	|		|		|		|
 |	S	|	6	|	37	|	22.11.	|	R squared	|	[📚](https://openintro-ims.netlify.app/model-slr.html#r-squared)	|		|		|		|
 |	S	|	6	|	38	|	22.11.	|	Categorical predictors with two levels	|	[📚](https://openintro-ims.netlify.app/model-slr.html#categorical-predictor-two-levels)	|		|		|		|
+|	MR	|	7	|	39	|	29.11.	|	Classification	|		|		|		|		|
+|	MR	|	7	|	40	|	29.11.	|	Precision recall and F1 score	|	[📚](https://mlu-explain.github.io/precision-recall/)	|		|		|		|
+|	MR	|	7	|	41	|	29.11.	|	ROC Curve and AUC	|	[📚](https://mlu-explain.github.io/roc-auc/)	|		|		|		|
+|	S	|	7	|	42	|	29.11.	|	Outliers	|	[📚](https://openintro-ims.netlify.app/model-slr.html#outliers-in-regression)	|		|		|		|
+|	S	|	7	|	43	|	29.11.	|	Multiple predictors regression 1	|	[📚](https://openintro-ims.netlify.app/model-mlr.html#model-mlr)	|		|		|	[☑️](https://forms.gle/wHPHMvbTDczNaQD97)	|
+|	S	|	7	|	44	|	29.11.	|	Multiple predictors regression 2	|		|		|		|		|
+|	S	|	7	|	45	|	29.11.	|	Multiple predictors regression 3	|		|		|		|		|
