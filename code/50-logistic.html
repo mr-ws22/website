@@ -1146,7 +1146,7 @@ y = df[y_label]
 <h3>Select model<a class="headerlink" href="#select-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf = LogisticRegressionCV(cv=5, random_state=0)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf = ___(cv=5, random_state=0)
 </pre></div>
 </div>
 </div>
@@ -1156,7 +1156,7 @@ y = df[y_label]
 <h3>Training<a class="headerlink" href="#training" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.fit(X_train, y_train)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.fit(___, ____)
 </pre></div>
 </div>
 </div>
@@ -1177,7 +1177,7 @@ y = df[y_label]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.score(X_train, y_train)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.___(____, ___)
 </pre></div>
 </div>
 </div>
@@ -1192,7 +1192,7 @@ y = df[y_label]
 <h3>Coefficients<a class="headerlink" href="#coefficients" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.intercept_
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>___
 </pre></div>
 </div>
 </div>
@@ -1204,7 +1204,7 @@ y = df[y_label]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>clf.coef_
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>___
 </pre></div>
 </div>
 </div>
@@ -1220,7 +1220,7 @@ y = df[y_label]
 <h3>Evaluation on test set<a class="headerlink" href="#evaluation-on-test-set" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y_pred = clf.predict(X_test)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y_pred = clf.___(X_test)
 </pre></div>
 </div>
 </div>
@@ -1228,7 +1228,7 @@ y = df[y_label]
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Return the mean accuracy on the given test data and labels:
-clf.score(X_test, y_test)
+clf.score(___, ___)
 </pre></div>
 </div>
 </div>
@@ -1244,7 +1244,7 @@ clf.score(X_test, y_test)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Return the mean accuracy on the given test data and labels:
-clf.score(X_test, y_test)
+clf.___(X_test, y_test)
 </pre></div>
 </div>
 </div>
@@ -1259,7 +1259,7 @@ clf.score(X_test, y_test)
 <h3>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ConfusionMatrixDisplay.from_estimator(clf, X_test, y_test);
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>___.from_estimator(clf, X_test, y_test);
 </pre></div>
 </div>
 </div>
@@ -1297,7 +1297,7 @@ weighted avg       0.85      0.92      0.88      1461
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-RocCurveDisplay.from_estimator(clf, X_test, y_test);
+___.from_estimator(clf, X_test, y_test);
 </pre></div>
 </div>
 </div>
@@ -1310,7 +1310,7 @@ RocCurveDisplay.from_estimator(clf, X_test, y_test);
 <h3>AUC Score<a class="headerlink" href="#auc-score" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>roc_auc_score(y_test, clf.decision_function(X_test))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>___(y_test, clf.decision_function(X_test))
 </pre></div>
 </div>
 </div>
