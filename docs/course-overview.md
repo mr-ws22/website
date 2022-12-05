@@ -21,7 +21,7 @@ For a more detailed semester overview, take a look at the [course-schedule](../d
 |	5	|	15.11.	|	Introduction to models	|	Regression modeling	|	[📑](https://drive.google.com/file/d/1-aNNxcxxtxU7shWEGJrpw8k88XmUym_0/view?usp=sharing)	|	[📁](../weeks/week5.md)	|
 |	6	|	22.11.	|	Regression modeling	|	Regression modeling	|	[📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)	|	[📁](../weeks/week6.md)	|
 |	7	|	29.11.	|	Classification	|	Regression modeling	|	[📑](https://drive.google.com/file/d/10MFDRHaWTV56zVBqBE95xUTaeSxF7ICb/view?usp=sharing)	|	[📁](../weeks/week7.md)	|
-|	8	|	06.12.	|	Classification	|	Classification	|		|		|
+|	8	|	06.12.	|	Foundations of inference	|	Classification	|	[📑](https://drive.google.com/file/d/10PkF_EiAFjJ8-w2G29sewOQib0gKKISK/view?usp=sharing)	|	[📁](../weeks/week8.md)	|
 |	9	|	13.12.	|	Foundations of inference	|	Foundations of inference	|		|		|
 |	10	|	20.12.	|	Foundations of inference	|	Foundations of inference	|		|		|
 |	11	|	10.01.	|	Statistical inference	|	Statistical inference	|		|		|
