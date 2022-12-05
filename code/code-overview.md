@@ -187,6 +187,7 @@ You should be able to use scikit-learn to:
 
 ```
 
+---
 
 ### Week 7
 
@@ -201,3 +202,16 @@ You should be able to use scikit-learn to:
 - create a model with multiple predictors
 
 ```
+
+---
+
+
+### Week 8
+
+- [47. Randomization experiments](../code/48-discrimination.ipynb)
+
+- [48. Probability of an event](../code/49-logistic.ipynb)
+
+- [49. Multiple predictors classification](../code/50-logistic.ipynb)
+
+---
