@@ -208,10 +208,20 @@ You should be able to use scikit-learn to:
 
 ### Week 8
 
-- [47. Randomization experiments](../code/48-discrimination.ipynb)
+- [48. Randomization experiments](../code/48-discrimination.ipynb) (not relevant for exam)
 
-- [48. Probability of an event](../code/49-logistic.ipynb)
+- [49. Probability of an event](../code/49-logistic.ipynb)
 
-- [49. Multiple predictors classification](../code/50-logistic.ipynb)
+- [50. Multiple predictors classification](../code/50-logistic.ipynb)
+
+
+```{note}
+You should be able to use scikit-learn to:
+
+- create a train and test set
+- create a logistic regression model with cross-fold-validation
+- investigate your models performance 
+
+```
 
 ---
