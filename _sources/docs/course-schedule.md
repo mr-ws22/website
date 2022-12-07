@@ -53,3 +53,7 @@ This overview will be updated as the semester progresses.
 |	S	|	7	|	43	|	29.11.	|	Multiple predictors regression 1	|	[📚](https://openintro-ims.netlify.app/model-mlr.html#model-mlr)	|		|		|	[☑️](https://forms.gle/wHPHMvbTDczNaQD97)	|
 |	S	|	7	|	44	|	29.11.	|	Multiple predictors regression 2	|		|		|		|		|
 |	S	|	7	|	45	|	29.11.	|	Multiple predictors regression 3	|		|		|		|		|
+|	MR	|	8	|	46	|	06.12.	|	Randomization introduction	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html)	|		|		|		|
+|	MR	|	8	|	47	|	06.12.	|	Randomization experiments	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#caseStudySexDiscrimination)	|		|		|		|
+|	S	|	8	|	48	|	06.12.	|	Probability of an event	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#modelingTheProbabilityOfAnEvent)	|		|		|		|
+|	S	|	8	|	49	|	06.12.	|	Multiple predictors classification	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#logistic-model-with-many-variables)	|		|		|		|
