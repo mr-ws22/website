@@ -225,3 +225,9 @@ You should be able to use scikit-learn to:
 ```
 
 ---
+
+### Week 9
+
+- [53. Hypothesis tesing opportunity cost ](../code/54-opportunity.ipynb)
+
+- [55. Bootsrapping medical case](../code/56-medical-case.ipynb)
