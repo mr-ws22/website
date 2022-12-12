@@ -57,3 +57,11 @@ This overview will be updated as the semester progresses.
 |	MR	|	8	|	47	|	06.12.	|	Randomization experiments	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#caseStudySexDiscrimination)	|		|		|		|
 |	S	|	8	|	48	|	06.12.	|	Probability of an event	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#modelingTheProbabilityOfAnEvent)	|		|		|		|
 |	S	|	8	|	49	|	06.12.	|	Multiple predictors classification	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#logistic-model-with-many-variables)	|		|		|		|
+|	S	|	8	|	50	|	06.12.	|	Logistic regression Python	|		|		|		|		|
+|	MR	|	9	|	51	|	13.12.	|	Hypothesis tesing summary	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#chp11-review)	|		|		|		|
+|	MR	|	9	|	52	|	13.12.	|	Randomization p-value	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#p-value-and-statistical-significance)	|		|		|		|
+|	MR	|	9	|	53	|	13.12.	|	Hypothesis tesing opportunity cost 	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#caseStudyOpportunityCost)	|		|		|		|
+|	S	|	9	|	54	|	13.12.	|	Bootsrapping introduction	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html)	|		|		|		|
+|	S	|	9	|	55	|	13.12.	|	Bootsrapping medical case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#case-study-med-consult)	|		|		|		|
+|	S	|	9	|	56	|	13.12.	|	Bootsrapping tappers case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#tapperscasestudy)	|		|		|		|
+|	S	|	9	|	57	|	13.12.	|	Bootsrapping confidence intervalls	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#ConfidenceIntervals)	|		|		|		|
