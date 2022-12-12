@@ -129,7 +129,7 @@ Optional:
 
 ---
 
-### Week 5
+## Week 5
 
 - [28. Introduction to models](../code/28-ds-happy-scikit.ipynb)
 
@@ -163,7 +163,7 @@ You should be able to use scikit-learn to:
 
 ---
 
-### Week 6
+## Week 6
 
 Market research
 
@@ -189,7 +189,7 @@ You should be able to use scikit-learn to:
 
 ---
 
-### Week 7
+## Week 7
 
 
 - [43. Multiple predictors regression 1](../code/44-1-multiple.ipynb)
@@ -206,7 +206,7 @@ You should be able to use scikit-learn to:
 ---
 
 
-### Week 8
+## Week 8
 
 - [48. Randomization experiments](../code/48-discrimination.ipynb) (not relevant for exam)
 
@@ -226,7 +226,7 @@ You should be able to use scikit-learn to:
 
 ---
 
-### Week 9
+## Week 9
 
 - [53. Hypothesis tesing opportunity cost ](../code/54-opportunity.ipynb)
 
