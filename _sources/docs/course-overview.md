@@ -10,8 +10,6 @@ This overview will be updated as the semester progresses.
 
 For a more detailed semester overview, take a look at the [course-schedule](../docs/course-schedule.md). 
 
-
-
 |	Week	|	Date	|	Market Research (MR)	|	Statistics (S)	|	Slides	|	Materials	|
 |	---	|	---	|	---	|	---	|	---	|	---	|
 |	1	|	11.10.	|	Introduction	|	Introduction to data	|	[📑](https://drive.google.com/file/d/1-WrEI0wxKQX_MJyt6sAvy4UVuNo0EVWS/view?usp=sharing)	|	[📁](../weeks/week1.md)	|
@@ -22,7 +20,7 @@ For a more detailed semester overview, take a look at the [course-schedule](../d
 |	6	|	22.11.	|	Regression modeling	|	Regression modeling	|	[📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)	|	[📁](../weeks/week6.md)	|
 |	7	|	29.11.	|	Classification	|	Regression modeling	|	[📑](https://drive.google.com/file/d/10MFDRHaWTV56zVBqBE95xUTaeSxF7ICb/view?usp=sharing)	|	[📁](../weeks/week7.md)	|
 |	8	|	06.12.	|	Foundations of inference	|	Classification	|	[📑](https://drive.google.com/file/d/10PkF_EiAFjJ8-w2G29sewOQib0gKKISK/view?usp=sharing)	|	[📁](../weeks/week8.md)	|
-|	9	|	13.12.	|	Foundations of inference	|	Foundations of inference	|		|		|
+|	9	|	13.12.	|	Foundations of inference	|	Foundations of inference	|	[📑](https://drive.google.com/file/d/10YvpqcO3HETCrRquhNt4C6lo22LbPGmH/view?usp=sharing)	|	[📁](../weeks/week9.md)	|
 |	10	|	20.12.	|	Foundations of inference	|	Foundations of inference	|		|		|
 |	11	|	10.01.	|	Statistical inference	|	Statistical inference	|		|		|
 |	12	|	17.01.	|	Statistical inference	|	Inferential modeling	|		|		|
