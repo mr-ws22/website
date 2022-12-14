@@ -228,9 +228,9 @@ You should be able to use scikit-learn to:
 
 ## Week 9
 
-- [53. Hypothesis tesing opportunity cost ](../code/54-opportunity.ipynb)
+- [54. Hypothesis tesing opportunity cost ](../code/54-opportunity.ipynb)
 
-- [55. Bootsrapping medical case](../code/56-medical-case.ipynb)
+- [56. Bootsrapping medical case](../code/56-medical-case.ipynb)
 
 ```{note}
 You should be able to 
@@ -238,6 +238,6 @@ You should be able to
 - change the variables to make calculations
 - use the code to make all necessary calculations
 
-You don't need to memorize the code (it would be provided in the exam). However, you would need to adapt some of the variables (like n or p in the bootsrapping example).
+You don't need to memorize the code (it would be provided in the exam). However, you would need to adapt some of the variables (like `n` or `p` in the bootsrapping example).
 
 ```
