@@ -16,7 +16,7 @@ We install some modules in a new Anaconda environment. We call this new environm
 - Copy this code and run it in your terminal: 
 
 ```bash
-conda create -n mr python=3.9 pandas openpyxl jupyter scikit-learn altair vega_datasets matplotlib seaborn --y
+conda create -n mr python=3.9 pandas openpyxl jupyter scikit-learn altair vega_datasets matplotlib seaborn vega altair_saver --y
 ```
 
 Activate the new environment:
