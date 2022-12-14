@@ -35,33 +35,34 @@ This overview will be updated as the semester progresses.
 |	S	|	4	|	25	|	08.11.	|	Box Plot	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#boxplots)	|		|		|		|
 |	S	|	4	|	26	|	08.11.	|	Robust statistics and transformations	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#robust-statistics)	|		|		|		|
 |	S	|	4	|	27	|	08.11.	|	Comparing numerical data across groups	|	[📚](https://openintro-ims.netlify.app/explore-categorical.html#comparing-numerical-data-across-groups)	|		|		|		|
-|	MR	|	5	|	28	|	15.11.	|	Introduction to models	|		|	[📑](https://drive.google.com/file/d/1-aNNxcxxtxU7shWEGJrpw8k88XmUym_0/view?usp=sharing)	|		|		|
-|	S	|	5	|	29	|	15.11.	|	Sales and ads (models 1)	|		|		|	[💻](../ae/models_1models_1/07a-intro-sales-g.ipynb)	|		|
-|	S	|	5	|	30	|	15.11.	|	Mean squared error 1 (models 2)	|		|		|	[💻](../ae/models_2models_2/07b-1-mse-g.ipynb)	|		|
-|	S	|	5	|	31	|	15.11.	|	Mean squared error 2 (models 3)	|		|		|	[💻](../ae/models_3models_3/07b-2-mse-g.ipynb)	|		|
-|	S	|	5	|	32	|	15.11.	|	Mean squared error 3 (models 4)	|		|		|	[💻](../ae/models_4models_4/07b-3-mse-g.ipynb)	|		|
-|	S	|	5	|	33	|	15.11.	|	Fitting a line and residuals	|	[📚](https://openintro-ims.netlify.app/model-slr.html#fit-line-res-cor)	|		|		|	[☑️](https://forms.gle/JFMXzjByDRGZtbDx8)	|
-|	MR	|	6	|	34	|	22.11.	|	Data splitting	|		|	[📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)	|		|		|
-|	S	|	6	|	35	|	22.11.	|	Correlation	|	[📚](https://openintro-ims.netlify.app/model-slr.html#describing-linear-relationships-with-correlation)	|		|		|	[☑️](https://forms.gle/5ntV6z8yHk8g4qgZ8)	|
-|	S	|	6	|	36	|	22.11.	|	Least squares regression	|	[📚](https://openintro-ims.netlify.app/model-slr.html#least-squares-regression)	|		|		|		|
-|	S	|	6	|	37	|	22.11.	|	R squared	|	[📚](https://openintro-ims.netlify.app/model-slr.html#r-squared)	|		|		|		|
-|	S	|	6	|	38	|	22.11.	|	Categorical predictors with two levels	|	[📚](https://openintro-ims.netlify.app/model-slr.html#categorical-predictor-two-levels)	|		|		|		|
-|	MR	|	7	|	39	|	29.11.	|	Classification	|		|		|		|		|
-|	MR	|	7	|	40	|	29.11.	|	Precision recall and F1 score	|	[📚](https://mlu-explain.github.io/precision-recall/)	|		|		|		|
-|	MR	|	7	|	41	|	29.11.	|	ROC Curve and AUC	|	[📚](https://mlu-explain.github.io/roc-auc/)	|		|		|		|
-|	S	|	7	|	42	|	29.11.	|	Outliers	|	[📚](https://openintro-ims.netlify.app/model-slr.html#outliers-in-regression)	|		|		|		|
-|	S	|	7	|	43	|	29.11.	|	Multiple predictors regression 1	|	[📚](https://openintro-ims.netlify.app/model-mlr.html#model-mlr)	|		|		|	[☑️](https://forms.gle/wHPHMvbTDczNaQD97)	|
-|	S	|	7	|	44	|	29.11.	|	Multiple predictors regression 2	|		|		|		|		|
-|	S	|	7	|	45	|	29.11.	|	Multiple predictors regression 3	|		|		|		|		|
-|	MR	|	8	|	46	|	06.12.	|	Randomization introduction	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html)	|		|		|		|
-|	MR	|	8	|	47	|	06.12.	|	Randomization experiments	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#caseStudySexDiscrimination)	|		|		|		|
-|	S	|	8	|	48	|	06.12.	|	Probability of an event	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#modelingTheProbabilityOfAnEvent)	|		|		|		|
-|	S	|	8	|	49	|	06.12.	|	Multiple predictors classification	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#logistic-model-with-many-variables)	|		|		|		|
-|	S	|	8	|	50	|	06.12.	|	Logistic regression Python	|		|		|		|		|
-|	MR	|	9	|	51	|	13.12.	|	Hypothesis tesing summary	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#chp11-review)	|		|		|		|
-|	MR	|	9	|	52	|	13.12.	|	Randomization p-value	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#p-value-and-statistical-significance)	|		|		|		|
-|	MR	|	9	|	53	|	13.12.	|	Hypothesis tesing opportunity cost 	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#caseStudyOpportunityCost)	|		|		|		|
-|	S	|	9	|	54	|	13.12.	|	Bootsrapping introduction	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html)	|		|		|		|
-|	S	|	9	|	55	|	13.12.	|	Bootsrapping medical case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#case-study-med-consult)	|		|		|		|
-|	S	|	9	|	56	|	13.12.	|	Bootsrapping tappers case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#tapperscasestudy)	|		|		|		|
-|	S	|	9	|	57	|	13.12.	|	Bootsrapping confidence intervalls	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#ConfidenceIntervals)	|		|		|		|
+|	S	|	4	|	28	|	08.11.	|	Mapping data	|	[📚](https://openintro-ims.netlify.app/explore-numerical.html#mapping-data)	|		|		|		|
+|	MR	|	5	|	29	|	15.11.	|	Introduction to models	|		|	[📑](https://drive.google.com/file/d/1-aNNxcxxtxU7shWEGJrpw8k88XmUym_0/view?usp=sharing)	|		|		|
+|	S	|	5	|	30	|	15.11.	|	Sales and ads (models 1)	|		|		|		|		|
+|	S	|	5	|	31	|	15.11.	|	Mean squared error 1 (models 2)	|		|		|		|		|
+|	S	|	5	|	32	|	15.11.	|	Mean squared error 2 (models 3)	|		|		|		|		|
+|	S	|	5	|	33	|	15.11.	|	Mean squared error 3 (models 4)	|		|		|		|		|
+|	S	|	5	|	34	|	15.11.	|	Fitting a line and residuals	|	[📚](https://openintro-ims.netlify.app/model-slr.html#fit-line-res-cor)	|		|		|	[☑️](https://forms.gle/JFMXzjByDRGZtbDx8)	|
+|	MR	|	6	|	35	|	22.11.	|	Data splitting	|		|	[📑](https://drive.google.com/file/d/10DuEFUE-BVH1NYf84KyXeYA1Ajdre-0I/view?usp=sharing)	|		|		|
+|	S	|	6	|	36	|	22.11.	|	Correlation	|	[📚](https://openintro-ims.netlify.app/model-slr.html#describing-linear-relationships-with-correlation)	|		|		|	[☑️](https://forms.gle/5ntV6z8yHk8g4qgZ8)	|
+|	S	|	6	|	37	|	22.11.	|	Least squares regression	|	[📚](https://openintro-ims.netlify.app/model-slr.html#least-squares-regression)	|		|		|		|
+|	S	|	6	|	38	|	22.11.	|	R squared	|	[📚](https://openintro-ims.netlify.app/model-slr.html#r-squared)	|		|		|		|
+|	S	|	6	|	39	|	22.11.	|	Categorical predictors with two levels	|	[📚](https://openintro-ims.netlify.app/model-slr.html#categorical-predictor-two-levels)	|		|		|		|
+|	MR	|	7	|	40	|	29.11.	|	Classification	|		|	[📑](https://drive.google.com/file/d/10MFDRHaWTV56zVBqBE95xUTaeSxF7ICb/view?usp=sharing)	|		|		|
+|	MR	|	7	|	41	|	29.11.	|	Precision recall and F1 score	|	[📚](https://mlu-explain.github.io/precision-recall/)	|		|		|		|
+|	MR	|	7	|	42	|	29.11.	|	ROC Curve and AUC	|	[📚](https://mlu-explain.github.io/roc-auc/)	|		|		|		|
+|	S	|	7	|	43	|	29.11.	|	Outliers	|	[📚](https://openintro-ims.netlify.app/model-slr.html#outliers-in-regression)	|		|		|		|
+|	S	|	7	|	44	|	29.11.	|	Multiple predictors regression 1	|	[📚](https://openintro-ims.netlify.app/model-mlr.html#model-mlr)	|		|		|	[☑️](https://forms.gle/wHPHMvbTDczNaQD97)	|
+|	S	|	7	|	45	|	29.11.	|	Multiple predictors regression 2	|		|		|		|		|
+|	S	|	7	|	46	|	29.11.	|	Multiple predictors regression 3	|		|		|		|		|
+|	MR	|	8	|	47	|	06.12.	|	Randomization introduction	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html)	|	[📑](https://drive.google.com/file/d/10PkF_EiAFjJ8-w2G29sewOQib0gKKISK/view?usp=sharing)	|		|		|
+|	MR	|	8	|	48	|	06.12.	|	Randomization experiments	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#caseStudySexDiscrimination)	|		|		|		|
+|	S	|	8	|	49	|	06.12.	|	Probability of an event	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#modelingTheProbabilityOfAnEvent)	|		|		|		|
+|	S	|	8	|	50	|	06.12.	|	Multiple predictors classification	|	[📚](https://openintro-ims.netlify.app/model-logistic.html#logistic-model-with-many-variables)	|		|		|		|
+|	S	|	8	|	51	|	06.12.	|	Logistic regression Python	|		|		|		|		|
+|	MR	|	9	|	52	|	13.12.	|	Hypothesis tesing summary	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#chp11-review)	|	[📑](https://drive.google.com/file/d/10YvpqcO3HETCrRquhNt4C6lo22LbPGmH/view?usp=sharing)	|		|		|
+|	MR	|	9	|	53	|	13.12.	|	Randomization p-value	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#p-value-and-statistical-significance)	|		|		|		|
+|	MR	|	9	|	54	|	13.12.	|	Hypothesis tesing opportunity cost 	|	[📚](https://openintro-ims.netlify.app/foundations-randomization.html#caseStudyOpportunityCost)	|		|		|		|
+|	S	|	9	|	55	|	13.12.	|	Bootsrapping introduction	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html)	|		|		|		|
+|	S	|	9	|	56	|	13.12.	|	Bootsrapping medical case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#case-study-med-consult)	|		|		|		|
+|	S	|	9	|	57	|	13.12.	|	Bootsrapping tappers case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#tapperscasestudy)	|		|		|		|
+|	S	|	9	|	58	|	13.12.	|	Bootsrapping confidence intervalls	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#ConfidenceIntervals)	|		|		|		|
