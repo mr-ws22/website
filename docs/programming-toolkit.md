@@ -143,8 +143,11 @@ VS Code extensions let you add tools to your installation to support your develo
 
 - 💾 Install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-- 💾 Install the [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
 ```
+
+<!--
+- 💾 Install the [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
+-->
 
 Now close and restart VS Code.
 
