@@ -241,3 +241,17 @@ You should be able to
 You don't need to memorize the code (it would be provided in the exam). However, you would need to adapt some of the variables (like `n` or `p` in the bootsrapping example).
 
 ```
+
+## Week 10
+
+- [59. Mathematical introduction](../code/59-mathematical-c.ipynb)
+
+```{note}
+You should be able to 
+
+- change the variables to make calculations
+- use the code to make all necessary calculations
+
+You don't need to memorize the code (it would be provided in the exam). However, you would need to adapt some of the variables.
+
+```
