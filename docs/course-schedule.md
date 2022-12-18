@@ -66,3 +66,7 @@ This overview will be updated as the semester progresses.
 |	S	|	9	|	56	|	13.12.	|	Bootsrapping medical case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#case-study-med-consult)	|		|		|		|
 |	S	|	9	|	57	|	13.12.	|	Bootsrapping tappers case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#tapperscasestudy)	|		|		|		|
 |	S	|	9	|	58	|	13.12.	|	Bootsrapping confidence intervalls	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#ConfidenceIntervals)	|		|		|		|
+|	MR	|	10	|	59	|	20.12.	|	Mathematical introduction	|	[📚](https://openintro-ims.netlify.app/foundations-mathematical.html)	|		|		|		|
+|	MR	|	10	|	60	|	20.12.	|	Mathematical cases and confidence	|	[📚](https://openintro-ims.netlify.app/foundations-mathematical.html#caseopp)	|		|		|		|
+|	S	|	10	|	61	|	20.12.	|	Exam exercise in lab	|		|		|		|		|
+|	S	|	10	|	62	|	20.12.	|	Decision errors	|	[📚](https://openintro-ims.netlify.app/decerr.html)	|		|		|		|
