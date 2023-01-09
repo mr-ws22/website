@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -585,8 +590,8 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import altair as alt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 </pre></div>
 </div>
 </div>
@@ -598,7 +603,7 @@ import altair as alt
 <h3>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.read_csv(&#39;https://raw.githubusercontent.com/kirenz/datasets/master/possum.csv&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/kirenz/datasets/master/possum.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -608,7 +613,7 @@ import altair as alt
 <h3>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -770,7 +775,7 @@ import altair as alt
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -799,10 +804,10 @@ memory usage: 6.6+ KB
 <h3>Variable lists<a class="headerlink" href="#variable-lists" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># define outcome variable as y_label
-y_label = &#39;head_l&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define outcome variable as y_label</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s1">&#39;head_l&#39;</span>
 
-list_numeric = [&#39;age&#39;, &#39;head_l&#39;, &#39;skull_w&#39;, &#39;total_l&#39;, &#39;tail_l&#39;]
+<span class="n">list_numeric</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;head_l&#39;</span><span class="p">,</span> <span class="s1">&#39;skull_w&#39;</span><span class="p">,</span> <span class="s1">&#39;total_l&#39;</span><span class="p">,</span> <span class="s1">&#39;tail_l&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -815,7 +820,7 @@ list_numeric = [&#39;age&#39;, &#39;head_l&#39;, &#39;skull_w&#39;, &#39;total_l
 <h3>Descriptive analysis<a class="headerlink" href="#descriptive-analysis" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.describe().T
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 </div>
 </div>
@@ -924,22 +929,22 @@ list_numeric = [&#39;age&#39;, &#39;head_l&#39;, &#39;skull_w&#39;, &#39;total_l
 <h3>Explorative analysis<a class="headerlink" href="#explorative-analysis" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>alt.Chart(df).mark_circle().encode(
-    x=alt.X(alt.repeat(&quot;column&quot;), 
-            type=&#39;quantitative&#39;,
-            scale=alt.Scale(zero=False)
-            ),
-    y=alt.Y(alt.repeat(&quot;row&quot;), 
-            type=&#39;quantitative&#39;,
-            scale=alt.Scale(zero=False)
-             )
-).properties(
-    width=150,
-    height=150
-).repeat(
-    row=list_numeric,
-    column=list_numeric
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;column&quot;</span><span class="p">),</span> 
+            <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">,</span>
+            <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;row&quot;</span><span class="p">),</span> 
+            <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">,</span>
+            <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">zero</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+             <span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">150</span>
+<span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+    <span class="n">row</span><span class="o">=</span><span class="n">list_numeric</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="n">list_numeric</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1022,14 +1027,14 @@ or<br />
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>corr = df.corr(method=&#39;pearson&#39;).round(2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>corr
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr</span>
 </pre></div>
 </div>
 </div>
@@ -1121,14 +1126,14 @@ or<br />
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>corr_blues = corr.style.background_gradient(cmap=&#39;Blues&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr_blues</span> <span class="o">=</span> <span class="n">corr</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>corr_blues
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr_blues</span>
 </pre></div>
 </div>
 </div>
@@ -1300,15 +1305,15 @@ or<br />
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># inspect correlation between response and predictors
-corr_list = corr[y_label].sort_values(ascending=False)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inspect correlation between response and predictors</span>
+<span class="n">corr_list</span> <span class="o">=</span> <span class="n">corr</span><span class="p">[</span><span class="n">y_label</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>corr_list
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corr_list</span>
 </pre></div>
 </div>
 </div>

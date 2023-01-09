@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -646,16 +651,16 @@ title="Print to PDF"
 <p>Good luck!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>NAME = &quot;&quot;
-COLLABORATORS = &quot;&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">COLLABORATORS</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import IPython
-assert IPython.version_info[0] &gt;= 3, &quot;Your version of IPython is too old, please update it.&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
+<span class="k">assert</span> <span class="n">IPython</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Your version of IPython is too old, please update it.&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -667,11 +672,11 @@ assert IPython.version_info[0] &gt;= 3, &quot;Your version of IPython is too old
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
-from sklearn.metrics import mean_absolute_error
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
 </pre></div>
 </div>
 </div>
@@ -683,10 +688,10 @@ from sklearn.metrics import mean_absolute_error
 <h3>Create data<a class="headerlink" href="#create-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.DataFrame(
-    {&#39;sales&#39;: [2500, 4500, 6500, 8500, 10500, 12500, 14500, 16500, 18500, 20500],
-      &#39;ads&#39;  : [900, 1400, 3600, 3800, 6200, 5200, 6800, 8300, 9800, 10100]}
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;sales&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">4500</span><span class="p">,</span> <span class="mi">6500</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">12500</span><span class="p">,</span> <span class="mi">14500</span><span class="p">,</span> <span class="mi">16500</span><span class="p">,</span> <span class="mi">18500</span><span class="p">,</span> <span class="mi">20500</span><span class="p">],</span>
+      <span class="s1">&#39;ads&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="mi">900</span><span class="p">,</span> <span class="mi">1400</span><span class="p">,</span> <span class="mi">3600</span><span class="p">,</span> <span class="mi">3800</span><span class="p">,</span> <span class="mi">6200</span><span class="p">,</span> <span class="mi">5200</span><span class="p">,</span> <span class="mi">6800</span><span class="p">,</span> <span class="mi">8300</span><span class="p">,</span> <span class="mi">9800</span><span class="p">,</span> <span class="mi">10100</span><span class="p">]}</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -709,30 +714,30 @@ y = df[___]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>X
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code (note that there are some hidden checks)
-assert len(X) == 10
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code (note that there are some hidden checks)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
 </pre></div>
 </div>
 </div>
@@ -752,16 +757,16 @@ assert len(X) == 10
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code
-assert reg.get_params() == {&#39;copy_X&#39;: True, &#39;fit_intercept&#39;: True, &#39;n_jobs&#39;: None, &#39;normalize&#39;: &#39;deprecated&#39;, &#39;positive&#39;: False}
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code</span>
+<span class="k">assert</span> <span class="n">reg</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;copy_X&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;fit_intercept&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;n_jobs&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;normalize&#39;</span><span class="p">:</span> <span class="s1">&#39;deprecated&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -779,16 +784,16 @@ assert reg.get_params() == {&#39;copy_X&#39;: True, &#39;fit_intercept&#39;: Tru
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code
-assert reg.positive == False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code</span>
+<span class="k">assert</span> <span class="n">reg</span><span class="o">.</span><span class="n">positive</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -798,16 +803,16 @@ assert reg.positive == False
 <h3>Coefficients<a class="headerlink" href="#coefficients" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Intercept
-reg.intercept_
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Intercept</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Slope
-reg.coef_
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Slope</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
 </pre></div>
 </div>
 </div>
@@ -828,23 +833,23 @@ reg.coef_
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y_pred[0]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code
-assert 2836 &lt; y_pred[0] &lt;  2840
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code</span>
+<span class="k">assert</span> <span class="mi">2836</span> <span class="o">&lt;</span> <span class="n">y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span>  <span class="mi">2840</span>
 </pre></div>
 </div>
 </div>
@@ -863,23 +868,23 @@ assert 2836 &lt; y_pred[0] &lt;  2840
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&#39;The mean squared error equals {mse:.0f} &#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The mean squared error equals </span><span class="si">{</span><span class="n">mse</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code
-assert 1160738 &lt; mse &lt; 1160740 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code</span>
+<span class="k">assert</span> <span class="mi">1160738</span> <span class="o">&lt;</span> <span class="n">mse</span> <span class="o">&lt;</span> <span class="mi">1160740</span> 
 </pre></div>
 </div>
 </div>
@@ -899,23 +904,23 @@ assert 1160738 &lt; mse &lt; 1160740
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&#39;The root mean squared error equals {rmse:.0f} &#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The root mean squared error equals </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code
-assert 1076 &lt; rmse &lt; 1078 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code</span>
+<span class="k">assert</span> <span class="mi">1076</span> <span class="o">&lt;</span> <span class="n">rmse</span> <span class="o">&lt;</span> <span class="mi">1078</span> 
 </pre></div>
 </div>
 </div>
@@ -932,23 +937,23 @@ assert 1076 &lt; rmse &lt; 1078
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&#39;The mean absolute error equals {mae:.0f} &#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The mean absolute error equals </span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code
-assert 885 &lt; mae &lt; 887 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code</span>
+<span class="k">assert</span> <span class="mi">885</span> <span class="o">&lt;</span> <span class="n">mae</span> <span class="o">&lt;</span> <span class="mi">887</span> 
 </pre></div>
 </div>
 </div>

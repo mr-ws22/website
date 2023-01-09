@@ -246,6 +246,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -661,16 +666,16 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import altair as alt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
 
-import warnings
+<span class="kn">import</span> <span class="nn">warnings</span>
 
-warnings.simplefilter(action=&#39;ignore&#39;, category=FutureWarning)
-alt.data_transformers.disable_max_rows()
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -687,10 +692,10 @@ alt.data_transformers.disable_max_rows()
 <h3>Create data<a class="headerlink" href="#create-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.DataFrame(
-    {&#39;sales&#39;: [2500, 4500, 6500, 8500, 10500, 12500, 14500, 16500, 18500, 20500],
-      &#39;ads&#39;  : [900, 1400, 3600, 3800, 6200, 5200, 6800, 8300, 9800, 10100]}
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;sales&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">4500</span><span class="p">,</span> <span class="mi">6500</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">12500</span><span class="p">,</span> <span class="mi">14500</span><span class="p">,</span> <span class="mi">16500</span><span class="p">,</span> <span class="mi">18500</span><span class="p">,</span> <span class="mi">20500</span><span class="p">],</span>
+      <span class="s1">&#39;ads&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="mi">900</span><span class="p">,</span> <span class="mi">1400</span><span class="p">,</span> <span class="mi">3600</span><span class="p">,</span> <span class="mi">3800</span><span class="p">,</span> <span class="mi">6200</span><span class="p">,</span> <span class="mi">5200</span><span class="p">,</span> <span class="mi">6800</span><span class="p">,</span> <span class="mi">8300</span><span class="p">,</span> <span class="mi">9800</span><span class="p">,</span> <span class="mi">10100</span><span class="p">]}</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -700,9 +705,9 @@ alt.data_transformers.disable_max_rows()
 <h3>Variable lists<a class="headerlink" href="#variable-lists" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Prepare the data
-X = df[[&quot;ads&quot;]]
-y = df[[&quot;sales&quot;]]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare the data</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;ads&quot;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;sales&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -715,8 +720,8 @@ y = df[[&quot;sales&quot;]]
 <h3>Select model<a class="headerlink" href="#select-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># linear regression model
-reg = LinearRegression()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># linear regression model</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -726,8 +731,8 @@ reg = LinearRegression()
 <h3>Fit model<a class="headerlink" href="#fit-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Train the model
-reg.fit(X, y)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Train the model</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -739,8 +744,8 @@ reg.fit(X, y)
 <h3>Coefficients<a class="headerlink" href="#coefficients" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Intercept
-print(f&#39; Intercept: {reg.intercept_} \n Slope: {reg.coef_[0]}&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Intercept</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; Intercept: </span><span class="si">{</span><span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> Slope: </span><span class="si">{</span><span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -756,23 +761,23 @@ print(f&#39; Intercept: {reg.intercept_} \n Slope: {reg.coef_[0]}&#39;)
 <h3>Make predictions<a class="headerlink" href="#make-predictions" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Make predictions
-y_pred = reg.predict(X)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make predictions</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Add predictions to dataframe
-df[&#39;y_pred&#39;] = y_pred
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add predictions to dataframe</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -840,12 +845,12 @@ df[&#39;y_pred&#39;] = y_pred
 <h3>Plot model<a class="headerlink" href="#plot-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart = alt.Chart(df).mark_point().encode(
-    x=&#39;ads&#39;,
-    y=&#39;sales&#39;
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;sales&#39;</span>
+<span class="p">)</span>
 
-chart + chart.transform_regression(&#39;ads&#39;, &#39;sales&#39;, extent=[0, 12000]).mark_line()
+<span class="n">chart</span> <span class="o">+</span> <span class="n">chart</span><span class="o">.</span><span class="n">transform_regression</span><span class="p">(</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12000</span><span class="p">])</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -914,16 +919,16 @@ chart + chart.transform_regression(&#39;ads&#39;, &#39;sales&#39;, extent=[0, 12
 <p>Calculate the squared difference between actual and predicted sales and save it as <code class="docutils literal notranslate"><span class="pre">se</span></code>in the dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### BEGIN SOLUTION
-df[&#39;se&#39;] = (df[&#39;sales&#39;] - df[&#39;y_pred&#39;]) ** 2
-### END SOLUTION
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;se&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="c1">### END SOLUTION</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -994,8 +999,8 @@ df[&#39;se&#39;] = (df[&#39;sales&#39;] - df[&#39;y_pred&#39;]) ** 2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Check your code
-assert 113310 &lt; df.iloc[0, 3] &lt; 113330
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check your code</span>
+<span class="k">assert</span> <span class="mi">113310</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">113330</span>
 </pre></div>
 </div>
 </div>
@@ -1007,16 +1012,16 @@ assert 113310 &lt; df.iloc[0, 3] &lt; 113330
 <p><em>Note that <code class="docutils literal notranslate"><span class="pre">sse</span></code> is also known as “sum of squared residuals” or “residual sum of squares”.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### BEGIN SOLUTION
-sse = df[&#39;se&#39;].sum()
-### END SOLUTION
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
+<span class="n">sse</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;se&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1">### END SOLUTION</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sse
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sse</span>
 </pre></div>
 </div>
 </div>
@@ -1028,8 +1033,8 @@ sse = df[&#39;se&#39;].sum()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Check your code
-assert 11607390 &lt; sse 11607393
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check your code</span>
+<span class="k">assert</span> <span class="mi">11607390</span> <span class="o">&lt;</span> <span class="n">sse</span> <span class="mi">11607393</span>
 </pre></div>
 </div>
 </div>
@@ -1046,24 +1051,24 @@ sales values by how far they tend to fall from their mean</p></li>
 <h4>Total sum of squares (SST)<a class="headerlink" href="#total-sum-of-squares-sst" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># we calculate the mean of sales
-df[&#39;sales_mean&#39;] = df[&#39;sales&#39;].mean()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we calculate the mean of sales</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales_mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart = alt.Chart(df).mark_point().encode(
-    x=&#39;ads&#39;,
-    y=&#39;sales&#39;
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;sales&#39;</span>
+<span class="p">)</span>
 
-line = alt.Chart(df).mark_rule(color=&#39;red&#39;).encode(
-    y=&#39;mean(sales)&#39;
-)
+<span class="n">line</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;mean(sales)&#39;</span>
+<span class="p">)</span>
 
-chart + line
+<span class="n">chart</span> <span class="o">+</span> <span class="n">line</span>
 </pre></div>
 </div>
 </div>
@@ -1126,8 +1131,8 @@ chart + line
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># calculate squared difference between actual and mean (the variance)
-df[&#39;variance&#39;] = (df[&#39;sales&#39;] - df[&#39;sales_mean&#39;]) ** 2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate squared difference between actual and mean (the variance)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;variance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sales_mean&#39;</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div>
@@ -1137,14 +1142,14 @@ df[&#39;variance&#39;] = (df[&#39;sales&#39;] - df[&#39;sales_mean&#39;]) ** 2
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sst = df[&#39;variance&#39;].sum()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sst
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span>
 </pre></div>
 </div>
 </div>
@@ -1162,16 +1167,16 @@ df[&#39;variance&#39;] = (df[&#39;sales&#39;] - df[&#39;sales_mean&#39;]) ** 2
 \[R^2 = (SST - SSE) / SST\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### BEGIN SOLUTION
-r2 = (sst - sse) / sst
-### END SOLUTION
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="p">(</span><span class="n">sst</span> <span class="o">-</span> <span class="n">sse</span><span class="p">)</span> <span class="o">/</span> <span class="n">sst</span>
+<span class="c1">### END SOLUTION</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>r2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r2</span>
 </pre></div>
 </div>
 </div>
@@ -1183,8 +1188,8 @@ r2 = (sst - sse) / sst
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>### Check your code
-assert 0.963 &lt; r2 &lt; 0.965
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Check your code</span>
+<span class="k">assert</span> <span class="mf">0.963</span> <span class="o">&lt;</span> <span class="n">r2</span> <span class="o">&lt;</span> <span class="mf">0.965</span>
 </pre></div>
 </div>
 </div>
@@ -1195,8 +1200,8 @@ assert 0.963 &lt; r2 &lt; 0.965
 <h3>Use function to calculate R2<a class="headerlink" href="#use-function-to-calculate-r2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># we can use r2_score
-r2_score(y, y_pred)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can use r2_score</span>
+<span class="n">r2_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1208,8 +1213,8 @@ r2_score(y, y_pred)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># we can also use .score
-reg.score(X, y)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can also use .score</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

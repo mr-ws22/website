@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -615,10 +620,10 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import altair as alt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 
-alt.data_transformers.disable_max_rows()
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -633,8 +638,8 @@ alt.data_transformers.disable_max_rows()
 <h2>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.read_csv(&quot;https://raw.githubusercontent.com/kirenz/datasets/master/opportunity_cost.csv&quot;)
-df.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/kirenz/datasets/master/opportunity_cost.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -693,7 +698,7 @@ df.head()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -713,7 +718,7 @@ memory usage: 2.5+ KB
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df[&#39;group&#39;].value_counts()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -733,7 +738,7 @@ Name: group, dtype: int64
 <h2>Crosstable<a class="headerlink" href="#crosstable" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.crosstab(df.group, df.decision,  margins=True)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">group</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">decision</span><span class="p">,</span>  <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -792,7 +797,7 @@ Name: group, dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.crosstab(df.group, df.decision, normalize=&#39;index&#39;,  margins=True).round(2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">group</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">decision</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span>  <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -849,22 +854,22 @@ Name: group, dtype: int64
 <h2>Calculate difference<a class="headerlink" href="#calculate-difference" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_control = df[(df[&quot;group&quot;] == &quot;control&quot;)]
-df_treatment = df[(df[&quot;group&quot;] == &quot;treatment&quot;)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_control</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;control&quot;</span><span class="p">)]</span>
+<span class="n">df_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;treatment&quot;</span><span class="p">)]</span>
 
-control_total = len(df_control)
-treatment_total = len(df_treatment)
+<span class="n">control_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">)</span>
+<span class="n">treatment_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">)</span>
 
-control_not_buy = len(df_control[df_control[&#39;decision&#39;]==&quot;not buy video&quot;])
-treatment_not_buy = len(df_treatment[df_treatment[&#39;decision&#39;]==&quot;not buy video&quot;])
+<span class="n">control_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">[</span><span class="n">df_control</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
+<span class="n">treatment_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">[</span><span class="n">df_treatment</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
 
-control_p = round(control_not_buy / control_total, 3)
-treatment_p = round(treatment_not_buy / treatment_total, 3)
+<span class="n">control_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">control_not_buy</span> <span class="o">/</span> <span class="n">control_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">treatment_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_not_buy</span> <span class="o">/</span> <span class="n">treatment_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-p_diff_ob = round(treatment_p - control_p, 3)
+<span class="n">p_diff_ob</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_p</span> <span class="o">-</span> <span class="n">control_p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-df_p_diff_ob = pd.DataFrame({&#39;p_diff&#39;: [p_diff_ob] })
-df_p_diff_ob
+<span class="n">df_p_diff_ob</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;p_diff&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">p_diff_ob</span><span class="p">]</span> <span class="p">})</span>
+<span class="n">df_p_diff_ob</span>
 </pre></div>
 </div>
 </div>
@@ -908,7 +913,7 @@ df_p_diff_ob
 <p>Example with only one randomization:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df[&#39;group_random&#39;] = df[&#39;group&#39;].sample(frac=1, random_state=0).reset_index(drop=True)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;group_random&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -916,7 +921,7 @@ df_p_diff_ob
 <p>Since the randomization of files in this simulation is independent of the promotion decisions, any difference in promotion rates is due to chance.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.crosstab(df.group_random, df.decision,  margins=True)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">group_random</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">decision</span><span class="p">,</span>  <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -980,21 +985,21 @@ df_p_diff_ob
 <h4>One randomization<a class="headerlink" href="#one-randomization" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_control = df[(df[&quot;group_random&quot;] == &quot;control&quot;)]
-df_treatment = df[(df[&quot;group_random&quot;] == &quot;treatment&quot;)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_control</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;control&quot;</span><span class="p">)]</span>
+<span class="n">df_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;treatment&quot;</span><span class="p">)]</span>
 
-control_total = len(df_control)
-treatment_total = len(df_treatment)
+<span class="n">control_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">)</span>
+<span class="n">treatment_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">)</span>
 
-control_not_buy = len(df_control[df_control[&#39;decision&#39;]==&quot;not buy video&quot;])
-treatment_not_buy = len(df_treatment[df_treatment[&#39;decision&#39;]==&quot;not buy video&quot;])
+<span class="n">control_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">[</span><span class="n">df_control</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
+<span class="n">treatment_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">[</span><span class="n">df_treatment</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
 
-control_p = round(control_not_buy / control_total, 3)
-treatment_p = round(treatment_not_buy / treatment_total, 3)
+<span class="n">control_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">control_not_buy</span> <span class="o">/</span> <span class="n">control_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">treatment_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_not_buy</span> <span class="o">/</span> <span class="n">treatment_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-p_diff = round(treatment_p - control_p, 3)
+<span class="n">p_diff</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_p</span> <span class="o">-</span> <span class="n">control_p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-p_diff
+<span class="n">p_diff</span>
 </pre></div>
 </div>
 </div>
@@ -1009,44 +1014,44 @@ p_diff
 <h4>Multiple randomizations<a class="headerlink" href="#multiple-randomizations" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># create an empty list
-random_difference = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an empty list</span>
+<span class="n">random_difference</span> <span class="o">=</span> <span class="p">[]</span>
 
-# make 1000 randomizations and save results
-for i in range(0, 1000):
+<span class="c1"># make 1000 randomizations and save results</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
 
-    df[&#39;group_random&#39;] = df[&#39;group&#39;].sample(frac=1, random_state=i).reset_index(drop=True)
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;group_random&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    df_control = df[(df[&quot;group_random&quot;] == &quot;control&quot;)]
-    df_treatment = df[(df[&quot;group_random&quot;] == &quot;treatment&quot;)]
+    <span class="n">df_control</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;control&quot;</span><span class="p">)]</span>
+    <span class="n">df_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group_random&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;treatment&quot;</span><span class="p">)]</span>
 
-    control_total = len(df_control)
-    treatment_total = len(df_treatment)
+    <span class="n">control_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">)</span>
+    <span class="n">treatment_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">)</span>
 
-    control_not_buy = len(df_control[df_control[&#39;decision&#39;]==&quot;not buy video&quot;])
-    treatment_not_buy = len(df_treatment[df_treatment[&#39;decision&#39;]==&quot;not buy video&quot;])
+    <span class="n">control_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">[</span><span class="n">df_control</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
+    <span class="n">treatment_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">[</span><span class="n">df_treatment</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
 
-    control_p = round(control_not_buy / control_total, 3)
-    treatment_p = round(treatment_not_buy / treatment_total, 3)
+    <span class="n">control_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">control_not_buy</span> <span class="o">/</span> <span class="n">control_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">treatment_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_not_buy</span> <span class="o">/</span> <span class="n">treatment_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-    p_diff = round(treatment_p - control_p, 3)
+    <span class="n">p_diff</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_p</span> <span class="o">-</span> <span class="n">control_p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-    random_difference.append(p_diff)
+    <span class="n">random_difference</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p_diff</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># create pandas dataframe
-df_random = pd.DataFrame({&#39;p_diff&#39;: random_difference})
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create pandas dataframe</span>
+<span class="n">df_random</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;p_diff&#39;</span><span class="p">:</span> <span class="n">random_difference</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_random.describe().T
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_random</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 </div>
 </div>
@@ -1097,29 +1102,29 @@ df_random = pd.DataFrame({&#39;p_diff&#39;: random_difference})
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart1 = alt.Chart(df_random).mark_circle(size=100).transform_window(
-    id=&#39;rank()&#39;,
-    groupby=[&#39;p_diff&#39;]
-).encode(
-    alt.X(&#39;p_diff:O&#39;, title=&#39;Differences across 1000 shuffles&#39;),
-    alt.Y(&#39;id:O&#39;,
-          axis=None,
-          sort=&#39;descending&#39;)
-).properties(height=300, width=400)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart1</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_random</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">transform_window</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;rank()&#39;</span><span class="p">,</span>
+    <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p_diff&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;p_diff:O&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Differences across 1000 shuffles&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;id:O&#39;</span><span class="p">,</span>
+          <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 
 
-chart2 = alt.Chart(df_p_diff_ob).mark_circle(size=100).transform_window(
-    id=&#39;rank()&#39;,
-    groupby=[&#39;p_diff&#39;]
-).encode(
-    alt.X(&#39;p_diff:O&#39;),
-    alt.Y(&#39;id:O&#39;,
-          axis=None,
-          sort=&#39;descending&#39;),
-    color=alt.value(&#39;orange&#39;)
-)
+<span class="n">chart2</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_p_diff_ob</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">transform_window</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;rank()&#39;</span><span class="p">,</span>
+    <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p_diff&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;p_diff:O&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;id:O&#39;</span><span class="p">,</span>
+          <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="p">)</span>
 
-chart1 + chart2 
+<span class="n">chart1</span> <span class="o">+</span> <span class="n">chart2</span> 
 </pre></div>
 </div>
 </div>
@@ -1182,10 +1187,10 @@ chart1 + chart2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>alt.Chart(df_random).mark_bar().encode(
-    alt.X(&#39;p_diff:Q&#39;, bin=True, title=&#39;Differences across 100 shuffles&#39;),
-    alt.Y(&#39;count()&#39;)
-).properties(height=300, width=400)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_random</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;p_diff:Q&#39;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Differences across 100 shuffles&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;count()&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1253,10 +1258,10 @@ chart1 + chart2
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count_diff = df_random[df_random[&#39;p_diff&#39;] &gt;= p_diff_ob].count().p_diff
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_diff</span> <span class="o">=</span> <span class="n">df_random</span><span class="p">[</span><span class="n">df_random</span><span class="p">[</span><span class="s1">&#39;p_diff&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">p_diff_ob</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">p_diff</span>
 
-p_value = count_diff/len(df_random)
-p_value
+<span class="n">p_value</span> <span class="o">=</span> <span class="n">count_diff</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df_random</span><span class="p">)</span>
+<span class="n">p_value</span>
 </pre></div>
 </div>
 </div>
@@ -1279,7 +1284,7 @@ p_value
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p_value
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_value</span>
 </pre></div>
 </div>
 </div>
@@ -1291,18 +1296,18 @@ p_value
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def significance(p_value):
-    if p_value &lt;= 0.05:
-        return &quot;Reject Null Hypothesis&quot;
-    else:
-        return &quot;Accept Null Hypothesis&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;=</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Reject Null Hypothesis&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Accept Null Hypothesis&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>significance(p_value)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

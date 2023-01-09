@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -645,18 +650,18 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import pandas as pd
-import altair as alt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LassoCV
-from sklearn.linear_model import Lasso
-from sklearn.metrics import r2_score
-from sklearn.metrics import mean_squared_error
-from sklearn.metrics import mean_absolute_error
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LassoCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Lasso</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
 </pre></div>
 </div>
 </div>
@@ -668,7 +673,7 @@ from sklearn.metrics import mean_absolute_error
 <h3>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.read_csv(&#39;https://raw.githubusercontent.com/kirenz/datasets/master/advertising.csv&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/kirenz/datasets/master/advertising.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -678,7 +683,7 @@ from sklearn.metrics import mean_absolute_error
 <h3>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -804,7 +809,7 @@ from sklearn.metrics import mean_absolute_error
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -830,8 +835,8 @@ memory usage: 7.9 KB
 <h3>Data corrections<a class="headerlink" href="#data-corrections" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># variable Market is categorical
-df[&#39;Market&#39;] = df[&#39;Market&#39;].astype(&#39;category&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># variable Market is categorical</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Market&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Market&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -841,17 +846,17 @@ df[&#39;Market&#39;] = df[&#39;Market&#39;].astype(&#39;category&#39;)
 <h3>Variable lists<a class="headerlink" href="#variable-lists" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># define outcome variable as y_label
-y_label = &#39;sales&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define outcome variable as y_label</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s1">&#39;sales&#39;</span>
 
-# select features
-features = df.drop(columns=[y_label, &#39;Market&#39;]).columns
+<span class="c1"># select features</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">y_label</span><span class="p">,</span> <span class="s1">&#39;Market&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span>
 
-# create feature data
-X = df[features]
+<span class="c1"># create feature data</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
 
-# create response
-y = df[y_label]
+<span class="c1"># create response</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">y_label</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -861,18 +866,18 @@ y = df[y_label]
 <h3>Data splitting<a class="headerlink" href="#data-splitting" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>X_train, X_test, y_train, y_test = train_test_split(X, y, 
-                                                    test_size=0.2,
-                                                    random_state=42)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># data exploration set
-df_train = pd.DataFrame(X_train.copy())
-df_train = df_train.join(pd.DataFrame(y_train))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data exploration set</span>
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+<span class="n">df_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_train</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -882,7 +887,7 @@ df_train = df_train.join(pd.DataFrame(y_train))
 <h3>Analyze data<a class="headerlink" href="#analyze-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_train.describe().T
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 </div>
 </div>
@@ -966,15 +971,15 @@ df_train = df_train.join(pd.DataFrame(y_train))
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>alt.Chart(df_train).mark_bar().encode(
-    alt.X(alt.repeat(&quot;column&quot;), type=&quot;quantitative&quot;, bin=True),
-    y=&#39;count()&#39;,
-).properties(
-    width=150,
-    height=150
-).repeat(
-    column=[&#39;sales&#39;, &#39;TV&#39;, &#39;radio&#39;, &#39;newspaper&#39;]
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;column&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;quantitative&quot;</span><span class="p">,</span> <span class="nb">bin</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">150</span>
+<span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="s1">&#39;TV&#39;</span><span class="p">,</span> <span class="s1">&#39;radio&#39;</span><span class="p">,</span> <span class="s1">&#39;newspaper&#39;</span><span class="p">]</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1037,16 +1042,16 @@ df_train = df_train.join(pd.DataFrame(y_train))
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>alt.Chart(df_train).mark_circle().encode(
-    alt.X(alt.repeat(&quot;column&quot;), type=&#39;quantitative&#39;),
-    alt.Y(alt.repeat(&quot;row&quot;), type=&#39;quantitative&#39;)
-).properties(
-    width=150,
-    height=150
-).repeat(
-    row=[&#39;sales&#39;, &#39;TV&#39;, &#39;radio&#39;, &#39;newspaper&#39;],
-    column=[&#39;sales&#39;, &#39;TV&#39;, &#39;radio&#39;, &#39;newspaper&#39;]
-).interactive()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;column&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;row&quot;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">150</span>
+<span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+    <span class="n">row</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="s1">&#39;TV&#39;</span><span class="p">,</span> <span class="s1">&#39;radio&#39;</span><span class="p">,</span> <span class="s1">&#39;newspaper&#39;</span><span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="s1">&#39;TV&#39;</span><span class="p">,</span> <span class="s1">&#39;radio&#39;</span><span class="p">,</span> <span class="s1">&#39;newspaper&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1109,9 +1114,9 @@ df_train = df_train.join(pd.DataFrame(y_train))
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># inspect correlation between outcome and possible predictors
-corr = df_train.corr()
-corr[y_label].sort_values(ascending=False)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inspect correlation between outcome and possible predictors</span>
+<span class="n">corr</span> <span class="o">=</span> <span class="n">df_train</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">corr</span><span class="p">[</span><span class="n">y_label</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1127,8 +1132,8 @@ Name: sales, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># take a look at all correlations
-corr.style.background_gradient(cmap=&#39;Blues&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># take a look at all correlations</span>
+<span class="n">corr</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1240,17 +1245,17 @@ corr.style.background_gradient(cmap=&#39;Blues&#39;)
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>scaler = StandardScaler().fit(X_train[features]) 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">features</span><span class="p">])</span> 
 
-X_train[features] = scaler.transform(X_train[features])
-X_test[features] = scaler.transform(X_test[features])
+<span class="n">X_train</span><span class="p">[</span><span class="n">features</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="n">features</span><span class="p">])</span>
+<span class="n">X_test</span><span class="p">[</span><span class="n">features</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="n">features</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>X_train
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span>
 </pre></div>
 </div>
 </div>
@@ -1355,8 +1360,8 @@ X_test[features] = scaler.transform(X_test[features])
 <h3>Select model<a class="headerlink" href="#select-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># select the lasso model with built in crossvalidation
-reg = LassoCV(cv=5, random_state=0)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select the lasso model with built in crossvalidation</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">LassoCV</span><span class="p">(</span><span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1366,7 +1371,7 @@ reg = LassoCV(cv=5, random_state=0)
 <h3>Training &amp; best alpha<a class="headerlink" href="#training-best-alpha" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>reg.fit(X_train, y_train)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1376,7 +1381,7 @@ reg = LassoCV(cv=5, random_state=0)
 <p>Show best value of penalization chosen by cross validation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>reg.alpha_
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">alpha_</span>
 </pre></div>
 </div>
 </div>
@@ -1391,9 +1396,9 @@ reg = LassoCV(cv=5, random_state=0)
 <h3>Fit best model<a class="headerlink" href="#fit-best-model" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Fit the model to the complete training data
-reg = Lasso(alpha=reg.alpha_)
-reg.fit(X_train, y_train)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit the model to the complete training data</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">reg</span><span class="o">.</span><span class="n">alpha_</span><span class="p">)</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1405,22 +1410,22 @@ reg.fit(X_train, y_train)
 <h3>Coefficients<a class="headerlink" href="#coefficients" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># intercept
-intercept = pd.DataFrame({
-    &quot;Name&quot;: [&quot;Intercept&quot;],
-    &quot;Coefficient&quot;:[reg.intercept_]}
-    )
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># intercept</span>
+<span class="n">intercept</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Intercept&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Coefficient&quot;</span><span class="p">:[</span><span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span><span class="p">]}</span>
+    <span class="p">)</span>
 
-# make a slope table
-slope = pd.DataFrame({
-    &quot;Name&quot;: features,
-    &quot;Coefficient&quot;: reg.coef_}
-)
+<span class="c1"># make a slope table</span>
+<span class="n">slope</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">features</span><span class="p">,</span>
+    <span class="s2">&quot;Coefficient&quot;</span><span class="p">:</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">}</span>
+<span class="p">)</span>
 
-# combine estimates of intercept and slopes
-table = pd.concat([intercept, slope], ignore_index=True, sort=False)
+<span class="c1"># combine estimates of intercept and slopes</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">intercept</span><span class="p">,</span> <span class="n">slope</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-round(table, 3)
+<span class="nb">round</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1477,16 +1482,16 @@ round(table, 3)
 <h3>Evaluation on test set<a class="headerlink" href="#evaluation-on-test-set" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># obtain predictions
-y_pred = reg.predict(X_test)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtain predictions</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># R squared
-r2_score(y_test, y_pred).round(3)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># R squared</span>
+<span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1498,8 +1503,8 @@ r2_score(y_test, y_pred).round(3)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># MSE
-mean_squared_error(y_test, y_pred).round(3)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MSE</span>
+<span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1511,8 +1516,8 @@ mean_squared_error(y_test, y_pred).round(3)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># RMSE
-mean_squared_error(y_test, y_pred, squared=False).round(3)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RMSE</span>
+<span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1524,8 +1529,8 @@ mean_squared_error(y_test, y_pred, squared=False).round(3)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># MAE
-mean_absolute_error(y_test, y_pred).round(3)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MAE</span>
+<span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

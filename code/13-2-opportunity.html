@@ -246,6 +246,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -519,13 +524,13 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import numpy as np
-import scipy.stats as st
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
 
-import altair as alt
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 
-alt.data_transformers.disable_max_rows()
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -540,8 +545,8 @@ alt.data_transformers.disable_max_rows()
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.read_csv(&quot;https://raw.githubusercontent.com/kirenz/datasets/master/opportunity_cost.csv&quot;)
-df.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/kirenz/datasets/master/opportunity_cost.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -600,22 +605,22 @@ df.head()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_control = df[(df[&quot;group&quot;] == &quot;control&quot;)]
-df_treatment = df[(df[&quot;group&quot;] == &quot;treatment&quot;)]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_control</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;control&quot;</span><span class="p">)]</span>
+<span class="n">df_treatment</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;group&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;treatment&quot;</span><span class="p">)]</span>
 
-control_total = len(df_control)
-treatment_total = len(df_treatment)
+<span class="n">control_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">)</span>
+<span class="n">treatment_total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">)</span>
 
-control_not_buy = len(df_control[df_control[&#39;decision&#39;]==&quot;not buy video&quot;])
-treatment_not_buy = len(df_treatment[df_treatment[&#39;decision&#39;]==&quot;not buy video&quot;])
+<span class="n">control_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_control</span><span class="p">[</span><span class="n">df_control</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
+<span class="n">treatment_not_buy</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_treatment</span><span class="p">[</span><span class="n">df_treatment</span><span class="p">[</span><span class="s1">&#39;decision&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;not buy video&quot;</span><span class="p">])</span>
 
-control_p = round(control_not_buy / control_total, 3)
-treatment_p = round(treatment_not_buy / treatment_total, 3)
+<span class="n">control_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">control_not_buy</span> <span class="o">/</span> <span class="n">control_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">treatment_p</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_not_buy</span> <span class="o">/</span> <span class="n">treatment_total</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-p_diff_ob = round(treatment_p - control_p, 3)
+<span class="n">p_diff_ob</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">treatment_p</span> <span class="o">-</span> <span class="n">control_p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-df_p_diff_ob = pd.DataFrame({&#39;p_diff&#39;: [p_diff_ob] })
-df_p_diff_ob
+<span class="n">df_p_diff_ob</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;p_diff&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">p_diff_ob</span><span class="p">]</span> <span class="p">})</span>
+<span class="n">df_p_diff_ob</span>
 </pre></div>
 </div>
 </div>
@@ -652,13 +657,13 @@ df_p_diff_ob
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n1 = control_total
-n2 = treatment_total
-p1 = 0.2
-p2 = 0.0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n1</span> <span class="o">=</span> <span class="n">control_total</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="n">treatment_total</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-se = np.sqrt(((p1 * (1 - p1)) / n1) + ((p2 * (1 - p2)) / n2))
-se
+<span class="n">se</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(((</span><span class="n">p1</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p1</span><span class="p">))</span> <span class="o">/</span> <span class="n">n1</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">p2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p2</span><span class="p">))</span> <span class="o">/</span> <span class="n">n2</span><span class="p">))</span>
+<span class="n">se</span>
 </pre></div>
 </div>
 </div>
@@ -674,8 +679,8 @@ se
 <h2>Z score hypothesis test<a class="headerlink" href="#z-score-hypothesis-test" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>z = (p1 - p2) / se
-z
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">p1</span> <span class="o">-</span> <span class="n">p2</span><span class="p">)</span> <span class="o">/</span> <span class="n">se</span>
+<span class="n">z</span>
 </pre></div>
 </div>
 </div>
@@ -688,8 +693,8 @@ z
 <p>Determine the right tail area</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p_value = 1 - st.norm.cdf(z)
-p_value
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_value</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">p_value</span>
 </pre></div>
 </div>
 </div>
@@ -701,7 +706,7 @@ p_value
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f&quot;{p_value:8f}&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p_value</span><span class="si">:</span><span class="s2">8f</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -713,18 +718,18 @@ p_value
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def significance(p_value):
-    if p_value &lt;= 0.05:
-        return &quot;Reject Null Hypothesis&quot;
-    else:
-        return &quot;Accept Null Hypothesis&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;=</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Reject Null Hypothesis&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Accept Null Hypothesis&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>significance(p_value)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

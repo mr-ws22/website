@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -570,13 +575,13 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import numpy as np
-import scipy.stats as st
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
 
-import altair as alt
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 
-alt.data_transformers.disable_max_rows()
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -588,33 +593,32 @@ alt.data_transformers.disable_max_rows()
 <h3>Generate data<a class="headerlink" href="#generate-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sat_mean = ___
-sat_sd   = ___
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sat_mean</span> <span class="o">=</span> <span class="n">___</span>
+<span class="n">sat_sd</span>   <span class="o">=</span> <span class="n">___</span>
 
-act_mean = ___
-act_sd   = ___
+<span class="n">act_mean</span> <span class="o">=</span> <span class="n">___</span>
+<span class="n">act_sd</span>   <span class="o">=</span> <span class="n">___</span>
 
-nel_sat = ___
-sian_act = ___ 
+<span class="n">nel_sat</span> <span class="o">=</span> <span class="n">___</span>
+<span class="n">sian_act</span> <span class="o">=</span> <span class="n">___</span> 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>np.random.seed(0)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-sat = np.random.normal(sat_mean, sat_sd, 100000)
+<span class="n">sat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">sat_mean</span><span class="p">,</span> <span class="n">sat_sd</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
 
-act = np.random.normal(act_mean, act_sd, 100000)
+<span class="n">act</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">act_mean</span><span class="p">,</span> <span class="n">act_sd</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-df = pd.DataFrame({&quot;sat&quot;: ___, &quot;act&quot;: ___})
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;sat&quot;</span><span class="p">:</span> <span class="n">___</span><span class="p">,</span> <span class="s2">&quot;act&quot;</span><span class="p">:</span> <span class="n">___</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -624,14 +628,14 @@ df = pd.DataFrame({&quot;sat&quot;: ___, &quot;act&quot;: ___})
 <h3>Data overview<a class="headerlink" href="#data-overview" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -641,54 +645,54 @@ df = pd.DataFrame({&quot;sat&quot;: ___, &quot;act&quot;: ___})
 <h3>Data visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart = alt.Chart(___).transform_density(
-    &#39;sat&#39;,
-    as_=[&#39;sat&#39;, &#39;density&#39;],
-).mark_area().encode(
-    x=&quot;sat:Q&quot;,
-    y=&#39;density:Q&#39;,
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">___</span><span class="p">)</span><span class="o">.</span><span class="n">transform_density</span><span class="p">(</span>
+    <span class="s1">&#39;sat&#39;</span><span class="p">,</span>
+    <span class="n">as_</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sat&#39;</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">],</span>
+<span class="p">)</span><span class="o">.</span><span class="n">mark_area</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sat:Q&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;density:Q&#39;</span><span class="p">,</span>
+<span class="p">)</span>
 
-nel = alt.Chart(pd.DataFrame({
-  &#39;value&#39;: nel_sat,
-  &#39;color&#39;: [&#39;orange&#39;]
-})
-).mark_rule(
-  strokeDash=[5, 5], 
-  strokeWidth=3
-).encode(
-  x=&#39;value:Q&#39;,
-  color=alt.Color(&#39;color:N&#39;, scale=None)
-)
+<span class="n">nel</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+  <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">nel_sat</span><span class="p">,</span>
+  <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="p">)</span><span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span>
+  <span class="n">strokeDash</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> 
+  <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">3</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+  <span class="n">x</span><span class="o">=</span><span class="s1">&#39;value:Q&#39;</span><span class="p">,</span>
+  <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;color:N&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span>
 
-chart + nel
+<span class="n">chart</span> <span class="o">+</span> <span class="n">nel</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart = alt.Chart(df).transform_density(
-    &#39;act&#39;,
-    as_=[&#39;act&#39;, &#39;density&#39;],
-).mark_area().encode(
-    x=&quot;act:Q&quot;,
-    y=&#39;density:Q&#39;,
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">transform_density</span><span class="p">(</span>
+    <span class="s1">&#39;act&#39;</span><span class="p">,</span>
+    <span class="n">as_</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;act&#39;</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">],</span>
+<span class="p">)</span><span class="o">.</span><span class="n">mark_area</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;act:Q&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;density:Q&#39;</span><span class="p">,</span>
+<span class="p">)</span>
 
-sian = alt.Chart(pd.DataFrame({
-  &#39;value&#39;: sian_act,
-  &#39;color&#39;: [&#39;orange&#39;]
-})
-).mark_rule(
-  strokeDash=[5, 5], 
-  strokeWidth=3
-).encode(
-  x=&#39;value:Q&#39;,
-  color=alt.Color(&#39;color:N&#39;, scale=None)
-)
+<span class="n">sian</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+  <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">sian_act</span><span class="p">,</span>
+  <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="p">)</span><span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span>
+  <span class="n">strokeDash</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> 
+  <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">3</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+  <span class="n">x</span><span class="o">=</span><span class="s1">&#39;value:Q&#39;</span><span class="p">,</span>
+  <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;color:N&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span>
 
-chart + sian
+<span class="n">chart</span> <span class="o">+</span> <span class="n">sian</span>
 </pre></div>
 </div>
 </div>
@@ -699,16 +703,16 @@ chart + sian
 <h2>Standardizing with Z scores<a class="headerlink" href="#standardizing-with-z-scores" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>z_nel = (___ - ___) / ___
-z_nel
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_nel</span> <span class="o">=</span> <span class="p">(</span><span class="n">___</span> <span class="o">-</span> <span class="n">___</span><span class="p">)</span> <span class="o">/</span> <span class="n">___</span>
+<span class="n">z_nel</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>z_sian = (___ - ___) / ___
-z_sian
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_sian</span> <span class="o">=</span> <span class="p">(</span><span class="n">___</span> <span class="o">-</span> <span class="n">___</span><span class="p">)</span> <span class="o">/</span> <span class="n">___</span>
+<span class="n">z_sian</span>
 </pre></div>
 </div>
 </div>
@@ -719,14 +723,14 @@ z_sian
 <p>Nel’s percentile is the percentage of people who earned a lower SAT score than Nel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>nel_percentile = st.norm.cdf(___)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nel_percentile</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">___</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&quot;Nel’s percentile: {nel_percentile:.2}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nel’s percentile: </span><span class="si">{</span><span class="n">nel_percentile</span><span class="si">:</span><span class="s2">.2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -734,14 +738,14 @@ z_sian
 <p>Determine the proportion of SAT test takers who scored better than Nel on the SAT.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sian_percentile = st.norm.cdf(___)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sian_percentile</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">___</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>round(sian_percentile, 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">sian_percentile</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -749,7 +753,7 @@ z_sian
 <p>We can also find the Z score associated with a percentile. For example, to identify Z for the 80th percentile (0.8), we use st.norm.ppf() which identifies the quantile for a given percentage.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>st.norm.ppf(___)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">___</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

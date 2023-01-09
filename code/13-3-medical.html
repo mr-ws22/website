@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -520,13 +525,13 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import numpy as np
-import scipy.stats as st
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
 
-import altair as alt
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 
-alt.data_transformers.disable_max_rows()
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -541,12 +546,12 @@ alt.data_transformers.disable_max_rows()
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = 62
-p_hat = 3/n
-p_null = 0.1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">62</span>
+<span class="n">p_hat</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="n">n</span>
+<span class="n">p_null</span> <span class="o">=</span> <span class="mf">0.1</span>
 
-se = np.sqrt((p_hat * (1 - p_hat)) / n)
-se
+<span class="n">se</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">p_hat</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p_hat</span><span class="p">))</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">se</span>
 </pre></div>
 </div>
 </div>
@@ -561,8 +566,8 @@ se
 <h2>Z score hypothesis test<a class="headerlink" href="#z-score-hypothesis-test" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>z = (p_hat - p_null) / se
-z
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_hat</span> <span class="o">-</span> <span class="n">p_null</span><span class="p">)</span> <span class="o">/</span> <span class="n">se</span>
+<span class="n">z</span>
 </pre></div>
 </div>
 </div>
@@ -575,8 +580,8 @@ z
 <p>We need to determine the left tail area, which is the estimated p-value for the hypothesis test:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p_value = st.norm.cdf(z)
-p_value
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_value</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">p_value</span>
 </pre></div>
 </div>
 </div>
@@ -588,18 +593,18 @@ p_value
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def significance(p_value):
-    if p_value &lt;= 0.05:
-        return &quot;Reject Null Hypothesis&quot;
-    else:
-        return &quot;Accept Null Hypothesis&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;=</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Reject Null Hypothesis&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Accept Null Hypothesis&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>significance(p_value)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">significance</span><span class="p">(</span><span class="n">p_value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

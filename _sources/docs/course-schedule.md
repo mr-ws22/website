@@ -6,6 +6,7 @@ This page contains a detailed overview about the topics, readings,  application 
 This overview will be updated as the semester progresses.
 :::
 
+
 |	Lecture	|	Week	|	Nr.	|	Date	|	Topic	|	Prepare	|	Slides	|	AE	|	Q	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|	---	|	---	|
 |	MR	|	1	|	1	|	11.10.	|	Data driven	|		|	[📑](https://drive.google.com/file/d/1-WrEI0wxKQX_MJyt6sAvy4UVuNo0EVWS/view?usp=sharing)	|		|		|
@@ -70,3 +71,11 @@ This overview will be updated as the semester progresses.
 |	MR	|	10	|	60	|	20.12.	|	Mathematical cases and confidence	|	[📚](https://openintro-ims.netlify.app/foundations-mathematical.html#caseopp)	|		|		|		|
 |	S	|	10	|	61	|	20.12.	|	Exam exercise in lab	|		|		|		|		|
 |	S	|	10	|	62	|	20.12.	|	Decision errors	|	[📚](https://openintro-ims.netlify.app/decerr.html)	|		|		|		|
+|	MR	|	11	|	63	|	10.01.	|	Single proportion bootstrapping	|	[📚](https://openintro-ims.netlify.app/inference-one-prop.html#one-prop-null-boot)	|		|		|		|
+|	MR	|	11	|	64	|	10.01.	|	Single proportion mathematical	|	[📚](https://openintro-ims.netlify.app/inference-one-prop.html#one-prop-norm)	|		|		|		|
+|	MR	|	11	|	65	|	10.01.	|	Single proportion hypothesis testing	|	[📚](https://openintro-ims.netlify.app/inference-one-prop.html#hypothesis-test-for-a-proportion)	|		|		|		|
+|	S	|	11	|	66	|	10.01.	|	Two proportions randomization	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#two-prop-errors)	|		|		|		|
+|	S	|	11	|	67	|	10.01.	|	Two proportions bootstrapping	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#two-prop-boot-ci)	|		|		|		|
+|	S	|	11	|	68	|	10.01.	|	Two proportions mathematical	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#math-2prop)	|		|		|		|
+|	S	|	11	|	69	|	10.01.	|	Two proportions hypothesis test	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#hypothesis-test-for-the-difference-between-two-proportions)	|		|		|		|
+|	S	|	11	|	70	|	10.01.	|	Two proportions mammogram	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#hypothesis-test-for-the-difference-between-two-proportions)	|		|		|		|

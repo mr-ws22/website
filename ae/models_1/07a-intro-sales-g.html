@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -582,16 +587,16 @@ title="Print to PDF"
 <p>Good luck!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>NAME = &quot;&quot;
-COLLABORATORS = &quot;&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">COLLABORATORS</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import IPython
-assert IPython.version_info[0] &gt;= 3, &quot;Your version of IPython is too old, please update it.&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython</span>
+<span class="k">assert</span> <span class="n">IPython</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Your version of IPython is too old, please update it.&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -603,12 +608,12 @@ assert IPython.version_info[0] &gt;= 3, &quot;Your version of IPython is too old
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import altair as alt
-import warnings
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
 
-warnings.simplefilter(action=&#39;ignore&#39;, category=FutureWarning)
-alt.data_transformers.disable_max_rows()
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -621,10 +626,10 @@ alt.data_transformers.disable_max_rows()
 <h3>Create data<a class="headerlink" href="#create-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df = pd.DataFrame(
-    {&#39;sales&#39;: [2500, 4500, 6500, 8500, 10500, 12500, 14500, 16500, 18500, 20500],
-      &#39;ads&#39;  : [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]}
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;sales&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">4500</span><span class="p">,</span> <span class="mi">6500</span><span class="p">,</span> <span class="mi">8500</span><span class="p">,</span> <span class="mi">10500</span><span class="p">,</span> <span class="mi">12500</span><span class="p">,</span> <span class="mi">14500</span><span class="p">,</span> <span class="mi">16500</span><span class="p">,</span> <span class="mi">18500</span><span class="p">,</span> <span class="mi">20500</span><span class="p">],</span>
+      <span class="s1">&#39;ads&#39;</span>  <span class="p">:</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">7000</span><span class="p">,</span> <span class="mi">8000</span><span class="p">,</span> <span class="mi">9000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">]}</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -634,7 +639,7 @@ alt.data_transformers.disable_max_rows()
 <h3>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -642,7 +647,7 @@ alt.data_transformers.disable_max_rows()
 <p><em>Do you recognize a relationship between the two variables?</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.info()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -654,13 +659,13 @@ alt.data_transformers.disable_max_rows()
 <p>Show the relationship between the variables:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart = alt.Chart(df).mark_point().encode(
-   x=alt.X(&#39;ads&#39;, axis=alt.Axis(title=&#39;Ads (in $)&#39;)),
-   y=alt.Y(&#39;sales&#39;, axis=alt.Axis(title=&quot;Sales (in units)&quot;)),
-   tooltip=[&#39;ads&#39;, &#39;sales&#39;]
-).interactive()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+   <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ads (in $)&#39;</span><span class="p">)),</span>
+   <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sales (in units)&quot;</span><span class="p">)),</span>
+   <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="s1">&#39;sales&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
 
-chart
+<span class="n">chart</span>
 </pre></div>
 </div>
 </div>
@@ -671,14 +676,14 @@ chart
 <p>Let’s take a closer look at ad spendings of 2000. What is the value of sales you would expect?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>callout = alt.Chart(df.iloc[1:2]).mark_point(
-    color=&#39;red&#39;, size=300, tooltip=&quot;Ads = 2000, Sales = 4500&quot;
-).encode(
-    x=alt.X(&#39;ads&#39;, axis=alt.Axis(title=&#39;Ads (in $)&#39;)),
-    y=alt.Y(&#39;sales&#39;, axis=alt.Axis(title=&quot;Sales (in units)&quot;))
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">callout</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">mark_point</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Ads = 2000, Sales = 4500&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ads (in $)&#39;</span><span class="p">)),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sales (in units)&quot;</span><span class="p">))</span>
+<span class="p">)</span>
 
-chart + callout
+<span class="n">chart</span> <span class="o">+</span> <span class="n">callout</span>
 </pre></div>
 </div>
 </div>
@@ -705,16 +710,16 @@ chart + callout
 <hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># check your code
-assert 4000 &lt;= sales_prediction &lt;= 5000
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check your code</span>
+<span class="k">assert</span> <span class="mi">4000</span> <span class="o">&lt;=</span> <span class="n">sales_prediction</span> <span class="o">&lt;=</span> <span class="mi">5000</span>
 </pre></div>
 </div>
 </div>
@@ -731,23 +736,23 @@ assert 4000 &lt;= sales_prediction &lt;= 5000
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Check your code
-assert 2000 &lt;= df.iloc[0, 2] &lt;= 3000
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check your code</span>
+<span class="k">assert</span> <span class="mi">2000</span> <span class="o">&lt;=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">3000</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -755,12 +760,12 @@ assert 2000 &lt;= df.iloc[0, 2] &lt;= 3000
 <p>Visualize predictions as a line</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>line = alt.Chart(df).mark_line().encode(
-         alt.X(&#39;ads&#39;, axis=alt.Axis(title=&#39;Ads (in $)&#39;)),
-         alt.Y(&#39;sales_prediction&#39;, axis=alt.Axis(title=&quot;Sales (in units)&quot;)),
-         color=alt.value(&quot;#0001F5&quot;))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+         <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ads (in $)&#39;</span><span class="p">)),</span>
+         <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sales (in units)&quot;</span><span class="p">)),</span>
+         <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;#0001F5&quot;</span><span class="p">))</span>
 
-chart + line
+<span class="n">chart</span> <span class="o">+</span> <span class="n">line</span>
 </pre></div>
 </div>
 </div>
@@ -794,50 +799,50 @@ chart + line
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># YOUR CODE HERE
-raise NotImplementedError()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># check your code
-assert len(df) == 11
-assert df.loc[10, &#39;ads&#39;] == 0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check your code</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">==</span> <span class="mi">11</span>
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;ads&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart_new = alt.Chart(df).mark_point().encode(
-   x=alt.X(&#39;ads&#39;, axis=alt.Axis(title=&#39;Ads (in $)&#39;)),
-   y=alt.Y(&#39;sales&#39;, axis=alt.Axis(title=&quot;Sales (in units)&quot;))
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart_new</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+   <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ads (in $)&#39;</span><span class="p">)),</span>
+   <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;sales&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sales (in units)&quot;</span><span class="p">))</span>
+<span class="p">)</span>
 
-line_new = alt.Chart(df).mark_line().encode(
-         alt.X(&#39;ads&#39;, axis=alt.Axis(title=&#39;Ads (in $)&#39;)),
-         alt.Y(&#39;sales_prediction&#39;, axis=alt.Axis(title=&quot;Sales (in units)&quot;)),
-         color=alt.value(&quot;#0001F5&quot;))
+<span class="n">line_new</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+         <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ads (in $)&#39;</span><span class="p">)),</span>
+         <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sales (in units)&quot;</span><span class="p">)),</span>
+         <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;#0001F5&quot;</span><span class="p">))</span>
 
-callout_new = alt.Chart(df.loc[10:&#39;sales_prediction&#39;]).mark_point(
-    color=&#39;red&#39;, 
-    size=300, 
-    tooltip=&quot;Ads = 0, Sales prediction = 500&quot;
-).encode(
-    x=&#39;ads&#39;,
-    y=&#39;sales_prediction&#39;
-)
+<span class="n">callout_new</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="s1">&#39;sales_prediction&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mark_point</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> 
+    <span class="n">size</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> 
+    <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Ads = 0, Sales prediction = 500&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;ads&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;sales_prediction&#39;</span>
+<span class="p">)</span>
 
-chart_new + line_new + callout_new
+<span class="n">chart_new</span> <span class="o">+</span> <span class="n">line_new</span> <span class="o">+</span> <span class="n">callout_new</span>
 </pre></div>
 </div>
 </div>

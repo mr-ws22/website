@@ -244,6 +244,11 @@ const thebe_selector_output = ".output, .cell_output"
      Week 10
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../weeks/week11.html">
+     Week 11
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -592,11 +597,11 @@ title="Print to PDF"
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import numpy as np
-import altair as alt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
 
-alt.data_transformers.disable_max_rows()
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -614,23 +619,23 @@ alt.data_transformers.disable_max_rows()
 <p>By sampling with replacement from the dataset (a process called bootstrapping), the variability of the possible p’ values can be approximated.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># number of people
-n = 62 
-# probability
-p = 3/n
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># number of people</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">62</span> 
+<span class="c1"># probability</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="n">n</span>
 
-#  set the random number generator (we use 0)
-np.random.seed(0)
+<span class="c1">#  set the random number generator (we use 0)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-# generate 10000 bootstrap simulations
-complications = np.random.binomial(n, p, 10000)
+<span class="c1"># generate 10000 bootstrap simulations</span>
+<span class="n">complications</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 
-# create dataframe
-df = pd.DataFrame({&quot;comp&quot;: complications})
-# calculate proportions
-df[&#39;comp_rate&#39;] = df[&#39;comp&#39;] / n
+<span class="c1"># create dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;comp&quot;</span><span class="p">:</span> <span class="n">complications</span><span class="p">})</span>
+<span class="c1"># calculate proportions</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;comp_rate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;comp&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">n</span>
 
-df.head()
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -693,7 +698,7 @@ df.head()
 <h3>Descriptive statistics<a class="headerlink" href="#descriptive-statistics" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df.describe().T
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 </div>
 </div>
@@ -758,15 +763,15 @@ df.head()
 <h3>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>chart = alt.Chart(df, title=&quot;10,000 bootstrapped proportions&quot;).mark_bar().encode(
-    alt.X(&#39;comp_rate:Q&#39;, 
-           title=&quot;Bootstrapped proportion of surgical complications&quot;,
-           bin=alt.BinParams(maxbins=20)),
-    alt.Y(&#39;count()&#39;,
-           title=&quot;Count&quot;)
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;10,000 bootstrapped proportions&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;comp_rate:Q&#39;</span><span class="p">,</span> 
+           <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Bootstrapped proportion of surgical complications&quot;</span><span class="p">,</span>
+           <span class="nb">bin</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">BinParams</span><span class="p">(</span><span class="n">maxbins</span><span class="o">=</span><span class="mi">20</span><span class="p">)),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span>
+           <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
+<span class="p">)</span>
 
-chart
+<span class="n">chart</span>
 </pre></div>
 </div>
 </div>
@@ -834,13 +839,13 @@ chart
 <h4>Calculate percentiles<a class="headerlink" href="#calculate-percentiles" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># bootstrap 2.5 percentile proportion 
-lower = df[&#39;comp_rate&#39;].quantile(0.025)
-print(f&quot;The bootstrap 2.5 percentile proportion is {lower}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># bootstrap 2.5 percentile proportion </span>
+<span class="n">lower</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;comp_rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The bootstrap 2.5 percentile proportion is </span><span class="si">{</span><span class="n">lower</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-# bootstrap 97.5 percentile proportion 
-upper = df[&#39;comp_rate&#39;].quantile(0.975)
-print(f&quot;The 97.5 percentile is {upper:.3}&quot;)
+<span class="c1"># bootstrap 97.5 percentile proportion </span>
+<span class="n">upper</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;comp_rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.975</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The 97.5 percentile is </span><span class="si">{</span><span class="n">upper</span><span class="si">:</span><span class="s2">.3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -860,19 +865,19 @@ The 97.5 percentile is 0.113
 <p>Option 1: use precalculated values:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>percentiles = alt.Chart(pd.DataFrame({
-  &#39;values&#39;: [lower, upper],
-  &#39;color&#39;: [&#39;orange&#39;, &#39;red&#39;]
-})
-).mark_rule(
-  strokeDash=[5, 5], 
-  strokeWidth=3
-).encode(
-  x=&#39;values:Q&#39;,
-  color=alt.Color(&#39;color:N&#39;, scale=None)
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentiles</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+  <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">],</span>
+  <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="p">)</span><span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span>
+  <span class="n">strokeDash</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> 
+  <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">3</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+  <span class="n">x</span><span class="o">=</span><span class="s1">&#39;values:Q&#39;</span><span class="p">,</span>
+  <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;color:N&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span>
 
-chart + percentiles
+<span class="n">chart</span> <span class="o">+</span> <span class="n">percentiles</span>
 </pre></div>
 </div>
 </div>
@@ -939,25 +944,25 @@ chart + percentiles
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p_lower = (
-     alt.Chart(df)
-    .transform_quantile(&#39;comp_rate&#39;, probs=[0.025], as_=[&#39;prob&#39;, &#39;value&#39;])
-    .mark_rule(color=&#39;orange&#39;, strokeDash=[5, 5], strokeWidth=3)
-    .encode(
-        x = &quot;value:Q&quot;
-    )
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_lower</span> <span class="o">=</span> <span class="p">(</span>
+     <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transform_quantile</span><span class="p">(</span><span class="s1">&#39;comp_rate&#39;</span><span class="p">,</span> <span class="n">probs</span><span class="o">=</span><span class="p">[</span><span class="mf">0.025</span><span class="p">],</span> <span class="n">as_</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prob&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">strokeDash</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;value:Q&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
 
-p_upper = (
-     alt.Chart(df)
-    .transform_quantile(&#39;comp_rate&#39;, probs=[0.975], as_=[&#39;prob&#39;, &#39;value&#39;])
-    .mark_rule(color=&#39;red&#39;, strokeDash=[5, 5], strokeWidth=3)
-    .encode(
-        x = &quot;value:Q&quot;
-    )
-)
+<span class="n">p_upper</span> <span class="o">=</span> <span class="p">(</span>
+     <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">transform_quantile</span><span class="p">(</span><span class="s1">&#39;comp_rate&#39;</span><span class="p">,</span> <span class="n">probs</span><span class="o">=</span><span class="p">[</span><span class="mf">0.975</span><span class="p">],</span> <span class="n">as_</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prob&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">strokeDash</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;value:Q&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
 
-chart + p_lower + p_upper
+<span class="n">chart</span> <span class="o">+</span> <span class="n">p_lower</span> <span class="o">+</span> <span class="n">p_upper</span>
 </pre></div>
 </div>
 </div>
