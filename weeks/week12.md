@@ -16,6 +16,7 @@
 
 - Two means mathematical (Nr. 75): [📚](https://openintro-ims.netlify.app/inference-two-means.html#mathematical-model-for-estimating-the-difference-in-means)
 
+
 ---
 
 ---
@@ -25,7 +26,7 @@
 ## Participate
 
 
-Slides: [📑](https://drive.google.com/file/d/10w_k9Awxqsacu5eTXYbdFJ4VFuczV00h/view?usp=sharing)
+Slides: [📑](https://drive.google.com/file/d/115Q0y2T7GD9VGEd3irJljxm4V684TT9O/view?usp=sharing)
 
 
 
