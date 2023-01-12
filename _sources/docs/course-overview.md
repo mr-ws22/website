@@ -23,5 +23,5 @@ For a more detailed semester overview, take a look at the [course-schedule](../d
 |	9	|	13.12.	|	Foundations of inference	|	Foundations of inference	|	[📑](https://drive.google.com/file/d/10YvpqcO3HETCrRquhNt4C6lo22LbPGmH/view?usp=sharing)	|	[📁](../weeks/week9.md)	|
 |	10	|	20.12.	|	Foundations of inference	|	Exam exercise in lab	|	[📑](https://drive.google.com/file/d/10sGeOhA4V5dN8PxfIRbGar8ry1XgAyvt/view?usp=sharing)	|	[📁](../weeks/week10.md)	|
 |	11	|	10.01.	|	Statistical inference	|	Statistical inference	|	[📑](https://drive.google.com/file/d/10w_k9Awxqsacu5eTXYbdFJ4VFuczV00h/view?usp=sharing)	|	[📁](../weeks/week11.md)	|
-|	12	|	17.01.	|	Statistical inference	|	Inferential modeling	|		|		|
-|	13	|	24.01.	|	Inferential modeling	|	Inferential modeling	|		|		|
+|	12	|	17.01.	|	Statistical inference	|	Statistical inference	|	[📑](https://drive.google.com/file/d/115Q0y2T7GD9VGEd3irJljxm4V684TT9O/view?usp=sharing)	|	[📁](../weeks/week12.md)	|
+|	13	|	24.01.	|	Repetition	|	Repetition	|	 -	|	 -	|
