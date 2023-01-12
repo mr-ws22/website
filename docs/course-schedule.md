@@ -67,11 +67,11 @@ This overview will be updated as the semester progresses.
 |	S	|	9	|	56	|	13.12.	|	Bootsrapping medical case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#case-study-med-consult)	|		|		|		|
 |	S	|	9	|	57	|	13.12.	|	Bootsrapping tappers case	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#tapperscasestudy)	|		|		|		|
 |	S	|	9	|	58	|	13.12.	|	Bootsrapping confidence intervalls	|	[📚](https://openintro-ims.netlify.app/foundations-bootstrapping.html#ConfidenceIntervals)	|		|		|		|
-|	MR	|	10	|	59	|	20.12.	|	Mathematical introduction	|	[📚](https://openintro-ims.netlify.app/foundations-mathematical.html)	|		|		|		|
+|	MR	|	10	|	59	|	20.12.	|	Mathematical introduction	|	[📚](https://openintro-ims.netlify.app/foundations-mathematical.html)	|	[📑](https://drive.google.com/file/d/10sGeOhA4V5dN8PxfIRbGar8ry1XgAyvt/view?usp=sharing)	|		|		|
 |	MR	|	10	|	60	|	20.12.	|	Mathematical cases and confidence	|	[📚](https://openintro-ims.netlify.app/foundations-mathematical.html#caseopp)	|		|		|		|
 |	S	|	10	|	61	|	20.12.	|	Exam exercise in lab	|		|		|		|		|
 |	S	|	10	|	62	|	20.12.	|	Decision errors	|	[📚](https://openintro-ims.netlify.app/decerr.html)	|		|		|		|
-|	MR	|	11	|	63	|	10.01.	|	Single proportion bootstrapping	|	[📚](https://openintro-ims.netlify.app/inference-one-prop.html#one-prop-null-boot)	|		|		|		|
+|	MR	|	11	|	63	|	10.01.	|	Single proportion bootstrapping	|	[📚](https://openintro-ims.netlify.app/inference-one-prop.html#one-prop-null-boot)	|	[📑](https://drive.google.com/file/d/10w_k9Awxqsacu5eTXYbdFJ4VFuczV00h/view?usp=sharing)	|		|		|
 |	MR	|	11	|	64	|	10.01.	|	Single proportion mathematical	|	[📚](https://openintro-ims.netlify.app/inference-one-prop.html#one-prop-norm)	|		|		|		|
 |	MR	|	11	|	65	|	10.01.	|	Single proportion hypothesis testing	|	[📚](https://openintro-ims.netlify.app/inference-one-prop.html#hypothesis-test-for-a-proportion)	|		|		|		|
 |	S	|	11	|	66	|	10.01.	|	Two proportions randomization	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#two-prop-errors)	|		|		|		|
@@ -79,3 +79,9 @@ This overview will be updated as the semester progresses.
 |	S	|	11	|	68	|	10.01.	|	Two proportions mathematical	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#math-2prop)	|		|		|		|
 |	S	|	11	|	69	|	10.01.	|	Two proportions hypothesis test	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#hypothesis-test-for-the-difference-between-two-proportions)	|		|		|		|
 |	S	|	11	|	70	|	10.01.	|	Two proportions mammogram	|	[📚](https://openintro-ims.netlify.app/inference-two-props.html#hypothesis-test-for-the-difference-between-two-proportions)	|		|		|		|
+|	MR	|	12	|	71	|	17.01.	|	Two way tables randomization	|	[📚](https://openintro-ims.netlify.app/inference-tables.html#randomization-test-of-independence)	|	[📑](https://drive.google.com/file/d/115Q0y2T7GD9VGEd3irJljxm4V684TT9O/view?usp=sharing)	|		|		|
+|	MR	|	12	|	72	|	17.01.	|	Two way tables mathematical	|	[📚](https://openintro-ims.netlify.app/inference-tables.html#mathchisq)	|		|		|		|
+|	S	|	12	|	73	|	17.01.	|	Two means randomization	|	[📚](https://openintro-ims.netlify.app/inference-two-means.html#rand2mean)	|		|		|		|
+|	S	|	12	|	74	|	17.01.	|	Two means bootstrapping	|	[📚](https://openintro-ims.netlify.app/inference-two-means.html#bootstrap-confidence-interval-for-the-difference-in-means)	|		|		|		|
+|	S	|	12	|	75	|	17.01.	|	Two means mathematical	|	[📚](https://openintro-ims.netlify.app/inference-two-means.html#mathematical-model-for-estimating-the-difference-in-means)	|		|		|		|
+|	MR	|	13	|	76	|	24.01.	|	Repetition	|		|		|		|		|
