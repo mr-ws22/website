@@ -14,6 +14,7 @@
 
 - Two means bootstrapping (Nr. 74): [📚](https://openintro-ims.netlify.app/inference-two-means.html#bootstrap-confidence-interval-for-the-difference-in-means)
 
+
 - Two means mathematical (Nr. 75): [📚](https://openintro-ims.netlify.app/inference-two-means.html#mathematical-model-for-estimating-the-difference-in-means)
 
 
