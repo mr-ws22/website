@@ -8,6 +8,8 @@ In the exam, you will get a copy of the following code cheat sheets:
 
 - [Altair marks](../code/altair-marks.md)
 
+- [Scikit-learn cheat sheets (see Moodle)](https://e-learning.hdm-stuttgart.de/moodle/course/view.php?id=2464#section-2)
+
 ---
 
 ## Week 1
@@ -208,7 +210,7 @@ You should be able to use scikit-learn to:
 
 ## Week 8
 
-- [48. Randomization experiments](../code/48-discrimination.ipynb) (not relevant for exam)
+- [48. Randomization experiments](../code/48-discrimination.ipynb) (not relevant for exam: you don't need to memorize the code. See week 9)
 
 - [49. Probability of an event](../code/49-logistic.ipynb)
 
