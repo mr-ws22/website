@@ -87,7 +87,8 @@ There will be one exam at the end of the semester. Through the exam you have the
 
 The exam will focus on the conceptual understanding of the content but will also cover programming topics.  
 
-More detail about the exams will be given during the semester.
+More details about the exams will be given during the semester.
+
 
 ## Grading
 
