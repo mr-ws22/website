@@ -246,7 +246,10 @@ You don't need to memorize the code (it would be provided in the exam). However,
 
 ## Week 10
 
-- [59. Mathematical introduction](../code/59-mathematical-c.ipynb)
+- [59. Mathematical introduction (exercise)](../code/59-mathematical-c.ipynb)
+- [59. Mathematical introduction (solution)](../code/59-mathematical.ipynb)
+
+
 
 ```{note}
 You should be able to 
